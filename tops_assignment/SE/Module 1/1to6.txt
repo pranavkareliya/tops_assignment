@@ -1,0 +1,44 @@
+1. What is software? What is Software Engineering?
+ANS: SOFTWARE : Software is a set of instructions, data or programs used to operate computers and execute specific tasks.
+     SOFTWARE ENGINEERING : Software Engineering is the process of designing, developing, testing, and maintaining software. It is a systematic and disciplined approach to software 	development that aims to create high-quality, reliable, and maintainable software.
+
+2. Explain types of software?
+ANS : 	i) Application software
+	ii) System Software
+	iii) Driver Software
+	iv) Middleware
+	v) Programming Software
+
+3. What is SDLC? Explain each phase of SDLC.
+ANS : The software development lifecycle (SDLC) is the cost-effective and time-efficient process that development teams use to design and build high-quality software.
+
+	PHASES OF SDLC : 
+	
+	i) Requirement Gathering
+	ii) Analysis
+	iii) Designing
+	iv) Implementation
+	v) Testing
+	vi) Maintenance 
+
+
+	i) REQUIREMENT GATHERING : Requirement gathering and analysis in SDLC is a vital step in the software development process. It involves understanding the client's needs and 			identifying their problems.
+
+	ii) ANALYSIS : Analysis is the process of gathering data, interpreting information, identifying issues and using the results to recommend or develop possible system improvements.
+
+	iii) Designing : Designing is an interim check between the schematic design and construction documentation phases.
+
+	iv) Implementation : In this stage, developers complete the application per established specifications. Security activities in this stage focus on technology-specific secure coding 		guidelines as well (automated) code reviews.
+
+	v) Testing : In this stage the testing is done to ensure that the entire application works according to the customer requirements.
+
+	vi) Maintenance : In this stage Maintenance of software can include software upgrades, repairs, and fixes of the software if it breaks. Software applications often need to be 			upgraded or integrated with new systems the customer deploys.
+
+4. What is DFD? Create a DFD diagram on flipkart.
+ANS : A data flow diagram (DFD) is a graphical or visual representation using a standardized set of symbols and notations to describe a business's operations through data movement.
+
+5. What is Flow  chart? Create a flowchart to make addition of two numbers.
+ANS : A flowchart is a diagram that depicts a process, system or computer algorithm.
+
+6. What is Use case diagram? Create a use-case on bill payment on paytm.
+ANS : Use-case diagrams describe the high-level functions and scope of a system. These diagrams also identify the interactions between the system and its actors.
