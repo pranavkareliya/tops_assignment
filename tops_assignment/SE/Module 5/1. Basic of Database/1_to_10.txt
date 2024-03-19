@@ -1,0 +1,34 @@
+1. What do you understand by Database.
+ANS :- A database is an organized collection of structured information, or data, typically stored
+	electronically in a computer system and combination of row and column.
+
+2. What is Normalization?
+ANS :- Normalization is the process of organizing data in a database. It includes creating tables and 
+	establishing relationships between those tables according to rules designed both to protect the 
+	data and to make the database more flexible by eliminating redundancy and inconsistent dependency.
+
+3. What is difference between DBMS and RDBMS?
+ANS :- RDBMS stores data in the form of tables, whereas DBMS stores data in the form of files. 
+	Single users are supported by DBMS, whereas multiple users are supported by RDBMS. 
+	Client-server architecture is not supported by DBMS, although it is supported by RDBMS.
+
+4. What is MF Cod Rule of RDBMS Systems?
+ANS :- Codd's twelve rules are a set of thirteen rules (numbered zero to twelve) proposed by Edgar F. Codd, a pioneer of the relational model for databases, designed to define what is required from a database management system in order for it to be considered relational, i.e., a relational database management system (RDBMS).
+
+5. What do you understand By Data Redundancy?
+ANS :-  Data redundancy refers to the duplication of data within a database or across multiple databases.
+
+6. What is DDL Interpreter?
+ANS :- DDL Interpreter interprets the DDL statements and records the generated statements in the table containing metadata.
+
+7. What is DML Compiler in SQL?
+ANS :- A DML (data manipulation language) refers to a computer programming language that allows you to add (insert), delete (delete), and alter (update) data in a database. A DML is typically a sublanguage of a larger database language like SQL, with the DML containing some of the language's operators.
+ 
+8. What is SQL Key Constraints writing an Example of SQL Key Constraints.
+ANS :- SQL key constraints are rules applied to columns or groups of columns in a relational database table to enforce data integrity and define relationships between tables. 
+
+9. What is save Point? How to create a save Point write a Query?
+ANS :- A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction. Syntax for Savepoint command: SAVEPOINT SAVEPOINT_NAME; This command is used only in the creation of SAVEPOINT among all the transactions.
+
+10.What is trigger and how to create a Trigger in SQL?
+ANS :- In SQL, a trigger is a database object containing SQL code that is automatically executed when a specific database event occurs. In other words, a database trigger is "triggered" by a particular event. SQL triggers are generally associated with a particular table.
