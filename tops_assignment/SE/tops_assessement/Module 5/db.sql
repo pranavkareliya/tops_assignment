@@ -44,7 +44,7 @@ SELECT YEAR, SUBJECT, WINNER, COUNTRY FROM Nobel_win WHERE YEAR BETWEEN 1965 AND
 SELECT YEAR, SUBJECT, WINNER, COUNTRY FROM Nobel_win WHERE WINNER LIKE 'Louis%';
 
 -- Write sql querry to find nobel prize winners for the subject that does not begin with the letter 'P'. Order the result by year, descending and winner in ascending
-SELECT YEAR FROM Nobel_win WHERE
+SELECT * FROM Nobel_win WHERE SUBJECT NOT LIKE 'P%' ORDER BY YEAR DESC, WINNER;
 
--- Write sql querry to find the details of 1970 Nobel Prize Winners. Order the result by subject, ascending except for 'chemistry' and 'Economics' which will come at the end of the result set. Return year, subject, Winner, country and category
-SELECT
+-- Write sql querry to find the details of 1970 Nobel Prize Winners. Order the result by subject, ascending except for 'chemistry' and 'Economics' which will come at the end of the result set. Return year, subject, Winner, country and category.
+SELECT * FROM Nobel_win WHERE YEAR = 1970 ORDER BY CASE WHEN SUBJECT IN ('Economics', 'Chemistry') THEN 1 ELSE 0 END ASC, SUBJECT, WINNER;
