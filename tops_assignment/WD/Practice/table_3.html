@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table-3</title>
+    <style>
+        td, th{
+            padding: 10px;
+        }
+        .table1{
+            margin: 200px;
+        }
+        .stotal{
+            text-align: end;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .aqua{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <table border="2" class="table1">
+        <tr>
+            <th>ACC</th>
+            <td></td>
+            <th class="aqua">Column header 1a</th>
+            <th class="aqua">Column header 1b</th>
+            <th class="aqua">Column header 1c</th>
+            <th class="aqua">Column header 1d</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <th class="aqua">Column header 2a</th>
+            <th class="aqua">Column header 2b</th>
+            <th class="aqua">Column header 2c</th>
+            <th class="aqua">Column header 2d</th>
+        </tr>
+        <tr>
+            <th rowspan="4" class="yellow">Row Header 1a</th>
+            <th class="yellow">Row Header 2a</th>
+            <td>Data col 1 row 1</td>
+            <td>Data col 2 row 1</td>
+            <td>Data col 3 row 1</td>
+            <td>Data col 4 row 1</td>
+        </tr>
+        <tr>
+            <th class="yellow">Row Header 2b</th>
+            <td>Data col 1 row 2</td>
+            <td>Data col 2 row 2</td>
+            <td>Data col 3 row 2</td>
+            <td>Data col 4 row 2</td>
+        </tr>
+        <tr>
+            <th class="yellow">Row Header 2c</th>
+            <td>Data col 1 row 3</td>
+            <td>Data col 2 row 3</td>
+            <td>Data col 3 row 3</td>
+            <td>Data col 4 row 3</td>
+        </tr>
+        <tr>
+            <th colspan="3" class="stotal yellow">Summary Sub-Total</th>
+            <td>Total 1a</td>
+            <td>Total 2a</td>
+        </tr>
+        <tr>
+            <th rowspan="3" class="yellow">Row Header 1b</th>
+            <th class="yellow">Row header 2d</th>
+            <td>Data col 1 row 1</td>
+            <td>Data col 2 row 1</td>
+            <td>Data col 3 row 1</td>
+            <td>Data col 4 row 1</td>
+        </tr>
+        <tr>
+            <th class="yellow">Row header 2e</th>
+            <td>Data col 1 row 2</td>
+            <td>Data col 2 row 2</td>
+            <td>Data col 3 row 2</td>
+            <td>Data col 4 row 2</td>
+        </tr>
+        <tr>
+            <th colspan="3" class="stotal yellow">Summary Sub-Total</th>
+            <td>Total 1b</td>
+            <td>Total 2b</td>
+        </tr>
+        <tr>
+            <th colspan="4" class="stotal yellow">Grant Total</th>
+            <td>Grant-Total</td>
+            <td>Grant-Total</td>
+        </tr>
+    </table>
+</body>
+</html>
