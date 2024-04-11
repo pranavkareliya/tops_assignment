@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table-6</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .thead1{
+            background-color: #007bff;
+            color: white;
+        }
+        .blue{
+            color: #007bff;
+        }
+        .blue_font{
+            color: #007bff;
+        }
+        .page_no{
+            text-align: end;
+        }
+        .table_center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table class="table table-bordered">
+        <thead class="thead1">
+            <th scope="col" colspan="4">Departments</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" class="blue">Dept No.</th>
+                <th class="blue">Dept Name</th>
+                <th class="blue">Location</th>
+                <th class="blue">Employess</th>
+            </tr>
+            <tr>
+                <td scope="row">10</td>
+                <td>Accounting</td>
+                <td>New York</td>
+                <td>
+                    <!-- <i class="fa-solid fa-users" style="color: #007bff;"></i> -->
+                    <i class="fa-solid fa-users blue_font"></i>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <table class="table table-bordered table_center">
+                        <thead class="thead blue">
+                            <th scope="col">Emp No</th>
+                            <th scope="col">Emp Name</th>
+                            <th scope="col">Job</th>
+                            <th scope="col">Mgr</th>
+                            <th scope="col">Hire Date</th>
+                            <th scope="col">Sal</th>
+                            <th scope="col">Commission</th>
+                            <th scope="col">Dept No</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7782</td>
+                                <td>Clark</td>
+                                <td>Manager</td>
+                                <td>7839</td>
+                                <td>09-JUNE-1981</td>
+                                <td>2450</td>
+                                <td>-</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>7839</td>
+                                <td>King</td>
+                                <td>President</td>
+                                <td>-</td>
+                                <td>17-NOV-1981</td>
+                                <td>5000</td>
+                                <td>-</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>7937</td>
+                                <td>Miller</td>
+                                <td>Clerk</td>
+                                <td>7782</td>
+                                <td>23-JAN-1982</td>
+                                <td>1300</td>
+                                <td>-</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td colspan="8" class="page_no">1 - 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>RESEARCH</td>
+                <td>DALLAS</td>
+                <td>
+                    <i class="fa-solid fa-users blue_font"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>SALES</td>
+                <td>CHICAGO</td>
+                <td>
+                    <i class="fa-solid fa-users blue_font"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>OPERATIONS</td>
+                <td>BOSTON</td>
+                <td>
+                    <i class="fa-solid fa-users blue_font"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" colspan="4">Download</td>
+            </tr>
+            <tr>
+                <td class="page_no" colspan="4">1 - 4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
