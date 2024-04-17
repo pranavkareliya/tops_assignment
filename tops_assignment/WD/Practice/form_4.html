@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - 4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .head{
+            margin-top: 50px;
+            text-align: center;
+        }
+        .info{
+            text-align: center;
+        }
+        hr{
+            margin-left: 130px;
+        }
+        .border{
+            margin-left: 130px;
+            border-top: 10px;
+            width: 80%;
+        }
+        span{
+            color: red;
+        }
+        .left{
+            padding-top: 30px;
+            padding-left: 150px;
+        }
+        #first_name{
+            padding-right: 50px;
+        }
+        .select{
+            margin-left: 30px;
+        }
+        .con_label{
+            padding-bottom: 160px;
+        }
+        .submit_btn{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="head">Complaints</h2>
+    <p class="info">Help us improve our service</p>
+    <hr width="80%">
+    <div class="border"></div>
+    <form>
+        <table>
+            <tr>
+                <th class="left">Full Name <span> *</span></th>
+                <th>
+                    <input type="text" class="form-control mt-4 select" id="first_name" name="first_name" placeholder="First Name">
+                </th>
+                <th>
+                    <input type="text" class="form-control mt-4 ml-5" id="last_name" name="last_name" placeholder="Last Name">
+                </th>
+            </tr>
+            <tr>
+                <th class="left">Email <span> *</span></th>
+                <th colspan="2">
+                    <input type="email" class="form-control mt-4 select" id="email" name="email" placeholder="Ex : myexample@gmail.com">
+                </th>
+            </tr>
+            <tr>
+                <th class="left">Phone</th>
+                <th colspan="2">
+                    <input type="tel" class="form-control mt-4 select" id="number" name="number" placeholder="Ex : 9876543210">
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="2" class="left con_label">Where did we go wrong? <span> *</span></th>
+                <th colspan="2">
+                    <textarea class="form-control mt-4 select" name="conclusion" id="conclusion" cols="10" rows="5"></textarea>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-danger mt-4 submit_btn">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

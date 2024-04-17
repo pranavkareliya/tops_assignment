@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - 5</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        fieldset{
+            margin: 150px 500px 0px 500px;
+            padding: 10px;
+        }
+        td{
+            padding-left: 20px;
+        }
+        span{
+            color: red;
+        }
+        .button{
+            margin-top: 30px;
+            margin-left: 650px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Customer</legend>
+        <table>
+            <tr>
+                <td>Name <span> *</span></td>
+                <td>
+                    <input type="text" id="name" name="class"> <br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Email <span> *</span></td>
+                <td>
+                    <input type="text" id="email" name="email"> <br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Investment</td>
+                <td>
+                    <select name="inv" id="inv">
+                        <option selected disabled>Select</option>
+                        <option value="">Stocks</option>
+                        <option value="">Real Estate</option>
+                        <option value="">Mutual Funds</option>
+                        <option value="">Fixed Deposits</option>
+                    </select> <br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Date Joined <span> *</span></td>
+                <td>
+                    <input type="date" id="date" name="date"> <br><br>
+                </td> 
+            </tr>
+            <tr>
+                <td>Active</td>
+                <td>
+                    <input type="checkbox" name="active" id="active">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <!-- <button class="button" type="submit">OK</button>
+    <button type="reset">Cancel</button> -->
+    <input class="button" type="submit" value="OK">
+    <input type="reset" value="Cancel">
+</body>
+</html>
