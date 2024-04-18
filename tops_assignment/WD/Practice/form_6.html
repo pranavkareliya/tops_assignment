@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - 6</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            background: linear-gradient(to right, purple, rgb(244, 120, 140));
+        }
+        form{
+            height: 430px;
+            width: 450px;
+            margin-top: 100px;
+            margin-left: 400px;
+            border: 1px solid none;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .title{
+            padding-top: 40px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            position: relative;
+        }
+        .title::before{
+            content: "";
+            position: absolute;
+            left: 155px;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, purple, rgb(244, 120, 140));
+        }
+        .label_box{
+            margin-top: 20px;
+            margin-left: 50px;
+            width: 350px;
+        }
+        .forget_pass{
+            color: pink;
+            margin-top: 15px;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+        .login_btn{
+            height: 45px;
+            width: 350px;
+            margin-top: 10px;
+            margin-left: 50px;
+            color: white;
+            background: linear-gradient(to right, purple, rgb(244, 120, 140));
+            border-radius: 5px;
+            border: none;
+        }
+        .not_member{
+            margin-top: 40px;
+            margin-left: 110px;
+            font-weight: 500;
+        }
+        .signup_now{
+            color: pink;
+            margin-left: 240px;
+            margin-top: -39px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p class="title">Login Form</p>
+        <table>
+            <tr>
+                <td>
+                    <input type="email" class="form-control label_box" id="email" name="email" placeholder="Email Address">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control label_box" id="password" name="password" placeholder="Password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p href="#" class="forget_pass">Forgot Password?</p>
+                    <!-- <a href="#" class="forget_pass">Forgot Password?</a> -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="login_btn">Login</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="not_member">Not a member?</p>
+                    <p class="signup_now"> Signup now</p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
