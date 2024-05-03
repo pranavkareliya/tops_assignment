@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex - Media</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Nav CSS START */
+        .navbar {
+            /* height: auto;
+            width: 100%; */
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo>img {
+            height: 55px;
+            width: 55px;
+        }
+
+        .list>ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: 20px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+        }
+
+        a:hover {
+            background-color: white;
+            color: #333;
+            height: 20px;
+            width: auto;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 15px rgb(201, 198, 198);
+        }
+
+        .search_bar {
+            height: 35px;
+            width: 130px;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding-left: 8px;
+            background-color: #333;
+            color: white;
+        }
+
+        .search_bar::placeholder {
+            color: white;
+        }
+
+        .search_btn {
+            height: 35px;
+            width: 80px;
+            border-radius: 5px;
+            border: none;
+            color: #333;
+        }
+
+        .search_btn:hover,
+        .search_bar:hover {
+            box-shadow: 0px 0px 15px rgb(201, 198, 198);
+        }
+
+        /* Nav CSS END */
+
+        /* Code for Section-1 START */
+        .section_1 {
+            height: auto;
+            width: 100%;
+            background-color: yellow;
+            padding: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .text {
+            height: 200px;
+            width: 500px;
+            /* border: 2px solid red; */
+        }
+
+        .text h1 {
+            font-size: 35px;
+        }
+
+        .text button {
+            height: 35px;
+            width: 100px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact_us {
+            border: none;
+            background-color: #46b9e0;
+            color: white;
+        }
+
+        .service {
+            border: 2px solid black;
+            background-color: yellow;
+            color: black;
+        }
+
+        .contact_us:hover,
+        .service:hover {
+            box-shadow: 0px 0px 9px #333;
+        }
+
+        .photo img {
+            height: 300px;
+            width: 380px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #333;
+        }
+
+        .photo img:hover {
+            box-shadow: 3px 4px 15px #333;
+        }
+
+        /* Code for Section-1 END */
+
+        /* Code for Section-2 START */
+        .section_2 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 80px;
+        }
+
+        .service_2 {
+            height: 35px;
+            width: 100px;
+            border: none;
+            background-color: #46b9e0;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .service_2:hover {
+            box-shadow: 0px 0px 9px #333;
+        }
+
+        /* Code for Section-2 END */
+
+        /* Code for Section-3 START */
+        .section_3 {
+            height: auto;
+            width: 100%;
+            background-color: yellow;
+            padding: 50px;
+        }
+
+        .title h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .title p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .images {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .images img {
+            height: 320px;
+            width: 320px;
+        }
+
+        .sec_3 {
+            height: auto;
+            width: 340px;
+            /* border: 2px solid red; */
+            border-radius: 7px;
+        }
+
+        .sec_3 img {
+            height: auto;
+            height: 250px;
+            width: 336px;
+            border-radius: 5px;
+        }
+
+        .text_3 {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Code for Section-3 END */
+
+        /* MEDIA QUERY START (FOR 600PX) */
+        @media only screen and (max-width:600px) {
+
+            /* Code For navbar START */
+            .navbar {
+                background-color: #333;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px;
+
+                gap: 20px;
+                flex-direction: column;
+            }
+
+            .list>ul {
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+                gap: 20px;
+
+                flex-direction: column;
+            }
+
+            /* Code For navbar END */
+
+            /* Code for Section-1 START */
+            .section_1 {
+                height: auto;
+                width: 100%;
+                background-color: yellow;
+                padding: 80px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                gap: 70px;
+                flex-direction: column;
+            }
+
+            .photo img {
+                height: 200px;
+                width: 280px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px #333;
+            }
+
+            /* Code for Section-1 END */
+
+            /* Code for Section-2 START */
+            .section_2 {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 80px;
+
+                flex-direction: column;
+            }
+
+            /* Code for Section-2 END */
+
+            /* Code for Section-3 START */
+            /* .section_3 {
+                height: auto;
+                width: 100%;
+                background-color: yellow;
+                padding: 50px;
+
+                gap: 20px;
+                flex-direction: column;
+            }
+
+            .images {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 50px;
+
+                gap: 25px;
+                flex-direction: column;
+            } */
+            /* Code for Section-3 END */
+
+        }
+
+        /* MEDIA QUERY END (FOR 600PX) */
+
+        /* MEDIA QUERY START (FOR 872PX) */
+        @media only screen and (max-width:872px) {
+
+            /* Code for Section-1 START */
+            .section_1 {
+                height: auto;
+                width: 100%;
+                background-color: yellow;
+                padding: 80px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 70px;
+
+                flex-direction: column;
+            }
+            /* Code for Section-1 END */
+
+            /* Code for Section-2 START */
+            .section_2 {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 80px;
+
+                flex-direction: column;
+            }
+            /* Code for Section-2 END */
+        }
+        /* MEDIA QUERY END (FOR 872PX) */
+
+        /* MEDIA QUERY START (FOR PX) */
+        @media only screen and (max-width:1110px){
+            .section_3 {
+                height: auto;
+                width: 100%;
+                background-color: yellow;
+                padding: 50px;
+
+                gap: 20px;
+                flex-direction: column;
+            }
+            .images {
+                height: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 50px;
+
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+        /* MEDIA QUERY END (FOR PX) */
+    </style>
+</head>
+
+<body>
+    <!-- Nav Code START -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="docker.png" alt="This is a logo">
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" class="search_bar" placeholder="Search...">
+            <button class="search_btn">Search</button>
+        </div>
+    </nav>
+    <!-- Nav Code END -->
+
+    <!-- Code for section-1 START -->
+    <section class="section_1">
+        <div class="text">
+            <h1>First I wanted to be <br> a Web - Developer</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae molestias incidunt voluptatum
+                nisi sunt quia ullam voluptate provident.
+            </p> <br>
+            <button class="contact_us">Contact Us</button>&nbsp;&nbsp;
+            <button class="service">Our Service</button>
+        </div>
+        <div class="photo">
+            <img src="img_1.jpeg" alt="This is a photo">
+        </div>
+    </section>
+    <!-- Code for section-1 END -->
+
+    <!-- Code for section-2 START -->
+    <section class="section_2">
+        <div class="photo">
+            <img src="img_2.jpg" alt="This is a photo">
+        </div>
+        <div class="text">
+            <h1>As a Web - Developer many Responsibilities Faces</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae earum recusandae, incidunt officiis amet
+                maiores expedita dolorum. Dolorum quis accusamus.
+            </p> <br>
+            <button class="service_2">Our Services</button>
+        </div>
+    </section>
+    <!-- Code for section-2 END -->
+
+    <!-- Code for section-3 START -->
+    <section class="section_3">
+        <div class="title">
+            <h1>Title Here</h1>
+            <p>Lorem ipsum available but the majority have <br> suffered alteration in some form.</p>
+        </div>
+        <div class="images">
+            <div class="sec_3">
+                <img src="img_4.jpg" alt="This is image">
+                <h1 class="text_3">Cyber Security Engineer</h1>
+                <p class="text_3">
+                    Lorem ipsum available but the majority have suffered alteration in some.
+                </p>
+            </div>
+            <div class="sec_3">
+                <img src="img_6.jpg" alt="This is image">
+                <h1 class="text_3">DevOps Engineer</h1>
+                <p class="text_3">
+                    Lorem ipsum available but the majority have suffered alteration in some.
+                </p>
+            </div>
+            <div class="sec_3">
+                <img src="img_3.jpg" alt="This is image">
+                <h1 class="text_3">Hardware Engineer</h1>
+                <p class="text_3">
+                    Lorem ipsum available but the majority have suffered alteration in some.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Code for section-3 END -->
+
+</body>
+</html>
