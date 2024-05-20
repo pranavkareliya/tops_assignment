@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            background-image: linear-gradient(to right, lightblue, purple);
+        }
+        form{
+            height: 500px;
+            width: 700px;
+            margin-top: 70px;
+            margin-left: 300px;
+            box-sizing: border-box;
+            border: 1px solid white;
+            background-color: white;
+        }
+        .title{
+            margin-top: 20px;
+            margin-left: 40px;
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+        .title::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        .label_1{
+            margin-top: 20px;
+            text-transform: capitalize;
+            font-weight: bold;
+            margin-left: 40px;
+        }
+        .label_2{
+            margin-top: 20px;
+            text-transform: capitalize;
+            font-weight: bold;
+            margin-left: 100px;
+        }
+        .label_1_box{
+            margin-left: 40px;
+        }
+        .label_2_box{
+            width: 85%;
+            margin-left: 100px;
+        }
+        .radio_gender{
+            margin-left: 40px;
+        }
+        .radio_gender_2{
+            margin-left: 100px;
+        }
+        .register_button{
+            margin-top: 20px;
+            margin-left: 60px;
+            height: 38px;
+            width: 550px;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            background-image: linear-gradient(to right, lightblue, rgb(164, 6, 164));
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h4 class="title">Registration</h4>
+        <table>
+            <tbody>
+                <tr>
+                    <td scope="col">
+                        <label for="full_name" class="label_1">Full Name</label>
+                    </td>
+                    <td scope="col">
+                        <label for="username" class="label_2">Username</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control label_1_box" id="first_name" name="first_name" placeholder="Enter Your Name">
+                    </td>
+                    <td>
+                        <input type="text" class="form-control label_2_box" id="username" name="username" placeholder="Enter Your Username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email" class="label_1">Email</label>
+                    </td>
+                    <td>
+                        <label for="number" class="label_2">Phone Number</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control label_1_box" id="email" name="email" placeholder="Enter Your Email">
+                    </td>
+                    <td>
+                        <input type="text" class="form-control label_2_box" id="number" name="number" placeholder="Enter Your Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password" class="label_1">Password</label>
+                    </td>
+                    <td>
+                        <label for="confirm_password" class="label_2">Confirm Password</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" class="form-control label_1_box" id="password" name="password" placeholder="Enter Your Password">
+                    </td>
+                    <td>
+                        <input type="password" class="form-control label_2_box" id="confirm_password" name="confirm_password" placeholder="Enter Your Confirm Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="gender" class="label_1">Gender</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" class="radio_gender" name="gender" id="male" value="male"> Male
+                        <input type="radio" class="radio_gender_2" name="gender" id="female" value="female"> Female
+                        <input type="radio" class="radio_gender_2" name="gender" id="other" value="other"> Prefer not to say
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="register_button">Register</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

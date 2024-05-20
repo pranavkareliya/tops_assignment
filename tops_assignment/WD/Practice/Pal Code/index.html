@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Job Posting</title>
+  	<style>
+/* CSS styles */
+.signup-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 900px;
+    margin: auto;
+}
+
+.left-container {
+    background: 	#096192;
+    overflow: hidden;
+    padding: 0; /* Adjusted padding */
+    position: relative;
+    text-align: center;
+    width: 300px;
+    margin-right: -10px; /* Adjusted margin */
+}
+
+.left-container h1 {
+    color: rgba(0,0,0,.8);
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 60px; /* Adjusted margin */
+}
+
+.left-container h3 {
+    color: rgba(0,0,0,.8);
+    margin-top: 8px;
+}
+
+.left-container .puppy {
+    position: absolute; /* Position the image absolutely */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Occupy full width */
+}
+
+.left-container .puppy img {
+    width: 100%;
+    margin-top: auto; /* Adjusted margin */
+    height: 500px;
+}
+
+.right-container {
+	margin-left: -124px;
+    background: #1399c6;
+    padding: 40px;
+    padding-left: 160px; /* Adjusted padding */
+}
+
+.right-container h1:nth-of-type(1) {
+    color: rgba(0,0,0,.8);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px; /* Added margin */
+}
+
+.right-container .set {
+    display: flex;
+    justify-content: space-between;
+	gap: 30px;
+    align-items: flex-start; /* Adjusted alignment */
+    margin-bottom: 20px; /* Added margin */
+}
+
+.right-container .set .input-container {
+    width: calc(50% - 10px); /* Adjusted width */
+}
+
+.right-container input {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+    width: 100%; /* Adjusted width */
+}
+
+.right-container input, label {
+    color: rgba(0,0,0,.8);
+}
+
+.right-container label, .right-container input {
+    width: 100%;
+}
+
+.right-container .textarea-container textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+}
+
+.urgent_join_select{
+	height: 27px;
+	width: 100px;
+	border: none;
+	border-radius: 4px;
+}
+
+.right-container footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0; /* Adjusted padding */
+}
+
+.right-container footer button {
+    border: 1px solid rgba(0,0,0,.2);
+    height: 38px;
+    line-height: 38px;
+    width: 120px;
+    border-radius: 19px;
+    font-family: 'Montserrat',sans-serif;
+    cursor: pointer;
+}
+
+.right-container footer #back {
+    background: #fff;
+    transition: .2s all ease-in-out;
+}
+
+.right-container footer #back:hover {
+    background: #096192;
+    color: white;
+}
+
+.right-container footer #next {
+    background: #096192;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.right-container footer #next:hover {
+    background: #096192;
+}
+/* End of CSS styles */
+
+
+
+  	</style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="left-container">
+      <h1>Empower Your Team:</h1>
+	  <h3>Post Your Next Opportunity Here!</h3>
+      <div class="puppy">
+        <img src="company1.png" alt="Puppy">
+      </div>
+    </div>
+    <div class="right-container">
+      <h1>Post a Job</h1>
+      <div class="set">
+        <div class="company-name">
+          <!-- <label for="company-name">Company Name</label> -->
+          <input style="width: 230px;" id="company-name" type="text" placeholder="Company Name">
+        </div>
+        <div class="gst-number">
+          <!-- <label for="gst-number">GST Number</label> -->
+          <input style="width: 230px;" id="gst-number" type="text" placeholder="GST Number">
+        </div>
+      </div>
+      <div class="set">
+        <div class="job-title">
+          <!-- <label for="job-title">Job Title</label> -->
+          <input style="width: 230px;" id="job-title" type="text" placeholder="Job Title">
+        </div>
+        <div class="job-location">
+          <!-- <label for="job-location">Job Location</label> -->
+          <input style="width: 230px;" id="job-location" type="text" placeholder="Job Location">
+        </div>
+      </div>
+      <div class="set">
+        <div class="job-description">
+          <!-- <label for="job-description">Job Description</label> -->
+          <div class="textarea-container">
+            <textarea style="width: 230px;" id="job-description" placeholder="Job Description"></textarea>
+          </div>
+        </div>
+        <div class="job-salary">
+          <!-- <label for="job-salary">Job Salary</label> -->
+          <input style="width: 230px;" id="job-salary" type="text" placeholder="Job Salary">
+        </div> 
+      </div>
+      <div class="set">
+        <div class="job-responsibility">
+          <!-- <label for="job-responsibility">Job Responsibility</label> -->
+          <div class="textarea-container">
+            <textarea style="width: 230px;" id="job-responsibility" placeholder="Job Responsibility"></textarea>
+          </div>
+        </div>
+        <div class="urgent-join">
+          <label style="margin-left: 225px;" for="urgent-join"></label><br>
+          <select class="urgent_join_select" id="urgent-join">
+          <!-- <select class="urgent_join_select" style="height: 27px;width: 100px;border: none;border-radius: 4px;" id="urgent-join"> -->
+			<option selected disabled>Urgent Join</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+      </div>
+      <footer>
+        <button id="back">Back</button>
+        <button id="next">Next</button>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
