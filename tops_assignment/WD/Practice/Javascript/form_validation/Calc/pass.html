@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            font-family: "Roboto Mono", monospace;
+        }
+
+        .title {
+            margin-top: 60px;
+        }
+
+        .generator {
+            background-color: #eaeaea;
+            height: auto;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px 30px 40px 30px;
+            border-radius: 10px;
+        }
+
+        div.password {
+            display: grid;
+            grid-template-columns: auto min-content;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        div.password input {
+            height: 30px;
+            width: 280px;
+            margin-top: 20px;
+            padding-left: 15px;
+            background-color: #ddd;
+            border: none;
+            color: #333;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        div.password button {
+            border-radius: 0;
+        }
+
+        div.range {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: 1fr min-content;
+        }
+
+        /* div.range span { */
+        div.range input {
+            font-size: 17px;
+            background-color: #ddd;
+            padding: 10px;
+            height: 41px;
+            width: 280px;
+            text-align: center;
+            border: none;
+            /* overflow: scroll; */
+        }
+
+        .generate,
+        .copypass {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .alertshow {
+            margin-top: -20px;
+            margin-bottom: -6px;
+            font-size: 18px;
+            color: green;
+        }
+
+        .copypass,
+        .resetbtn {
+            width: 48%;
+            margin-top: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="title">Password Generator</h1>
+
+    <div class="generator">
+        <div class="password">
+            <h4>Please Enter Password Length : </span>
+                <input type="text" id="passgen" placeholder="Ex : 10 / 20" value="" />
+        </div>
+
+        <div class="alertshow">
+            <small id="successcopy"></small> <br>
+        </div>
+
+        <div class="range">
+            <input type="text" id="output" value="" />
+        </div>
+
+        <div class="buttons">
+            <button class="copypass" onclick="copypassword()">Copy Password</button>
+            <button class="resetbtn" onclick="Resetform()">Reset</button>
+        </div>
+
+        <button class="generate" onclick="passgenerator()">
+            generate
+        </button>
+    </div>
+
+</body>
+
+<script>
+    function passgenerator() {
+
+        let pass = "";
+        let string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz" + "1234567890" + "_!@#$%&";
+        let i, char;
+        let ulength = document.getElementById("passgen").value;
+
+        if (ulength == "" || ulength == null) {
+            alert("Please Enter Digit.");
+            return false;
+        }
+
+        var check_length = /^[0-9]+$/;
+        if (!(check_length.test(ulength))) {
+            alert("Please Enter Only Digits.");
+            document.getElementById("passgen").value = "";
+            return false;
+        } else {
+            for (i = 1; i <= ulength; i++) {
+                char = Math.floor(Math.random() * string.length + 1);
+                pass += string.charAt(char);
+            }
+
+            document.getElementById("output").value = pass;
+            return pass;
+        }
+    }
+
+    function copypassword() {
+
+        let check_inp = document.getElementById("output").value;
+
+        if (check_inp == "" || check_inp == null) {
+            alert("Null Password can't be copied.");
+            return false;
+        } else {
+            let copytext = document.getElementById("output");
+
+            copytext.select();
+            copytext.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(copytext.value);
+
+            document.getElementById("successcopy").innerHTML = "Password Copied!";
+        }
+
+    }
+
+    function Resetform() {
+        document.getElementById("passgen").value = "";
+        document.getElementById("output").value = "";
+        document.getElementById("successcopy").innerHTML = "";
+    }
+
+</script>
+</html>

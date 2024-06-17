@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operations</title>
+    <style>
+        .Table {
+            border: 2px solid black;
+            height: 600px;
+            width: 600px;
+        }
+
+        .button {
+            height: 50px;
+            width: 50px;
+            font-size: 25px;
+        }
+
+        #buttonReset {
+            height: 50px;
+            width: 50px;
+            font-size: 25px;
+        }
+
+        #number2 {
+            margin-top: -100px;
+        }
+
+        #heading {
+            margin-left: 150px;
+
+        }
+
+        #Answer {
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="Table">
+        <tr>
+            <th>
+                <h2 id="heading"> All operators:</h2>
+            </th>
+        </tr>
+        <tr>
+            <td>Enter your first Number: </td>
+            <td><input type="text" id="number1"></td>
+        </tr>
+        <tr>
+            <td>Enter your second Number: </td>
+            <td><input type="text" id="number2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <!-- <button onclick="operator('+')" class="button">+</button> -->
+                <button onclick="operator('add')" class="button">+</button>
+                <button onclick="operator('-')" class="button">-</button>
+                <button onclick="operator('')" class="button"></button>
+                <button onclick="operator('/')" class="button">/</button>
+                <button onclick="operator('%')" class="button">%</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="reset()" id="buttonReset">C</button>
+            </td>
+            <td>
+                <h2>Answer is : <span id="Answer"></span></h2>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function operator(operation) {
+            const num1 = Number(document.getElementById('number1').value);
+            const num2 = Number(document.getElementById('number2').value);
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result = 'Please enter valid numbers';
+            } else {
+                switch (operation) {
+                    case 'add':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        break;
+                    case '%':
+                        result = num1 % num2;
+                        break;
+                    default:
+                        result = 'Invalid Operation';
+                }
+            }
+
+            document.getElementById('Answer').innerText = result;
+        }
+
+        function reset() {
+            document.getElementById('number1').value = '';
+            document.getElementById('number2').value = '';
+            document.getElementById('Answer').textContent = '';
+        }
+    </script>
+</body>
+
+</html>
