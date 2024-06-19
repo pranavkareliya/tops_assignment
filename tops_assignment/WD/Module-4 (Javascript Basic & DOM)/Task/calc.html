@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #ede9e9;
+            color: #333;
+        }
+
+        .main {
+            height: 500px;
+            width: 450px;
+            /* border: 2px solid red; */
+            border-radius: 20px;
+            margin: 65px auto;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .button>button {
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px;
+            /* color: #0866ff; */
+            color: gray;
+        }
+
+        .output {
+            height: 200px;
+            width: 300px;
+            /* border: 2px solid aqua; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .output .box_1>span,
+        .output .box_2>span,
+        .output .box_3>span {
+            font-weight: 600;
+        }
+
+        .output .box_1>input,
+        .output .box_2>input,
+        .output .box_3>input {
+            height: 35px;
+            width: 280px;
+            padding-left: 6px;
+            border: 2px solid lightgray;
+            /* border: 2px solid rgb(174, 172, 172); */
+            outline: none;
+        }
+
+        .output .box_1>input:focus,
+        .output .box_2>input:focus,
+        .output .box_3>input:focus {
+            border: 2px solid #3e3e3e;
+        }
+
+        .button {
+            height: 100px;
+            width: 300px;
+            /* border: 2px solid aqua; */
+            margin: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .button>button {
+            cursor: pointer;
+            border: 2px solid gray;
+            background-color: #ede9e9;
+        }
+
+        .button>button:hover {
+            border: 2px solid #333;
+        }
+
+        @media only screen and (max-width:412px) {
+            .main {
+                margin: 150px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title">Calculator</h1>
+        <div class="output">
+            <div class="box_1">
+                <span>Enter Value - 1</span> <br>
+                <input type="text" name="box1" id="box1" placeholder="Enter Value - 1" value="">
+            </div>
+            <div class="box_2">
+                <span>Enter Value - 2</span> <br>
+                <input type="text" name="box2" id="box2" placeholder="Enter Value - 2" value="">
+            </div>
+            <div class="box_3">
+                <span>Answer is : </span> <br>
+                <input type="text" name="box3" id="box3" placeholder="Answer" value="">
+            </div>
+        </div>
+
+        <div class="button">
+            <button onclick="calc('add')">+</button>
+            <button onclick="calc('sub')">-</button>
+            <button onclick="calc('div')">/</button>
+            <button onclick="calc('mul')">*</button>
+            <button onclick="calc('mod')">%</button>
+            <button onclick="reset()">C</button>
+        </div>
+    </div>
+</body>
+<script>
+    function calc(type) {
+        var value1 = +document.getElementById("box1").value;
+        var value2 = +document.getElementById("box2").value;
+        // var value1 = Number(document.getElementById("box1").value);
+        // var value2 = Number(document.getElementById("box2").value);
+        var value1check = /^[0-9]+$/;
+        var value2check = /^[0-9]+$/;
+        var result;
+
+        if (!(value1check.test(value1) || value2check.test(value2))) {
+            result = "Please Enter Valid Number";
+        } else {
+            switch (type) {
+                case 'add':
+                    result = value1 + value2;
+                    break;
+                case 'sub':
+                    result = value1 - value2;
+                    break;
+                case 'div':
+                    result = value1 / value2;
+                    break;
+                case 'mul':
+                    result = value1 * value2;
+                    break;
+                case 'mod':
+                    result = value1 % value2;
+                    break;
+                default:
+                    reset = "Invalid Input";
+                    break;
+            }
+        }
+        document.getElementById('box3').value = result;
+    }
+
+    function reset() {
+        document.getElementById("box1").value = "";
+        document.getElementById("box2").value = "";
+        document.getElementById("box3").value = "";
+    }
+</script>
+
+</html>
