@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Fade</title>
+    <style>
+        #one{
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            background-color: red;
+            /* display: none; */
+        }
+
+        #two{
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            background-color: #db3c3c;
+            /* display: none; */
+        }
+
+        #three{
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            background-color: #f17474;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <button class="fadein">Fade In</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    // // FadeIn Example
+    // // When FadeIn apply in JQuery you should write display: none; property in css
+    // $(document).ready(function () {
+    //     $(".fadein").click(function () {
+    //         $("#one").fadeIn(2500)
+    //         $("#two").fadeIn(2000)
+    //         $("#three").fadeIn(1500)
+    //     })
+    // });
+
+    // // FadeOut Example
+    // $(document).ready(function () {
+    //     $(".fadein").click(function () {
+    //         $("#one").fadeOut(2500)
+    //         $("#two").fadeOut(2000)
+    //         $("#three").fadeOut(1500)
+    //     })
+    // });
+
+    // // FadeToggle Example
+    // $(document).ready(function () {
+    //     $(".fadein").click(function () {
+    //         $("#one").fadeToggle(2500)
+    //         $("#two").fadeToggle(2000)
+    //         $("#three").fadeToggle(1500)
+    //     })
+    // })
+
+    // FadeTo Example
+    $(document).ready(function () {
+        $(".fadein").click(function () {
+            $("#one").fadeTo("slow",0.80)
+            $("#two").fadeTo("slow",0.60)
+            $("#three").fadeTo("slow",0.40)
+        })
+    })
+
+</script>
+</html>

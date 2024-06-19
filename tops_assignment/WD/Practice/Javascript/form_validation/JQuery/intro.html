@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Intro</title>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptatum quidem quas eveniet maiores,
+        ipsum veritatis perspiciatis alias dolore, doloribus voluptatem error dolor harum pariatur. Architecto vel
+        dolores facilis rem?
+    </p>
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <button class="toggle">Hide & Show</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    // Hide Paragraph 
+    $(document).ready(function () {
+        $(".hide").click(function () {
+            $("p").hide(2500)
+        })
+    })
+
+    // Show Paragraph
+    $(document).ready(function () {
+        $(".show").click(function () {
+            $("p").show(2500)
+        })
+    })
+
+    // // Toggle Example
+    // $(document).ready(function () {
+    //     $(".toggle").click(function () {
+    //         $("p").toggle(2500)
+    //     })
+    // });
+</script>
+
+</html>
