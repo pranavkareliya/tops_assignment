@@ -1,0 +1,35 @@
+<!-- 38. Use Pattern in console.log in js -->
+<!-- 2)
+    A
+    B   C
+    D   E   F
+    G   H   I   J
+    K   L   M   N   O
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38 - 2</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Check Console Log</h2>
+</body>
+<script>
+    
+    var i;
+    var j;
+    var a = 65;
+    var c = 5;
+
+    for (i = 1; i <= c; i++) {
+        for (j = 1; j <= i; j++, a++) {
+            document.write(String.fromCharCode(a) + " ");
+        }
+
+        document.write("<br>");
+
+    }
+</script>
+</html>

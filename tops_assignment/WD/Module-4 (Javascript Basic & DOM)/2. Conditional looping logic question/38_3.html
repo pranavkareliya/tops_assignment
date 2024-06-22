@@ -1,0 +1,36 @@
+<!-- 38. Use Pattern in console.log in js -->
+<!-- 3)
+    1
+    2   3
+    4   5   6
+    7   8   9   10
+    11  12  13  14  15
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38 - 3</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Check Console Log</h2>
+</body>
+<script>
+    var n = prompt("Enter the height : ");
+    var n = Number(n);
+    var string = "";
+    var count = 1;
+
+    for (var i = 1; i <= n; i++) {
+        for (var j = 1; j <= i; j++) {
+            string += count;
+            count++;
+        }
+        string += "<br>";
+    }
+
+    document.write(string + "&nbsp;");
+    
+</script>
+</html>

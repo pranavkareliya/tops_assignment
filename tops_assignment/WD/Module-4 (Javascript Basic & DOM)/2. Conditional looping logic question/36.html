@@ -1,0 +1,30 @@
+<!-- 36. write a program you have to make a summation of first and last digit (E.g. 1234 Ans = 5) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Output of Sumation of First Digit & Last Digit</h2>
+</body>
+<script>
+    var l;
+    var f;
+    var sum = 0;
+    var n = prompt("Enter the Number : ");
+    n = Number(n);
+
+    f = n;
+
+    while (f >= 10) {
+        f = f / 10;
+    }
+
+    l = n % 10;
+    sum = Math.floor(f + l)
+
+    document.write("The sum of first and last digit is : ", sum);
+</script>
+</html>
