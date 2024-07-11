@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <style>
+        table {
+            cursor: pointer;
+        }
+
+        .navbar {
+            margin: 10px auto;
+        }
+
+        #demo,
+        .searchdiv {
+            width: 100%;
+            text-align: center;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav class="navbar">
+            <form class="form-inline">
+                <input class="form-control mr-2" type="search" id="searchtext" value="" onkeyup="SearchData(this)" placeholder="Search">
+                <button class="btn btn-outline-success" >Search</button>
+                <!-- <button class="btn btn-outline-success">Search</button> -->
+            </form>
+        </nav>
+    </div>
+
+    <!-- Searchbox code start -->
+    <div class="searchdiv">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">City</th>
+                </tr>
+            </thead>
+            <tbody id="searchdata">
+                <!-- <tr>
+                    <td>105</td>
+                    <td>siddharth</td>
+                    <td>25</td>
+                    <td>Bhavnagar</td>
+                </tr> -->
+        </table>
+    </div>
+    <!-- Searchbox code end -->
+
+    <div id="demo">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">City</th>
+                </tr>
+            </thead>
+            <tbody id="allUserData">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    let tbl = '';
+    let arr_obj = [
+        {
+            id: 101,
+            name: "Pranav",
+            age: 21,
+            city: "Junagadh"
+        },
+        {
+            id: 102,
+            name: "Siddharth",
+            age: 25,
+            city: "Bhavnagar"
+        },
+        {
+            id: 103,
+            name: "Jeel",
+            age: 21,
+            city: "Keshod"
+        },
+        {
+            id: 104,
+            name: "Pal",
+            age: 21,
+            city: "Rajkot"
+        },
+        {
+            id: 105,
+            name: "Nikita",
+            age: 28,
+            city: "Surat"
+        },
+        {
+            id: 106,
+            name: "Ronak",
+            age: 22,
+            city: "Kodinar"
+        }
+    ]
+
+    
+    
+
+    // searchbox code 
+    function SearchData(e) {
+        let searchText = e.value;
+        // alert(searchText)
+        arr_obj1 = arr_obj.includes(s)
+        console.log(arr_obj1);
+        arr_obj = arr_obj1
+        // let searchtext = document.getElementById("searchtext").value;
+        // if (searchtext == null || searchtext == "") {
+        //     alert("SearchBox can't be Null");
+        //     return false;
+        // }
+        // let tbl2 = '';
+
+        // arr_obj.filter(() => {
+        //     tbl += `<tr>
+        //         <td>${y.id}</td>
+        //         <td>${y.name}</td>
+        //         <td>${y.age}</td>
+        //         <td>${y.city}</td>
+        //     </tr>`;
+        // })
+
+        // searchtext = prompt("Enter value : ");
+
+        // let result = arr_obj.filter((y) => {
+        //     return y.name == searchtext || y.age == searchtext || y.city == searchtext;
+        // })
+
+        // let result = arr_obj.filter((y) => {
+        //     return tbl2 += `<tr>
+        //             <td>${y.id}</td>
+        //             <td>${y.name}</td>
+        //             <td>${y.age}</td>
+        //             <td>${y.city}</td>
+        //         </tr>`;
+        // })
+        // document.getElementById("searchdata").innerHTML = result;
+        // console.log(result);
+
+    }
+
+    /*
+    
+    let filteredUsers = users.filter(user => user.age > 40 && user.occupation === 'programmer');
+    console.log(filteredUsers);
+
+    let users = [
+    { name: 'John', age: 25, occupation: 'gardener' },
+    { name: 'Lenny', age: 51, occupation: 'programmer' },
+    { name: 'Andrew', age: 43, occupation: 'teacher' },
+    { name: 'Peter', age: 81, occupation: 'teacher' },
+    { name: 'Anna', age: 47, occupation: 'programmer' },
+    { name: 'Albert', age: 76, occupation: 'programmer' },
+]
+
+let result = arr_obj.filter((y) => {
+   return y.name == searchtext || y.age == searchtext || y.city == searchtext;
+})
+
+let filteredUsers = users.filter((user) => {
+    return user.age > 40 && user.occupation === 'programmer';
+});
+
+console.log(filteredUsers);
+
+    */
+    arr_obj.filter((x) => {
+        tbl += `<tr>
+                <td>${x.id}</td>
+                <td>${x.name}</td>
+                <td>${x.age}</td>
+                <td>${x.city}</td>
+            </tr>`;
+    })
+    document.getElementById("allUserData").innerHTML = tbl;
+
+</script>
+
+</html>
+
+<!-- 
+let arr_obj = [
+        {
+            id: 101,
+            name: "Pranav",
+            age: 21,
+            city: "Junagadh"
+        },
+        {
+            id: 102,
+            name: "Siddharth",
+            age: 25,
+            city: "Bhavnagar"
+        },
+        {
+            id: 103,
+            name: "Jeel",
+            age: 21,
+            city: "Keshod"
+        },
+        {
+            id: 104,
+            name: "Pal",
+            age: 21,
+            city: "Rajkot"
+        },
+        {
+            id: 105,
+            name: "Nikita",
+            age: 28,
+            city: "Surat"
+        },
+        {
+            id: 106,
+            name: "Ronak",
+            age: 22,
+            city: "Kodinar"
+        }
+    ]
+    searchtext = prompt("Enter value : "); 
+let result = arr_obj.filter((y) => {
+   return y.name == searchtext || y.age == searchtext || y.city == searchtext;
+})
+
+console.log(result);
+ -->
