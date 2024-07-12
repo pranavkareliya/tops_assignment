@@ -1,0 +1,42 @@
+<!-- 3. How to create slider with animation? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main, .detail{
+            height: auto;
+            width: 100%;
+            background-color: lightgray;
+            padding: 20px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .detail{
+            display: none;
+            padding: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">Click to slide up - down</div>
+    <div class="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quos in deleniti. Accusamus doloribus voluptatum quaerat iusto! Fugit dignissimos minus ipsa esse iure odio magni, suscipit sint commodi? Dolor, ea?</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".main").click(function () {
+            $(".detail").slideToggle("slow");
+        })
+    })
+</script>
+</html>
