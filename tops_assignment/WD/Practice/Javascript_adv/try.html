@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        <input type="text" name="search" id="search" placeholder="--Search--" oninput="searchData(this)"><br><br>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="allUserData">
+
+            </tbody>
+
+        </table>
+    </div>
+    <script>
+        let tbl = '';
+        let arr_obj = [
+            {
+                id: 101,
+                name: "dsfd",
+                age: 25
+            },
+            {
+                id: 102,
+                name: "test",
+                age: 25
+            },
+            {
+                id: 103,
+                name: "test123",
+                age: 22
+            },
+            {
+                id: 104,
+                name: "abcbd",
+                age: 22
+            }
+        ]
+
+
+
+        const searchData = (e) => {
+            let txt = e.value;
+            console.log(e.value);
+            let arr1 = arr_obj.filter((i) => {
+                //i.name = test.includes(t)
+                if (i.name.includes(txt)) {
+                    return i;
+                } else {
+                    return '';
+                }
+            })
+            disp(arr1)
+
+        }
+
+        const disp = (arr_obj) => {
+            tbl = '';
+            arr_obj.map((i) => {
+                tbl += `<tr>
+                            <td>${i.id}</td>
+                            <td>${i.name}</td>
+                            <td>${i.age}</td>
+                        </tr>`
+            })
+            document.getElementById('allUserData').innerHTML = tbl
+        }
+        disp(arr_obj)
+    </script>
+</body>
+
+</html>

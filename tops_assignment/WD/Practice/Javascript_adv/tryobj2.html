@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Obj</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f9f6f6;
+        }
+        table {
+            cursor: pointer;
+        }
+
+        .navbar {
+            margin: 10px auto;
+        }
+
+        .navbar>input {
+            width: 250px;
+            border: 2px solid gray;
+            background-color: #f9f6f6;
+        }
+        .navbar>input:focus{
+            background-color: #f9f6f6;
+        }
+        .main {
+            margin: 10px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav class="navbar">
+            <input class="form-control" type="text" id="searchtext" onkeyup="searchData(this)" placeholder="Search"
+                value="" />
+        </nav>
+    </div>
+    <div class="main">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Number</th>
+                </tr>
+            </thead>
+            <tbody id="alluserdetails">
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    // let tbl ='';
+    let arr_obj = [
+        {
+            id: 101,
+            name: "Pranav",
+            age: 21,
+            city: "Junagadh",
+            number: 9426283899
+        },
+        {
+            id: 102,
+            name: "Siddharth",
+            age: 25,
+            city: "Jamnagar",
+            number: 9845625870
+        },
+        {
+            id: 103,
+            name: "Jeel",
+            age: 21,
+            city: "Keshod",
+            number: 7245858520
+        },
+        {
+            id: 104,
+            name: "Pal",
+            age: 21,
+            city: "Rajkot",
+            number: 7896542350
+        },
+        {
+            id: 105,
+            name: "Nikita",
+            age: 28,
+            city: "Surat",
+            number: 9456856250
+        },
+        {
+            id: 106,
+            name: "Ronak",
+            age: 22,
+            city: "Kodinar",
+            number: 9965841054
+        }
+    ]
+
+    let tbl = '';
+    arr_obj.forEach(a => {
+        tbl += `<tr>
+                <td>${a.id}</td>
+                <td>${a.name}</td>
+                <td>${a.age}</td>
+                <td>${a.city}</td>
+                <td>${a.number}</td>
+            </tr>`;
+    });
+    // arr_obj.filter((a) => {
+    //     tbl += `<tr>
+    //             <td>${a.id}</td>
+    //             <td>${a.name}</td>
+    //             <td>${a.age}</td>
+    //             <td>${a.city}</td>
+    //             <td>${a.number}</td>
+    //         </tr>`;
+    // })
+    document.getElementById("alluserdetails").innerHTML = tbl;
+
+    // searchcode 
+    function searchData(e) {
+        let text = e.value;
+        // console.log(e.value);
+        let arr1 = arr_obj.filter((i) => {
+            if(i.name.includes(text) || i.city.includes(text)){
+            // if(i.name.includes(text)){
+                return i;
+            } else {
+                return '';
+            }
+        })
+        display(arr1);
+    }
+
+    const display = (arr_obj) =>{
+        tbl = '';
+        arr_obj.map((i) => {
+            tbl += `<tr>
+                <td>${i.id}</td>
+                <td>${i.name}</td>
+                <td>${i.age}</td>
+                <td>${i.city}</td>
+                <td>${i.number}</td>
+            </tr>`;
+        })
+        document.getElementById("alluserdetails").innerHTML = tbl;
+    }
+    display(arr_obj);
+</script>
+
+</html>
