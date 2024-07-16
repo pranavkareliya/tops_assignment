@@ -1,0 +1,22 @@
+<!-- 51. write a js program to get the current get date. 
+Expected output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51</title>
+</head>
+<body>
+    <script>
+        // let a = new Date();
+        let a = new Date().getDate();
+        let b = new Date().getMonth() + 1;
+        let c = new Date().getFullYear();
+        document.write("<b>First Format</b> : (mm-dd-yyyy) :- " + b + "-" + a + "-" + c + "<br>");
+        document.write("<b>Second Format</b> : (mm/dd/yyyy) :- " + b + "/" + a + "/" + c + "<br>");
+        document.write("<b>Third Format</b> : (dd-mm-yyyy) :- " + a + "-" + b + "-" + c + "<br>");
+        document.write("<b>Fourth Format</b> : (dd/mm/yyyy) :- " + a + "/" + b + "/" + c + "<br>");
+    </script>
+</body>
+</html>

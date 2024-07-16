@@ -1,0 +1,97 @@
+<!-- 55. Form in Email, number, password validation? -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>55</title>
+</head>
+<body>
+
+	<form name="myform" action="" method="post" onsubmit="return validate()" style="margin-top: 200px;">
+		<table border="2" align="center">
+			<tr>
+				<th colspan="2"> <b> Email, Number, Password Validation </b> </th>
+			</tr>
+			<tr>
+				<th>Password:-</th>
+				<td><input type="password" name="pass"></td>
+			</tr>
+			<tr>
+				<th>Confirm Password:-</th>
+				<td><input type="password" name="cpass"></td>
+			</tr>
+			<tr>
+				<th>Email Address:-</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<th>Phone No:-</th>
+				<td><input type="text" name="pno"></td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="submit" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+<script>
+
+	function validate() {
+
+		var pass = document.forms["myform"]["pass"].value;
+		if (pass == "" || pass == null) {
+			alert('Please fill out the pass');
+			return false;
+		}
+
+		if (!(pass.length >= 3 && pass.length <= 8)) {
+			alert('Please,provide min 3 & max 8 char in pass');
+			return false;
+		}
+
+		var cpass = document.forms["myform"]["cpass"].value;
+		if (cpass == "" || cpass == null) {
+			alert('Please fill out the cpass');
+			return false;
+		}
+
+		if (pass == cpass) {
+		}
+		else {
+			alert('Please Enter Same values');
+			return false;
+		}
+
+
+		var email = document.forms["myform"]["email"].value;
+		if (email == " " || email == null) {
+			alert('Please fill out the email');
+			return false;
+		}
+
+		var mail = /^[0-9a-zA-Z_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+		if (!mail.test(email)) {
+			alert('Please fill proper email id');
+			return false;
+
+		}
+
+		var pno = document.forms["myform"]["pno"].value;
+		if (pno == "" || pno == null) {
+			alert('Please fill out the pno');
+			return false;
+		}
+
+		var phone = /^[0-9]{10,11}$/;
+		if (!phone.test(pno)) {
+			alert('Please fill only digits in PNO');
+			return false;
+
+		}
+	}
+</script>
+
+</html>

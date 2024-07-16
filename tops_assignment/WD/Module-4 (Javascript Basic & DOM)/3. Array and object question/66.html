@@ -1,0 +1,23 @@
+<!-- 66. Find the length of a string without using library function? -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>66</title>
+</head>
+
+<body>
+    <script>
+        function strLength(b) {
+            var length = 0;
+            while (b[length] !== undefined)
+                length++;
+            return length;
+        }
+        document.write("<b>Length of String is : </b>" + (strLength("This is a string")));
+    </script>
+</body>
+
+</html>

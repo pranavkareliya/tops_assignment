@@ -1,0 +1,25 @@
+<!-- 42. Write a js program to compare two objects? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42</title>
+</head>
+<body>
+    <script>
+        let obj1 = {
+            name:"abc",
+            age:21
+        }
+
+        let obj2 = {
+            name:"xyz",
+            age:21
+        }
+        document.write("<b>Compare between two whole objects : </b>" + (obj1 === obj2) + "<br>");
+        document.write("<b>Compare between two object name : </b>" + (obj1.name === obj2.name) + "<br>");
+        document.write("<b>Compare between two object age : </b>" + (obj1.age === obj2.age));
+    </script>
+</body>
+</html>

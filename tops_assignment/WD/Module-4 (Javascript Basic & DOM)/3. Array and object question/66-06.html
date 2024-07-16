@@ -1,0 +1,37 @@
+<!-- Write the code for adding new elements dynamically -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>66-06</title>
+</head>
+
+<body>
+    <div class="button">
+        <button id="addTask">Add Div</button>
+    </div>
+    <div class="tasks"></div>
+    <script type="text/javascript">
+
+        let task = document.getElementsByClassName("tasks");
+
+        let addTask = document.getElementById("addTask");
+
+        addTask.addEventListener('click', function () {
+            for (let i = 0; i < task.length; i++) {
+
+                let newDiv = document.createElement("div");
+
+                newDiv.setAttribute("class", "list");
+ 
+                newDiv.innerText = "New Div created";
+
+                task[i].append(newDiv);
+            }
+        }) 
+    </script>
+</body>
+
+</html>

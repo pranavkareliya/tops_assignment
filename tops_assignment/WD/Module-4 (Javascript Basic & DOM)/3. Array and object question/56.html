@@ -1,0 +1,176 @@
+<!-- 56. Dynamic form validation in js? -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>56</title>
+</head>
+<body>
+
+    <form name="myform" action="" method="post" onsubmit="return validate()" style="margin-top: 200px;">
+        <table border="2" align="center">
+            <tr>
+                <th colspan="2"> <b> Dynamic Form Validation</b> </th>
+            </tr>
+            <tr>
+                <th>User Fist Name:-</th>
+                <td><input type="text" name="ufn"></td>
+            </tr>
+
+            <tr>
+                <th>User Name:-</th>
+                <td>
+                    <input type="text" name="un">
+                    <span style="color:red" id="un"></span>
+                </td>
+            </tr>
+            <tr>
+                <th>Password:-</th>
+                <td><input type="password" name="pass"></td>
+            </tr>
+            <tr>
+                <th>Confirm Password:-</th>
+                <td><input type="password" name="cpass"></td>
+            </tr>
+            <tr>
+                <th>Email Address:-</th>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <th>Phone No:-</th>
+                <td><input type="text" name="pno"></td>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <td>
+                    Male <input type="radio" name="gender" value="m">
+                    Female <input type="radio" name="gender" value="f">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Hobby</th>
+                <td>
+                    Reading <input type="checkbox" name="chk" value="Reading">
+                    Music <input type="checkbox" name="chk" value="music">
+                    Outing <input type="checkbox" name="chk" value="outing">
+                    Cricket <input type="checkbox" name="chk" value="criket">
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" name="submit" /></td>
+
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function validate() {
+        var ufn = document.forms["myform"]["ufn"].value;
+        if (ufn == "" || ufn == null) {
+            alert('Please fill out the User First Name');
+            return;
+        }
+
+        if (!alpha.test(ufn)) {
+            alert('Please fill only alpha User First Name');
+            return false;
+        }
+
+
+        var un = document.forms["myform"]["un"].value;
+        if (un == "" || un == null) {
+            document.getElementById('un').innerHTML = "Please fill out the User Name";
+            return false;
+        }
+        else {
+            document.getElementById('un').innerHTML = "";
+        }
+
+        var pass = document.forms["myform"]["pass"].value;
+        if (pass == "" || pass == null) {
+            alert('Please fill out the pass');
+            return false;
+        }
+
+        if (!(pass.length >= 3 && pass.length <= 8)) {
+            alert('Please,provide min 3 & max 8 char in pass');
+            return false;
+        }
+
+        var cpass = document.forms["myform"]["cpass"].value;
+        if (cpass == "" || cpass == null) {
+            alert('Please fill out the cpass');
+            return false;
+        }
+
+        if (pass == cpass) {
+        }
+        else {
+            alert('Please Enter Same values');
+            return false;
+        }
+
+
+        var email = document.forms["myform"]["email"].value;
+        if (email == " " || email == null) {
+            alert('Please fill out the email');
+            return false;
+        }
+
+        var mail = /^[0-9a-zA-Z_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+        if (!mail.test(email)) {
+            alert('Please fill proper email id');
+            return false;
+        }
+
+
+
+        var pno = document.forms["myform"]["pno"].value;
+        if (pno == "" || pno == null) {
+            alert('Please fill out the pno');
+            return false;
+        }
+
+        var phone = /^[0-9]{10,11}$/;
+        if (!phone.test(pno)) {
+            alert('Please fill only digits in PNO');
+            return false;
+        }
+
+
+        var gen_arr = document.getElementsByName("gender");
+        if (gen_arr[0].checked == true) {
+
+        }
+        else if (gen_arr[1].checked == true) {
+
+        }
+        else {
+            alert('! Please Select any Gender');
+            return false;
+        }
+
+        var chk_arr = document.getElementsByName("chk");
+        if (chk_arr[0].checked == true) {
+
+        }
+        else if (chk_arr[1].checked == true) {
+
+        }
+        else if (chk_arr[2].checked == true) {
+
+        }
+        else if (chk_arr[3].checked == true) {
+
+        }
+        else {
+            alert('! Please Select minimum one Hooby');
+            return false;
+        }
+    }
+</script>
+
+</html>
