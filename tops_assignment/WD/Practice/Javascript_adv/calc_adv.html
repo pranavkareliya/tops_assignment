@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Calc</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #ede9e9;
+            color: #333;
+        }
+
+        .main {
+            /* height: 500px;
+    width: 450px; */
+            /* border: 2px solid red; */
+            height: auto;
+            width: 30%;
+            border-radius: 20px;
+            margin: 65px auto;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .title {
+            text-align: center;
+            margin: 30px 20px;
+            /* color: #0866ff; */
+            color: gray;
+        }
+
+        .output {
+            /* border: 2px solid aqua; */
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 45px;
+        }
+
+        .output .box_1>span {
+            font-weight: 600;
+        }
+
+        .output .box_1>input {
+            height: 35px;
+            width: 240px;
+            padding-left: 6px;
+            border: 2px solid lightgray;
+            /* border: 2px solid rgb(174, 172, 172); */
+            outline: none;
+        }
+
+        .num_btn {
+            height: auto;
+            width: auto;
+        }
+
+        .num_btn>button {
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            border: 2px solid gray;
+            background-color: #ede9e9;
+            margin: 10px;
+        }
+
+        .output .box_1>input:focus {
+            border: 2px solid #3e3e3e;
+        }
+
+        .button>button {
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            border: 2px solid gray;
+            background-color: #ede9e9;
+        }
+
+        .button>button:hover {
+            border: 2px solid #333;
+        }
+
+        @media only screen and (max-width:412px) {
+            .main {
+                margin: 150px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="title">Calculator</h1>
+        <div class="output">
+            <div class="box_1">
+                <span>Enter Value</span> <br>
+                <input type="text" name="box1" id="box1" placeholder="Enter Value" value="">
+            </div>
+            <div class="num_btn">
+                <button onclick="clearData()">AC</button>
+                <button onclick="disp('%')">%</button>
+                <button onclick="deletechar()">DEL</button>
+                <button onclick="disp('/')">/</button> <br>
+                <button onclick="disp(1)">1</button>
+                <button onclick="disp(2)">2</button>
+                <button onclick="disp(3)">3</button>
+                <button onclick="disp('*')">X</button> <br>
+                <button onclick="disp(4)">4</button>
+                <button onclick="disp(5)">5</button>
+                <button onclick="disp(6)">6</button>
+                <button onclick="disp('-')">-</button> <br>
+                <button onclick="disp(7)">7</button>
+                <button onclick="disp(8)">8</button>
+                <button onclick="disp(9)">9</button>
+                <button onclick="disp('+')">+</button> <br>
+                <button onclick="disp(0)">0</button>
+                <button onclick="disp()">00</button>
+                <button onclick="disp('.')">.</button>
+                <button onclick="final_ans()">=</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let txt = '';
+    const disp = (num) => {
+        txt += num;
+        document.getElementById("box1").value = txt;
+    }
+    const final_ans = () => {
+        let ans = eval(txt);
+        document.getElementById("box1").value = ans;
+        txt = ans;
+    }
+    const deletechar = () => {
+        let data = document.getElementById("box1").value;
+        // console.log("Original Data : " + data); // console
+        let convertdata = data.toString().split('');
+        // console.log("Converted Data : " + convertdata); // console
+        convertdata.pop()
+        // console.log("Converted Data pop : " + convertdata); // console
+        document.getElementById("box1").value = convertdata;
+    }
+    const clearData = () => {
+        txt = ''
+        ans = ''
+        document.getElementById("box1").value = '';
+    }
+</script>
+
+</html>
