@@ -29,7 +29,7 @@
 	<!-- summernote -->
 	<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 	<style>
-		.content-wrapper{
+		.content-wrapper {
 			display: flex;
 			justify-content: space-around;
 			align-items: top;
@@ -190,12 +190,6 @@
 
 		<!-- Main Sidebar Container -->
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
-			<!-- Brand Logo -->
-			<a href="index3.html" class="brand-link">
-				<img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-					style="opacity: .8">
-				<span class="brand-text font-weight-light">AdminLTE 3</span>
-			</a>
 
 			<!-- Sidebar -->
 			<div class="sidebar">
@@ -260,11 +254,11 @@
 		</aside>
 
 		<!-- Content Wrapper. Contains page content -->
-		
+
 		<div class="content-wrapper">
-			<!-- code for inout text box -->
+			<!-- code for input text box -->
 			<div class="col-md-6 pt-3 pl-2">
-                <div class="card card-primary">
+				<div class="card card-primary">
 					<div class="card-header">
 						<h3 class="card-title">Category</h3>
 					</div>
@@ -274,14 +268,14 @@
 						<div class="card-body">
 							<div class="form-group">
 								<label for="addcategory">Add Category</label>
-								<input type="text" class="form-control" id="addcategory"
-									placeholder="Category">
+								<input type="hidden" id="hiddenid" value="">
+								<input type="text" class="form-control" id="addcategory" placeholder="Category">
 							</div>
 							<button type="button" class="btn btn-primary" onclick="getData()">Save</button>
 						</div>
 					</form>
 				</div>
-            </div>
+			</div>
 			<!-- code for table -->
 			<div class="col-md-6 pt-3 pl-0">
 				<div class="card">
@@ -297,7 +291,7 @@
 								<tr>
 									<th style="width: 8%;text-align: center;">#</th>
 									<th>Name</th>
-									<th style="width: 28%;">Action</th>
+									<th style="width: 30%;">Action</th>
 								</tr>
 							</thead>
 							<tbody id="catdata">
@@ -306,6 +300,9 @@
 					</div>
 				</div>
 			</div>
+
+
+
 		</div>
 		<!-- /.content-wrapper -->
 		<footer class="main-footer">
@@ -361,4 +358,5 @@
 </body>
 <!-- script for localStorage -->
 <script src="category.js"></script>
+
 </html>

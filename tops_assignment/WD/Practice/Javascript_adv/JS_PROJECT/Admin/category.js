@@ -2,12 +2,27 @@ let list_arr = [];
 const getData = () => {
     let data = JSON.parse(localStorage.getItem("categoryInfo"))
     let getvalue = document.getElementById("addcategory").value;
+    let getid = document.getElementById("hiddenid").value;
     let len_id = data != null ? data.length+1 : 1;
-    let obj = {
-        id:len_id,
-        name:getvalue
+    
+    if(getid != ''){
+        // update
+        let updateData = data.map((i) => {
+            if(i.id == getid){
+                i.name = getvalue;
+            }
+            return i;
+        })
+        list_arr = updateData;
+    } else {
+        // insert
+        let obj = {
+            id:len_id,
+            name:getvalue
+        }
+        list_arr.push(obj);
     }
-    list_arr.push(obj);
+    
     let convert_data = JSON.stringify(list_arr)
     localStorage.setItem("categoryInfo",convert_data)
     document.getElementById("addcategory").value = '';
@@ -24,7 +39,7 @@ const displayData = () => {
                 <th style="text-align: center;">${i.id}</th>
                 <td>${i.name}</td>
                 <td>
-                    <button class="btn btn-info">Edit</button>
+                    <button class="btn btn-info" onclick="editData(${i.id})">Edit</button>
                     <button class="btn btn-danger" onclick="deleteData(${i.id})">Delete</button>
                 </td>
             </tr>`;
@@ -49,3 +64,13 @@ const deleteData = (id) => {
     displayData()
 }
 displayData()
+
+const editData = (id) => {
+    let data = JSON.parse(localStorage.getItem("categoryInfo"))
+    let final_res = data.find((i) => {
+        return i.id == id
+    })
+    document.getElementById("addcategory").value = final_res.name;
+    let id_res = document.getElementById("hiddenid").value = id;
+    
+}
