@@ -1,0 +1,2 @@
+# Writing readable and maintainable code
+print("Readability refers to how easily another analyst can gain a decent understand of how your code works, within a reasonable amount of time. Maintainability refers to how easily other analysts can understand your code well enough to modify and repair it.")

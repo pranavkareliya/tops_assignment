@@ -1,0 +1,1 @@
+# Basic operations: concatenation, repetition, string methods (upper(), lower(), etc.).

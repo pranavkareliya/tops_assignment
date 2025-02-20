@@ -1,0 +1,1 @@
+# How functional programming works in Python.
