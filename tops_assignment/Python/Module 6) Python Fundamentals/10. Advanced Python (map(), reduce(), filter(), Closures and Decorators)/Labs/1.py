@@ -1,7 +1,6 @@
 # Write a Python program to apply the map() function to square a list of numbers
 
-n = [1,2,3,4,5,6]
+n = [1, 2, 3, 4, 5, 6]
+square = map(lambda x: x**2, n)
 
-for i in n:
-    sq = map(i[n] * 2)
-print(sq)
+print(list(square))

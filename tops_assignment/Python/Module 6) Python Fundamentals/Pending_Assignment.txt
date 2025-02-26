@@ -1,5 +1,1 @@
-06. Generators and Iterators -> Labs -> 1,2
-
-10. Advanced Python (map(), reduce(), filter(), Closures and Decorators) -> Labs -> 1,2,3
-
 Assessment

@@ -19,12 +19,11 @@ function CRUD() {
 
     const [dataEdit, setDataEdit] = useState(false)
 
-    // Fetch All Data
+    // Fetch data
     const fetchData = async () => {
         try {
             const response = await axios.get(baseApi)
             setAllData(response.data)
-            console.log(response.data)
         } catch (error) {
             console.log(error)
         }
@@ -44,50 +43,15 @@ function CRUD() {
         try {
             await axios.post(baseApi, newData)
             fetchData()
-            clearForm()
-            alert("Data Insert Successfully...!!!")
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-    // Delete Data 
-    const deleteData = async (id) => {
-        if (!confirm("Are You Sure You Want to Delete This Data....??")) {
-            return false;
-        }
-
-        try {
-            await axios.delete(`${baseApi}/${id}`)
-            fetchData()
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
-    // Edit Data
-    const editData = async () => {
-        const updateData = {
-            first_Name: firstName,
-            last_Name: lastName,
-            email: formEmail,
-            mobile_Number: formNumber,
-            city: formCity,
-            state: formState,
-        }
-
-        try {
-            await axios.put(`${baseApi}/${id}`, updateData)
-            fetchData()
-            clearForm()
-            setDataEdit(false)
+            formClear()
+            alert("Data Insert Successfully...!!")
         } catch (error) {
             console.log(error)
         }
     }
 
     // Select Edit
-    const selectEdit = async (i) => {
+    const selectEdit = (i) => {
         setDataEdit(true)
         setId(i.id)
         setFirstName(i.first_Name)
@@ -98,8 +62,43 @@ function CRUD() {
         setFormState(i.state)
     }
 
-    // ClearForm
-    const clearForm = () => {
+    // Edit Data
+    const editData = async () => {
+        const updatedData = {
+            first_Name: firstName,
+            last_Name: lastName,
+            email: formEmail,
+            mobile_Number: formNumber,
+            city: formCity,
+            state: formState,
+        }
+
+        try {
+            await axios.put(`${baseApi}/${id}`, updatedData)
+            fetchData();
+            formClear();
+            setDataEdit(false);
+            alert("Data Updated Successfullyy...!!")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    // Delete Data
+    const dataDelete = async (id) => {
+        if (!confirm("Are You Sure You Want to Delete this Record...??")) {
+            return false;
+        }
+        try {
+            await axios.delete(`${baseApi}/${id}`)
+            fetchData()
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    // Form Clear
+    const formClear = () => {
+        setDataEdit(false)
         setId("")
         setFirstName("")
         setLastName("")
@@ -107,7 +106,6 @@ function CRUD() {
         setFormNumber("")
         setFormCity("")
         setFormState("")
-        setDataEdit(false)
     }
 
     useEffect(() => {
@@ -168,9 +166,9 @@ function CRUD() {
 
                         <div className="flex items-center justify-between">
                             <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:cursor-pointer" onClick={dataEdit ? editData : insertData}>
-                                {dataEdit ? "Update" : "Add"}
+                                {dataEdit ? "Updated" : "Add"}
                             </button>
-                            <button type='reset' className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:cursor-pointer" onClick={() => clearForm()}>
+                            <button type='reset' className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:cursor-pointer" onClick={formClear}>
                                 Clear
                             </button>
                         </div>
@@ -180,7 +178,7 @@ function CRUD() {
             {/* Form End */}
 
             {/* CRUD Table - Start */}
-            <div className='mt-15 flex justify-center items-center border border-sky-700'>
+            <div className='mt-15 flex justify-center items-center border border-sky-700 text-center'>
                 <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                     <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
                         <tr>
@@ -196,6 +194,29 @@ function CRUD() {
                     </thead>
                     <tbody>
                         {
+                            allData.map((i, index) => {
+                                return (
+                                    <tr className='bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200' key={index}>
+                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {i.id}
+                                        </th>
+                                        <td className="px-6 py-4">{i.first_Name}</td>
+                                        <td className="px-6 py-4">{i.last_Name}</td>
+                                        <td className="px-6 py-4">{i.email}</td>
+                                        <td className="px-6 py-4">{i.mobile_Number}</td>
+                                        <td className="px-6 py-4">{i.city}</td>
+                                        <td className="px-6 py-4">{i.state}</td>
+                                        <td className="px-6 py-4">
+                                            <button type="button" className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 hover:cursor-pointer" onClick={() => selectEdit(i)}>Edit</button> {" "}
+
+                                            <button type="button" className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 hover:cursor-pointer" onClick={() => dataDelete(i.id)}>Delete</button>
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+
+                        {/* {
                             allData.map((i) => {
                                 return (
                                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200" key={i.id}>
@@ -216,7 +237,7 @@ function CRUD() {
                                     </tr>
                                 )
                             })
-                        }
+                        } */}
                     </tbody>
                 </table>
             </div>
