@@ -1,0 +1,1 @@
+# Write a Python program to separate keys and values from a dictionary using keys() and values() methods.

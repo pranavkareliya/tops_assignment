@@ -1,0 +1,1 @@
+# Write a Python program to access values using keys from a dictionary.

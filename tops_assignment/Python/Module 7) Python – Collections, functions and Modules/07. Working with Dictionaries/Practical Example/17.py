@@ -1,0 +1,1 @@
+# Write a Python program to convert two lists into one dictionary using a for loop.

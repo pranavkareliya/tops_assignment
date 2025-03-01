@@ -1,0 +1,1 @@
+# Different types of functions: with/without parameters, with/without return values.
