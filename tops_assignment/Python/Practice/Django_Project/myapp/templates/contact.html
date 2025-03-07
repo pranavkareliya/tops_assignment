@@ -1,0 +1,97 @@
+{% extends 'header.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            outline: none;
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus,
+        textarea:focus {
+            border: 2px solid #04AA6D;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="margin: 20px auto;">
+        <span style="color: #04AA6D;">
+            {% if msg %}
+            {{msg}}
+            {% endif %}
+        </span>
+        <form name="contact" method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name..." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email..." required>
+
+            <label for="mobile">Mobile</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Your Mobile Number..." required>
+
+            <label for="remarks">Remarks</label>
+            <textarea id="remarks" name="remarks" placeholder="Write Something Related to Remarks..."
+                style="height:200px" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <!-- Data Show -->
+    <div class="container" style="margin: 10px auto 10px;">
+        {% for i in contacts %}
+        <label for="name">Full Name : </label>
+        <span>
+            {{i.name}}
+        </span><br>
+        <label for="name">Remarks : </label>
+        <span>
+            {{i.remarks}}
+        </span> <hr>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
+{% endblock %}

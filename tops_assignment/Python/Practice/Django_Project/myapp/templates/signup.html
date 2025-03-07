@@ -1,0 +1,160 @@
+{% extends 'header.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Signup Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=tel],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus,
+        input[type=email]:focus,
+        input[type=tel]:focus,
+        textarea:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn,
+        .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+
+            .cancelbtn,
+            .signupbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form name="signup" method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <div class="container">
+            <span style="color: #04AA6D;">
+                {% if msg %}
+                    {{msg}}
+                {% endif %}
+            </span>
+            <span style="color: red;">
+                {% if msg2 %}
+                    {{msg2}}
+                {% endif %}
+            </span>
+            <h1>Sign Up</h1>
+            <hr>
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+                <div style="width: 45%;">
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="Enter First Name" id="fname" name="fname" required>
+                </div>
+                <div style="width: 45%;">
+                    <label for="lname"><b>Last Name</b></label>
+                    <input type="text" placeholder="Enter Last Name" id="lname" name="lname" required>
+                </div>
+            </div>
+
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+                <div style="width: 45%;">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" id="email" name="email" required>
+                </div>
+                <div style="width: 45%;">
+                    <label for="mobile"><b>Mobile</b></label>
+                    <input type="tel" placeholder="Enter Mobile" id="mobile" name="mobile" required>
+                </div>
+            </div>
+
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+                <div style="width: 45%;">
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" id="password" placeholder="Enter Password" name="password" required>
+                </div>
+                <div style="width: 45%;">
+                    <label for="cpassword"><b>Confirm Password</b></label>
+                    <input type="password" id="cpassword" placeholder="Repeat Password" name="cpassword" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="address">Address</label>
+                <textarea id="address" name="address" placeholder="Enter Address" style="height:100px;width: 100%;"
+                    required></textarea>
+            </div>
+
+            <div class="clearfix">
+                <button type="reset" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
+{% endblock %}
