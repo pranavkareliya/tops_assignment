@@ -1,1 +1,2 @@
 # Accessing tuple elements using positive and negative indexing.
+print("You can use negative indexing to access items from the end of the tuple, with -1 being the last item, -2 being the second-to-last, and so on.")

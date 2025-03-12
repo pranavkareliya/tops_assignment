@@ -1,1 +1,2 @@
 # Slicing a tuple to access ranges of elements.
+print("ou can also use slicing to access a range of items in a tuple. The syntax for slicing is tuple[start:stop:step]. start is the index at which the slice starts (inclusive). stop is the index at which the slice ends (exclusive).")
