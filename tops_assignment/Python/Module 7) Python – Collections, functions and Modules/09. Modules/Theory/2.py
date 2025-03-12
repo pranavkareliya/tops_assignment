@@ -1,1 +1,3 @@
 # Standard library modules: math, random
+
+print("In Python, 'math' and 'random' are both considered standard library modules, meaning they come pre-installed with the language and can be used directly by importing them into your code 'math' provides functions for various mathematical operations like trigonometry, logarithms, and basic arithmetic, while 'random' generates pseudo-random numbers for tasks like selecting random elements from a list or simulating random events.")
