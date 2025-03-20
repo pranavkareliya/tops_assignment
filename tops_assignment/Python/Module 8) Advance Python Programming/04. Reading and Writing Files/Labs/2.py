@@ -1,0 +1,1 @@
+# Write a Python program to write multiple strings into a file.

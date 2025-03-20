@@ -1,0 +1,1 @@
+# Reading from a file using read(), readline(), readlines()

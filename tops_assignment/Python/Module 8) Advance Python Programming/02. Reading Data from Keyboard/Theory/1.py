@@ -1,0 +1,1 @@
+# Using the input() function to read user input from the keyboard.

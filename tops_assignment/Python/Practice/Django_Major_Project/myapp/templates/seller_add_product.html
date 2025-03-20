@@ -1,0 +1,91 @@
+{% extends 'seller_header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Seller | Add Product</title>
+</head>
+
+<body class="animsition">
+
+	<!-- Title page -->
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92"
+		style="background-image: url('{% static 'images/bg-01.jpg' %}');">
+		<h2 class="ltext-105 cl0 txt-center">
+			Seller | Add Product
+		</h2>
+	</section>
+
+
+	<!-- Content page -->
+	<section class="bg0 p-t-104 p-b-116">
+		<div class="container">
+			<div class="flex-w flex-tr" style="display: flex;justify-content: center;align-items: center;">
+				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+					<span style="color: #04AA6D;text-align: center;">
+						{% if msg %}
+							{{msg}}
+						{% endif %}
+					</span>
+					<span style="color: red;text-align: center;">
+						{% if msg2 %}
+							{{msg2}}
+						{% endif %}
+					</span>
+					<form method="post" action="{% url 'seller_add_product' %}" enctype="multipart/form-data">
+						{% csrf_token %}
+						<h4 class="mtext-105 cl2 txt-center p-b-30">
+							Add Product
+						</h4>
+
+						<div class="bor8 m-b-20 how-pos4-parent">
+							<select class="stext-111 cl2 plh3 size-116 p-l-20 p-r-30" name="product_category">
+								<option selected disabled>-- Select Product Category --</option>
+								<option value="men">Men</option>
+								<option value="women">Women</option>
+								<option value="kids">Kids</option>
+							</select>
+						</div>
+
+						<div class="bor8 m-b-20 how-pos4-parent">
+							<input type="text" name="product_name" placeholder="Your Product Name" class="stext-111 cl2 plh3 size-116 p-l-30 p-r-30">
+						</div>
+
+                        <div class="bor8 m-b-20 how-pos4-parent">
+							<select class="stext-111 cl2 plh3 size-116 p-l-20 p-r-30" name="product_size" id="product_size">
+								<option selected disabled>-- Select Product Size --</option>
+								<option value="s">Small (S)</option>
+								<option value="m">Medium (M)</option>
+								<option value="l">Large (L)</option>
+								<option value="xl">Extra Large (XL)</option>
+								<option value="xxl">Extra Extra Large (XXL)</option>
+							</select>
+						</div>
+
+						<div class="bor8 m-b-20 how-pos4-parent">
+							<input type="text" name="product_price" placeholder="Your Product Price" class="stext-111 cl2 plh3 size-116 p-l-30 p-r-30">
+						</div>
+
+                        <div class="bor8 m-b-30">
+							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="product_desc"
+								placeholder="Your Product Description"></textarea>
+						</div>
+
+						<div class="bor8 m-b-20 how-pos4-parent">
+							<input type="file" name="product_picture" class="stext-111 cl2 plh3 size-116 p-l-30 p-r-30">
+						</div>
+
+						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+							Add Product
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
+{% endblock %}

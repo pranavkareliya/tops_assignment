@@ -1,0 +1,1 @@
+# Opening files in different modes ('r', 'w', 'a', 'r+', 'w+')
