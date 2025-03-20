@@ -18,4 +18,6 @@ urlpatterns = [
     path('logout/',views.logout,name='logout'),
     path('seller_index/',views.seller_index,name='seller_index'),
     path('seller_add_product/',views.seller_add_product,name='seller_add_product'),
+    path('seller_view_product/',views.seller_view_product,name='seller_view_product'),
+    path('seller_product_details/<int:pk>/',views.seller_product_details,name='seller_product_details'),
 ]

@@ -67,7 +67,8 @@ def login(request):
             else:
                 msg2 = "Incorrect Password..."
                 return render(request, 'login.html',{'msg2':msg2})
-        except:
+        except Exception as e:
+            print("error is : ",e)
             msg2 = "Email Not Registered..."
             return render(request, 'login.html',{'msg2':msg2})
     else:
@@ -186,4 +187,27 @@ def shoping_cart(request):
     return render(request, 'shoping_cart.html')
 
 def seller_add_product(request):
-        return render(request, 'seller_add_product.html')
+        if request.method == "POST":
+            seller = User.objects.get(email=request.session['email'])
+            Product.objects.create(
+                seller=seller,
+                product_category=request.POST['product_category'],
+                product_name=request.POST['product_name'],
+                product_price=request.POST['product_price'],
+                product_size=request.POST['product_size'],
+                product_desc=request.POST['product_desc'],
+                product_picture=request.FILES['product_picture'],
+            )
+            msg = "Product Added Successfully..."
+            return render(request, 'seller_add_product.html',{'msg':msg})
+        else:
+            return render(request, 'seller_add_product.html')
+        
+def seller_view_product(request):
+    seller=User.objects.get(email=request.session['email'])
+    products=Product.objects.filter(seller=seller)
+    return render(request, 'seller_view_product.html',{'products':products})
+
+def seller_product_details(request,pk):
+    product=Product.objects.get(pk=pk)
+    return render(request, 'seller_product_details.html',{'product':product})
