@@ -1,0 +1,1 @@
+# Write a Django project that uses JavaScript to validate fields like email and phone number in a registration form.

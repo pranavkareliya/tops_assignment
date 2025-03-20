@@ -1,0 +1,1 @@
+# Introduction to integrating payment gateways (like Paytm) in Django projects.

@@ -1,0 +1,1 @@
+# Write a Django project that customizes the admin panel to display more detailed doctor information (e.g., specialties, availability).

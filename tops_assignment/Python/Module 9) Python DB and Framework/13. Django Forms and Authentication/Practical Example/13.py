@@ -1,0 +1,1 @@
+# Write a Django project to handle user sign up, login, password reset, and profile updates.

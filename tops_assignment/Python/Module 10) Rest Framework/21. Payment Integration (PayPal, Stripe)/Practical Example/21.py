@@ -1,0 +1,1 @@
+# Write a Django project to allow users to make payments via Stripe for booking doctor appointments.

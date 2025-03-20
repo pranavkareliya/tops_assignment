@@ -1,0 +1,1 @@
+# Write a Django REST API to serialize a Doctor model with fields like name, specialty, and contact details.

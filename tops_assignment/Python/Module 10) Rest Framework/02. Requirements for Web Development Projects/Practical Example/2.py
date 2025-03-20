@@ -1,0 +1,1 @@
+# Write a Python script to set up a Django project and install packages like django, djangorestframework, requests, etc.

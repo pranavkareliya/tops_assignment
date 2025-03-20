@@ -1,0 +1,1 @@
+# Write a Django project that integrates Google login and sends OTPs to users using Twilio.

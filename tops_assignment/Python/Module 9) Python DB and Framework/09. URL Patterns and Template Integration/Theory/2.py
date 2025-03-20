@@ -1,0 +1,1 @@
+# Integrating templates with views to render dynamic HTML content.

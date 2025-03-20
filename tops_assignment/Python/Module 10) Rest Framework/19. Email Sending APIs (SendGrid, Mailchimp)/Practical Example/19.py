@@ -1,0 +1,1 @@
+# Write a Django project to send a confirmation email to a user using the SendGrid API after successful registration.

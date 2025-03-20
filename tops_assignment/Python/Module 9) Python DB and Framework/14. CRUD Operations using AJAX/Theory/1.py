@@ -1,0 +1,1 @@
+# Using AJAX for making asynchronous requests to the server without reloading the page

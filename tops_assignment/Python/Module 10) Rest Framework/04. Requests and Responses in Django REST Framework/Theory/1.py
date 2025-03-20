@@ -1,0 +1,1 @@
+# HTTP request methods (GET, POST, PUT, DELETE).

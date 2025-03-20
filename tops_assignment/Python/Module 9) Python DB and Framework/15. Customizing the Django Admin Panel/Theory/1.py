@@ -1,0 +1,1 @@
+# Techniques for customizing the Django admin panel.

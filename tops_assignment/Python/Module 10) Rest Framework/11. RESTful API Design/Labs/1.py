@@ -1,0 +1,1 @@
+# Design a REST API for managing doctor profiles using Django REST Framework.

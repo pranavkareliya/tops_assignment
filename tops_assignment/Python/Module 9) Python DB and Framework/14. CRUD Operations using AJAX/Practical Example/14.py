@@ -1,0 +1,1 @@
+# Write a Django project that uses AJAX to add, edit, or delete doctor profiles without refreshing the page.

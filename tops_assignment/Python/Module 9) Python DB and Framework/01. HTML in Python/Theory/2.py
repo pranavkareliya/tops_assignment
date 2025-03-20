@@ -1,0 +1,1 @@
+# Generating dynamic HTML content using Django templates.

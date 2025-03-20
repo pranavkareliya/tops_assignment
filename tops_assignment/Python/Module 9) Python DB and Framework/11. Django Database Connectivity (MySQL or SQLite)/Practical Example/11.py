@@ -1,0 +1,1 @@
+# Write a Django project to connect to an SQLite/MySQL database and manage doctor records.

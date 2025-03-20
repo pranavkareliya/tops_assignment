@@ -1,0 +1,1 @@
+# Write a Django project that renders an HTML file displaying “Welcome to Doctor Finder” on the home page.

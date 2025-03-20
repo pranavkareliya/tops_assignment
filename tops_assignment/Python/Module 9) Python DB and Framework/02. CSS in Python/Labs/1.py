@@ -1,0 +1,1 @@
+# Create a CSS file to style a basic HTML template in Django.

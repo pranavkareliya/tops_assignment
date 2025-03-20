@@ -1,0 +1,1 @@
+# Write a requirements.txt file for a Django project that includes all necessary dependencies.

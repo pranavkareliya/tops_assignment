@@ -1,0 +1,1 @@
+# Write a Python program to create a Django project and understand its directory structure.

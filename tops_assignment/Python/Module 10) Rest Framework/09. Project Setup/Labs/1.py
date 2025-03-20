@@ -1,0 +1,1 @@
+# Create a new Django project and app for managing doctor profiles.

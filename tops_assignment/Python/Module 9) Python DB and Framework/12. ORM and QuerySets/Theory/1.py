@@ -1,0 +1,1 @@
+# Understanding Django’s ORM and how QuerySets are used to interact with the database.

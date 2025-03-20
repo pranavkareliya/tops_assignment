@@ -1,0 +1,1 @@
+# Create a Django project that fetches weather data for a given location.

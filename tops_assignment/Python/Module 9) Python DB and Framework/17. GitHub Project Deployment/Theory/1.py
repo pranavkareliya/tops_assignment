@@ -1,0 +1,1 @@
+# Steps to push a Django project to GitHub.

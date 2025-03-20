@@ -1,0 +1,1 @@
+# Write a Python program to create and activate a virtual environment, then install Django in it.

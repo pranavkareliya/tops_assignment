@@ -1,0 +1,1 @@
+# REST principles: statelessness, resource-based URLs, and using HTTP methods for CRUD operations.

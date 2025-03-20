@@ -1,0 +1,1 @@
+# Write a Django project with models, views, and templates to display doctor information.

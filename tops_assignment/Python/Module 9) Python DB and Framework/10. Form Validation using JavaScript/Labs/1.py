@@ -1,0 +1,1 @@
+# Write a Django project to implement JavaScript form validation for a user registration form.

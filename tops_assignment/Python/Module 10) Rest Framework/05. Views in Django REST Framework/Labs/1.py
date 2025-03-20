@@ -1,0 +1,1 @@
+# Implement a class-based view in DRF for managing doctor profiles.

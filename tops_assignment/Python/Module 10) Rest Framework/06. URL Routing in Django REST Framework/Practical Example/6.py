@@ -1,0 +1,1 @@
+# Write a Django project that routes URLs to the views handling doctor CRUD operations (/doctors, /doctors/<id>).

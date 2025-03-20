@@ -1,0 +1,1 @@
+# Understanding views in DRF: Function-based views vs Class-based views.

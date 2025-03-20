@@ -1,0 +1,1 @@
+# Implementing Django’s authentication system (sign up, login, logout, password management).

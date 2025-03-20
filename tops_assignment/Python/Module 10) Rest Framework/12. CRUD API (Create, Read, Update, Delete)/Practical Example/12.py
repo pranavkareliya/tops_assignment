@@ -1,0 +1,1 @@
+# Write a Django project that allows users to create, read, update, and delete doctor profiles using API endpoints.

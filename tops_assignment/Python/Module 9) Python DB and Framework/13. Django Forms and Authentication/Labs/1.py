@@ -1,0 +1,1 @@
+# Create a Django project for user registration and login functionality.

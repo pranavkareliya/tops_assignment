@@ -1,0 +1,1 @@
+# Implement email sending functionality in a Django project using SendGrid.

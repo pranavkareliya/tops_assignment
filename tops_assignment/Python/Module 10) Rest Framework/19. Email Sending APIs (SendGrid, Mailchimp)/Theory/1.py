@@ -1,0 +1,1 @@
+# Using email sending APIs like SendGrid and Mailchimp to send transactional emails.

@@ -1,0 +1,1 @@
+# How to serve static files (like CSS, JavaScript) in Django.

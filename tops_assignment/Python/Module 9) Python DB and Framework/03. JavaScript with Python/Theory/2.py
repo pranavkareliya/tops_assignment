@@ -1,0 +1,1 @@
+# Linking external or internal JavaScript files in Django.

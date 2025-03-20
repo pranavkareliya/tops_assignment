@@ -1,0 +1,1 @@
+# Configuring Django settings for database, static files, and API keys.

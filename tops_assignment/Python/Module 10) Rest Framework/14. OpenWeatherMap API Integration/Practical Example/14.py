@@ -1,0 +1,1 @@
+# Write a Django project to fetch current weather data for a location using the OpenWeatherMap API.

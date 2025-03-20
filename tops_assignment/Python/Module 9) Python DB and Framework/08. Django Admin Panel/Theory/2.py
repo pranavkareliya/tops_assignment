@@ -1,0 +1,1 @@
+# Customizing the Django admin interface to manage database records.

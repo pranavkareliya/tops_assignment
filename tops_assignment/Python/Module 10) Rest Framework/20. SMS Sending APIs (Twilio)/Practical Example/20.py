@@ -1,0 +1,1 @@
+# Write a Django project that sends an OTP to the user's mobile number during registration using Twilio API.

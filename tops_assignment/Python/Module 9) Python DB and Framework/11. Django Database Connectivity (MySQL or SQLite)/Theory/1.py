@@ -1,0 +1,1 @@
+# Connecting Django to a database (SQLite or MySQL).

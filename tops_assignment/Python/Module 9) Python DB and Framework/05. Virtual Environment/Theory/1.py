@@ -1,0 +1,1 @@
+# Understanding the importance of a virtual environment in Python projects.

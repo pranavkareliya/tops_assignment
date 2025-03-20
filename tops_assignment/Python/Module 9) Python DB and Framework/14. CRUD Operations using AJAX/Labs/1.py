@@ -1,0 +1,1 @@
+# Implement AJAX in a Django project for performing CRUD operations.

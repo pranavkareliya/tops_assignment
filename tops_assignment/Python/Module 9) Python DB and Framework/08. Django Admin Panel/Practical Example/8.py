@@ -1,0 +1,1 @@
+# Write a Django project to create an admin panel and add custom fields for managing doctor information.

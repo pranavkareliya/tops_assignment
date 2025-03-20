@@ -1,0 +1,1 @@
+# Write a Django project that displays details (population, language, currency) of a country entered by the user using the REST Countries API.

@@ -1,0 +1,1 @@
+# Write a Python script to fetch a random joke from an API and display it on the console.

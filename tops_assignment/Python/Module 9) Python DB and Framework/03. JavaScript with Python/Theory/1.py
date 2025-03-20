@@ -1,0 +1,1 @@
+# Using JavaScript for client-side interactivity in Django templates.

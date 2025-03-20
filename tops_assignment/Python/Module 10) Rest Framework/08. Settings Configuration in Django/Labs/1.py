@@ -1,0 +1,1 @@
+# Modify settings.py to connect Django to a MySQL or SQLite database.

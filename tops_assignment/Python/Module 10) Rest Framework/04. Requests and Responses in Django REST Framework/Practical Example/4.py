@@ -1,0 +1,1 @@
+# Write a Django project where the API accepts a POST request to add a doctor’s details to the database.

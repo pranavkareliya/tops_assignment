@@ -1,0 +1,1 @@
+# Set up a virtual environment for a Django project.

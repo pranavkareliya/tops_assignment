@@ -1,0 +1,1 @@
+# Advantages of Django (e.g., scalability, security).

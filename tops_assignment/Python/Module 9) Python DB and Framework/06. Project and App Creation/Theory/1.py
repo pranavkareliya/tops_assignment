@@ -1,0 +1,1 @@
+# Steps to create a Django project and individual apps within the project.

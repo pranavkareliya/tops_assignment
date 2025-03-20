@@ -1,0 +1,1 @@
+# Write a Django project that demonstrates CRUD operations (Create, Read, Update, Delete) on doctor profiles using Django ORM.

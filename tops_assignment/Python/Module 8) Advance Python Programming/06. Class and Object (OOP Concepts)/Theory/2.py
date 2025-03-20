@@ -1,0 +1,1 @@
+# Difference between local and global variables.

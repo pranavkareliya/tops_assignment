@@ -1,0 +1,1 @@
+# Write a Django project to display a webpage with custom CSS styling for a doctor profile page.

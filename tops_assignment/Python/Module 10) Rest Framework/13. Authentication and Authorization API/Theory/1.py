@@ -1,0 +1,1 @@
+# Difference between authentication and authorization.

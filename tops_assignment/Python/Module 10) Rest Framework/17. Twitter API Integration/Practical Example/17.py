@@ -1,0 +1,1 @@
+# Write a Django project to fetch and display the latest 5 tweets from a Twitter user using the Twitter API.

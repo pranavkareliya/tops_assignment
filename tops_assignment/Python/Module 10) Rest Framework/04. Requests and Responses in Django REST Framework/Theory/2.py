@@ -1,0 +1,1 @@
+# Sending and receiving responses in DRF.

@@ -1,0 +1,1 @@
+# Django’s MVT (Model-View-Template) architecture and how it handles request-response cycles.

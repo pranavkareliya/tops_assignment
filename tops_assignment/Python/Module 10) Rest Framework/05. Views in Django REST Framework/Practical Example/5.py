@@ -1,0 +1,1 @@
+# Write a Django project that implements a class-based view to handle doctor profile creation, reading, updating, and deletion (CRUD operations).

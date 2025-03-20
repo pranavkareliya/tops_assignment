@@ -1,0 +1,1 @@
+# Implement pagination in a Django REST API for fetching doctor profiles.

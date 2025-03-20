@@ -1,0 +1,1 @@
+# Write a Django project where JavaScript is used to validate a patient registration form on the client side.

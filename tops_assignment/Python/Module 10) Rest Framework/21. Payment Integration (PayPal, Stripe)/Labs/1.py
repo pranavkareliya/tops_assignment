@@ -1,0 +1,1 @@
+# Add Stripe payment functionality to a Django project.

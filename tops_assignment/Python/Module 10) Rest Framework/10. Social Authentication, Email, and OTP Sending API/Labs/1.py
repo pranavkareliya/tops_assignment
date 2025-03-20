@@ -1,0 +1,1 @@
+# Add Google login to a Django project using django-allauth.

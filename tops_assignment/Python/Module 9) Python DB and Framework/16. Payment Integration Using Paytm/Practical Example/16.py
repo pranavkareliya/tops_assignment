@@ -1,0 +1,1 @@
+# Write a Django project that integrates Paytm for handling payments in the "Doctor Finder" project.
