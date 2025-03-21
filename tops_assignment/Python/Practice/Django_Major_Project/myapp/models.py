@@ -37,3 +37,10 @@ class Product(models.Model):
 
     def __str__(self):
         return self.seller.fname+" - "+self.product_name
+    
+class Wishlist(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    product=models.ForeignKey(Product,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.email+ " - "+self.product.product_name

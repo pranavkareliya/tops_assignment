@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import User,Product
 from django.core.mail import send_mail
 from django.conf import settings
@@ -20,7 +20,8 @@ def about(request):
     return render(request, 'about.html')
 
 def product(request):
-    return render(request, 'product.html')
+    products=Product.objects.all()
+    return render(request, 'product.html',{'products':products})
 
 def product_detail(request):
     return render(request, 'product_detail.html')
@@ -211,3 +212,29 @@ def seller_view_product(request):
 def seller_product_details(request,pk):
     product=Product.objects.get(pk=pk)
     return render(request, 'seller_product_details.html',{'product':product})
+
+def product_details(request,pk):
+    product=Product.objects.get(pk=pk)
+    return render(request, 'product_details.html',{'product':product})
+
+def seller_edit_product(request,pk):
+    product=Product.objects.get(pk=pk)
+    if request.method=="POST":
+        product.product_category=request.POST['product_category']
+        product.product_name=request.POST['product_name']
+        product.product_size=request.POST['product_size']
+        product.product_price=request.POST['product_price']
+        product.product_desc=request.POST['product_desc']
+        try:
+            product.product_picture=request.FILES['product_picture']
+        except:
+            pass
+        product.save()
+        return redirect('seller_view_product')
+    else:
+        return render(request, 'seller_edit_product.html',{'product':product})
+    
+def seller_delete_product(request,pk):
+    product=Product.objects.get(pk=pk)
+    product.delete()
+    return redirect('seller_view_product')

@@ -280,7 +280,7 @@
                             <!-- <img src="{% static 'images/product-10.jpg' %}" alt="IMG-PRODUCT"> -->
                             <img src="{{i.product_picture.url}}" alt="IMG-PRODUCT" style="width:280px;height: 350px;">
 
-                            <a href="{% url 'seller_product_details' pk=i.pk %}" target="_blank"
+                            <a href="{% url 'seller_product_details' pk=i.pk %}"
                                 class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
                                 Quick View
                             </a>
@@ -292,7 +292,7 @@
 
                         <div class="block2-txt flex-w flex-t p-t-14">
                             <div class="block2-txt-child1 flex-col-l ">
-                                <a href="{% url 'seller_product_details' pk=i.pk %}" target="_blank" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                <a href="{% url 'seller_product_details' pk=i.pk %}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
                                     {{i.product_name}}
                                 </a>
 

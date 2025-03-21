@@ -1,10 +1,10 @@
-{% extends 'seller_header.html' %}
+{% extends 'header.html' %}
 {% load static %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Seller | Product Detail</title>
+	<title>Product Detail</title>
 </head>
 <body class="animsition">
 
@@ -289,12 +289,18 @@
 									<b>Description : </b> <br> {{product.product_desc}}
 								</span>
                                 <div class="mt-2">
-                                    <a href="{% url 'seller_edit_product' pk=product.pk %}">
-                                        <button class="btn btn-dark">Edit</button>
-                                    </a>
-                                    <a href="{% url 'seller_delete_product' pk=product.pk %}">
-                                        <button class="btn btn-danger">Delete</button>
-                                    </a>
+                                    {% if request.session.email %}
+                                        <a href="{% url 'seller_edit_product' pk=product.pk %}">
+                                            <button class="btn btn-primary">Add to Cart <i class="zmdi zmdi-shopping-cart"></i></button>
+                                        </a>
+                                        <a href="{% url 'seller_delete_product' pk=product.pk %}">
+                                            <button class="btn btn-dark">Wishlist <i class="zmdi zmdi-favorite-outline"></i></button>
+                                        </a>
+                                    {% else %}
+                                        <a href="{% url 'login' %}">
+                                            <button class="btn btn-primary">Login</button>
+                                        </a>
+                                    {% endif %}
                                 </div>
 							</div>
 						</div>

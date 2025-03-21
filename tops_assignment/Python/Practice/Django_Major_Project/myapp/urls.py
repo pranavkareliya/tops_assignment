@@ -19,5 +19,8 @@ urlpatterns = [
     path('seller_index/',views.seller_index,name='seller_index'),
     path('seller_add_product/',views.seller_add_product,name='seller_add_product'),
     path('seller_view_product/',views.seller_view_product,name='seller_view_product'),
+    path('product_details/<int:pk>/',views.product_details,name='product_details'),
     path('seller_product_details/<int:pk>/',views.seller_product_details,name='seller_product_details'),
+    path('seller_edit_product/<int:pk>/',views.seller_edit_product,name='seller_edit_product'),
+    path('seller_delete_product/<int:pk>/',views.seller_delete_product,name='seller_delete_product'),
 ]
