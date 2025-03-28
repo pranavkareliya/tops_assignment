@@ -1,1 +1,2 @@
 # Integrating CSS with Django templates.
+print("When building web applications, you probably want to add some static files like images or css files. Start by creating a folder named static in your project, the same place where you created the templates folder.")

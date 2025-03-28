@@ -56,7 +56,6 @@ def login(request):
     if request.method == "POST":
         try:
             user = User.objects.get(email=request.POST['email'])
-            print("user Email is : ",user.email)
             if user.password == request.POST['password']:
                 request.session['email'] = user.email
                 request.session['fname'] = user.fname
@@ -68,8 +67,7 @@ def login(request):
             else:
                 msg2 = "Incorrect Password..."
                 return render(request, 'login.html',{'msg2':msg2})
-        except Exception as e:
-            print("error is : ",e)
+        except:
             msg2 = "Email Not Registered..."
             return render(request, 'login.html',{'msg2':msg2})
     else:

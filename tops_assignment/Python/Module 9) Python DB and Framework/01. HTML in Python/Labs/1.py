@@ -1,1 +1,2 @@
 # Write a Python program to render an HTML file using Django’s template system.
+print("n Django, render a template using the render() function in your views. The code syntax looks as follows: return render(request, 'template. html', {'context': data}).")
