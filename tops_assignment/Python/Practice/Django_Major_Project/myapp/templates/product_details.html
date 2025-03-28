@@ -3,9 +3,11 @@
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Product Detail</title>
 </head>
+
 <body class="animsition">
 
 	<!-- Product -->
@@ -39,10 +41,11 @@
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
-					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
+					<div
+						class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
 						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
 						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						 Filter
+						Filter
 					</div>
 
 					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
@@ -51,7 +54,7 @@
 						Search
 					</div>
 				</div>
-				
+
 				<!-- Search product -->
 				<div class="dis-none panel-search w-full p-t-10 p-b-15">
 					<div class="bor8 dis-flex p-l-15">
@@ -59,8 +62,9 @@
 							<i class="zmdi zmdi-search"></i>
 						</button>
 
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
-					</div>	
+						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product"
+							placeholder="Search">
+					</div>
 				</div>
 
 				<!-- Filter -->
@@ -228,23 +232,28 @@
 							</div>
 
 							<div class="flex-w p-t-4 m-r--5">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									Fashion
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									Lifestyle
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									Denim
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									Streetstyle
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									Crafts
 								</a>
 							</div>
@@ -253,14 +262,15 @@
 				</div>
 			</div>
 
-            <!-- Products Lists -->
+			<!-- Products Lists -->
 			<div class="row isotope-grid">
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{product.product_category}}">
 					<!-- Block2 -->
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<!-- <img src="{% static 'images/product-10.jpg' %}" alt="IMG-PRODUCT"> -->
-							<img src="{{product.product_picture.url}}" alt="IMG-PRODUCT" style="width:280px;height: 350px;">
+							<img src="{{product.product_picture.url}}" alt="IMG-PRODUCT"
+								style="width:280px;height: 350px;">
 						</div>
 
 						<div class="block2-txt flex-w flex-t p-t-14">
@@ -270,17 +280,17 @@
 								</a>
 
 								<span class="stext-105 cl3">
-                                    {% if product.product_size == 's' %}
-									    <b>Size : </b> Small [S]
-                                    {% elif product.product_size == 'm' %}
-                                        <b>Size : </b> Medium [M]
-                                    {% elif product.product_size == 'l' %}
-                                        <b>Size : </b> Large [L]
-                                    {% elif product.product_size == 'xl' %}
-                                        <b>Size : </b> Extra Large [XL]
-                                    {% elif product.product_size == 'xxl' %}
-                                        <b>Size : </b> Extra Extra Large [XXL]
-                                    {% endif %}
+									{% if product.product_size == 's' %}
+									<b>Size : </b> Small [S]
+									{% elif product.product_size == 'm' %}
+									<b>Size : </b> Medium [M]
+									{% elif product.product_size == 'l' %}
+									<b>Size : </b> Large [L]
+									{% elif product.product_size == 'xl' %}
+									<b>Size : </b> Extra Large [XL]
+									{% elif product.product_size == 'xxl' %}
+									<b>Size : </b> Extra Extra Large [XXL]
+									{% endif %}
 								</span>
 								<span class="stext-105 cl3">
 									<b>Price : </b>₹{{product.product_price}}
@@ -288,20 +298,31 @@
 								<span class="stext-105 cl3">
 									<b>Description : </b> <br> {{product.product_desc}}
 								</span>
-                                <div class="mt-2">
-                                    {% if request.session.email %}
-                                        <a href="{% url 'seller_edit_product' pk=product.pk %}">
-                                            <button class="btn btn-primary">Add to Cart <i class="zmdi zmdi-shopping-cart"></i></button>
-                                        </a>
-                                        <a href="{% url 'seller_delete_product' pk=product.pk %}">
-                                            <button class="btn btn-dark">Wishlist <i class="zmdi zmdi-favorite-outline"></i></button>
-                                        </a>
-                                    {% else %}
-                                        <a href="{% url 'login' %}">
-                                            <button class="btn btn-primary">Login</button>
-                                        </a>
-                                    {% endif %}
-                                </div>
+								<div class="mt-2">
+									{% if request.session.email %}
+									<div style="display: flex;gap: 6px;flex-direction: column;">
+											<a href="#">
+											<button class="btn btn-primary">Add to Cart <i
+													class="zmdi zmdi-shopping-cart"></i></button>
+										</a>
+										{% if wishlist_flag == False %}
+										<a href="{% url 'add_to_wishlist' pk=product.pk %}">
+											<button class="btn btn-dark">Add to Wishlist <i
+													class="zmdi zmdi-favorite-outline"></i></button>
+										</a>
+										{% else %}
+										<a href="{% url 'remove_from_wishlist' pk=product.pk %}">
+											<button class="btn btn-danger">Delete From Wishlist <i
+													class="zmdi zmdi-favorite-outline"></i></button>
+										</a>
+										{% endif %}
+									</div>
+									{% else %}
+									<a href="{% url 'login' %}">
+										<button class="btn btn-primary">Login</button>
+									</a>
+									{% endif %}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -310,5 +331,6 @@
 		</div>
 	</div>
 </body>
+
 </html>
 {% endblock %}
