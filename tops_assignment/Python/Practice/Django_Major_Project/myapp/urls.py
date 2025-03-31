@@ -6,7 +6,6 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('about/',views.about,name='about'),
     path('product/',views.product,name='product'),
-    path('shoping_cart/',views.shoping_cart,name='shoping_cart'),
     path('profile/',views.profile,name='profile'),
     path('change_password/',views.change_password,name='change_password'),
     path('forgot_password/',views.forgot_password,name='forgot_password'),
@@ -25,4 +24,8 @@ urlpatterns = [
     path('add_to_wishlist/<int:pk>/',views.add_to_wishlist,name='add_to_wishlist'),
     path('wishlist/',views.wishlist,name='wishlist'),
     path('remove_from_wishlist/<int:pk>',views.remove_from_wishlist,name='remove_from_wishlist'),
+    path('add_to_cart/<int:pk>/',views.add_to_cart,name='add_to_cart'),
+    path('cart/',views.cart,name='cart'),
+    path('remove_from_cart/<int:pk>/',views.remove_from_cart,name='remove_from_cart'),
+    path('change_qty/<int:pk>',views.change_qty,name='change_qty'),
 ]

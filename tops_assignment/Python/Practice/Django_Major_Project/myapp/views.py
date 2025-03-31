@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import User,Product,Wishlist
+from .models import User,Product,Wishlist,Cart
 from django.core.mail import send_mail
 from django.conf import settings
 import random
@@ -60,6 +60,8 @@ def login(request):
                 if user.usertype == "buyer":
                     wishlists=Wishlist.objects.filter(user=user)
                     request.session['wishlist_count']=len(wishlists)
+                    carts=Cart.objects.filter(user=user)
+                    request.session['cart_count']=len(carts)
                     return render(request, 'index.html')
                 else:
                     return render(request, 'seller_index.html')
@@ -181,9 +183,6 @@ def new_password(request):
         msg2 = "New Password & Confirm Password does not Match..."
         return render(request, 'new_password.html',{'msg2':msg2})
 
-def shoping_cart(request):
-    return render(request, 'shoping_cart.html')
-
 def seller_add_product(request):
         if request.method == "POST":
             seller = User.objects.get(email=request.session['email'])
@@ -212,6 +211,7 @@ def seller_product_details(request,pk):
 
 def product_details(request,pk):
     wishlist_flag=False
+    cart_flag=False
     product=Product.objects.get(pk=pk)
     user=User.objects.get(email=request.session['email'])
     try:
@@ -219,7 +219,12 @@ def product_details(request,pk):
         wishlist_flag=True
     except:
         pass
-    return render(request, 'product_details.html',{'product':product,'wishlist_flag':wishlist_flag})
+    try:
+        Cart.objects.get(user=user,product=product)
+        cart_flag=True
+    except:
+        pass
+    return render(request, 'product_details.html',{'product':product,'wishlist_flag':wishlist_flag,'cart_flag':cart_flag})
 
 def seller_edit_product(request,pk):
     product=Product.objects.get(pk=pk)
@@ -261,3 +266,33 @@ def remove_from_wishlist(request,pk):
     wishlist=Wishlist.objects.get(user=user,product=product)
     wishlist.delete()
     return redirect('wishlist')
+
+def add_to_cart(request,pk):
+    product=Product.objects.get(pk=pk)
+    user=User.objects.get(email=request.session['email'])
+    Cart.objects.create(user=user,product=product,product_price=product.product_price,product_qty=1,total_price=product.product_price)
+    return redirect('cart')
+
+def cart(request):
+    net_price=0
+    user=User.objects.get(email=request.session['email'])
+    carts=Cart.objects.filter(user=user).order_by("-id")
+    for i in carts:
+        net_price+=i.total_price
+    request.session['cart_count']=len(carts)
+    return render(request, 'cart.html',{'carts':carts,'net_price':net_price})
+
+def remove_from_cart(request,pk):
+    product=Product.objects.get(pk=pk)
+    user=User.objects.get(email=request.session['email'])
+    cart=Cart.objects.get(user=user,product=product)
+    cart.delete()
+    return redirect('cart')
+
+def change_qty(request, pk):
+    cart=Cart.objects.get(pk=pk)
+    product_qty=int(request.POST['product_qty'])
+    cart.product_qty=product_qty
+    cart.total_price=cart.product_price*product_qty
+    cart.save()
+    return redirect('cart')
