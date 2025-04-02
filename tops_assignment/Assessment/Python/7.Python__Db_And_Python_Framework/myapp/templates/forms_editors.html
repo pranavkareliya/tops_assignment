@@ -1,0 +1,1738 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <title>Forms | Digital Society</title>
+</head>
+
+<body>
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Form Editors</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    <li class="breadcrumb-item active">Editors</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Quill Editor Default</h5>
+
+                            <!-- Quill Editor Default -->
+                            <div role="toolbar" class="ql-toolbar ql-snow"><span class="ql-formats"><span
+                                        class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0"
+                                            role="button" aria-expanded="false" aria-controls="ql-picker-options-0"><svg
+                                                viewBox="0 0 18 18">
+                                                <polygon class="ql-stroke" points="7 11 9 13 11 11 7 11"></polygon>
+                                                <polygon class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon>
+                                            </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                            tabindex="-1" id="ql-picker-options-0"><span tabindex="0" role="button"
+                                                class="ql-picker-item" data-value="1"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="2"></span><span
+                                                tabindex="0" role="button" class="ql-picker-item"
+                                                data-value="3"></span><span tabindex="0" role="button"
+                                                class="ql-picker-item"></span></span></span><select class="ql-header"
+                                        style="display: none;">
+                                        <option value="1"></option>
+                                        <option value="2"></option>
+                                        <option value="3"></option>
+                                        <option selected="selected"></option>
+                                    </select></span><span class="ql-formats"><button type="button" class="ql-bold"
+                                        aria-pressed="false" aria-label="bold"><svg viewBox="0 0 18 18">
+                                            <path class="ql-stroke"
+                                                d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                                            </path>
+                                            <path class="ql-stroke"
+                                                d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                                            </path>
+                                        </svg></button><button type="button" class="ql-italic" aria-pressed="false"
+                                        aria-label="italic"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line>
+                                            <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line>
+                                        </svg></button><button type="button" class="ql-underline" aria-pressed="false"
+                                        aria-label="underline"><svg viewBox="0 0 18 18">
+                                            <path class="ql-stroke"
+                                                d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path>
+                                            <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15">
+                                            </rect>
+                                        </svg></button><button type="button" class="ql-link" aria-pressed="false"
+                                        aria-label="link"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line>
+                                            <path class="ql-even ql-stroke"
+                                                d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                                            </path>
+                                            <path class="ql-even ql-stroke"
+                                                d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                                            </path>
+                                        </svg></button></span><span class="ql-formats"><button type="button"
+                                        class="ql-list" aria-pressed="false" value="ordered"
+                                        aria-label="list: ordered"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line>
+                                            <line class="ql-stroke" x1="7" x2="15" y1="14" y2="14"></line>
+                                            <line class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line>
+                                            <path class="ql-fill"
+                                                d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z">
+                                            </path>
+                                            <path class="ql-stroke ql-thin"
+                                                d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156">
+                                            </path>
+                                            <path class="ql-stroke ql-thin"
+                                                d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109">
+                                            </path>
+                                        </svg></button><button type="button" class="ql-list" aria-pressed="false"
+                                        value="bullet" aria-label="list: bullet"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line>
+                                            <line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line>
+                                            <line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line>
+                                            <line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line>
+                                        </svg></button></span><span class="ql-formats"><button type="button"
+                                        class="ql-clean" aria-pressed="false" aria-label="clean"><svg class=""
+                                            viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line>
+                                            <line class="ql-stroke" x1="6" x2="9.35" y1="12" y2="3"></line>
+                                            <line class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line>
+                                            <line class="ql-stroke" x1="15" x2="11" y1="11" y2="15"></line>
+                                            <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2" y="14">
+                                            </rect>
+                                        </svg></button></span></div>
+                            <div class="quill-editor-default ql-container ql-snow">
+                                <div class="ql-editor" contenteditable="true">
+                                    <p>Hello World!</p>
+                                    <p>This is Quill <strong>default</strong> editor</p>
+                                </div>
+                                <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer"
+                                        target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2"
+                                        data-link="https://quilljs.com" data-video="Embed URL"><a
+                                        class="ql-action"></a><a class="ql-remove"></a></div>
+                            </div>
+                            <!-- End Quill Editor Default -->
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Quill Editor Bubble</h5>
+
+                            <!-- Quill Editor Bubble -->
+                            <p>Select some text to display options in poppovers</p>
+                            <div class="quill-editor-bubble ql-container ql-bubble">
+                                <div class="ql-editor" contenteditable="true">
+                                    <p>Hello World!</p>
+                                    <p>This is Quill <strong>bubble</strong> editor</p>
+                                </div>
+                                <div class="ql-tooltip ql-hidden"><span class="ql-tooltip-arrow"></span>
+                                    <div class="ql-tooltip-editor"><input type="text" data-formula="e=mc^2"
+                                            data-link="page.html" data-video="Embed URL"><a class="ql-close"></a></div>
+                                    <div role="toolbar" class="ql-toolbar"><span class="ql-formats"><button
+                                                type="button" class="ql-bold" aria-pressed="false"
+                                                aria-label="bold"><svg viewBox="0 0 18 18">
+                                                    <path class="ql-stroke"
+                                                        d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                                                    </path>
+                                                    <path class="ql-stroke"
+                                                        d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                                                    </path>
+                                                </svg></button><button type="button" class="ql-italic"
+                                                aria-pressed="false" aria-label="italic"><svg viewBox="0 0 18 18">
+                                                    <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line>
+                                                    <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line>
+                                                    <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line>
+                                                </svg></button><button type="button" class="ql-underline"
+                                                aria-pressed="false" aria-label="underline"><svg viewBox="0 0 18 18">
+                                                    <path class="ql-stroke"
+                                                        d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3">
+                                                    </path>
+                                                    <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3"
+                                                        y="15"></rect>
+                                                </svg></button><button type="button" class="ql-strike"
+                                                aria-pressed="false" aria-label="strike"><svg viewBox="0 0 18 18">
+                                                    <line class="ql-stroke ql-thin" x1="15.5" x2="2.5" y1="8.5"
+                                                        y2="9.5"></line>
+                                                    <path class="ql-fill"
+                                                        d="M9.007,8C6.542,7.791,6,7.519,6,6.5,6,5.792,7.283,5,9,5c1.571,0,2.765.679,2.969,1.309a1,1,0,0,0,1.9-.617C13.356,4.106,11.354,3,9,3,6.2,3,4,4.538,4,6.5a3.2,3.2,0,0,0,.5,1.843Z">
+                                                    </path>
+                                                    <path class="ql-fill"
+                                                        d="M8.984,10C11.457,10.208,12,10.479,12,11.5c0,0.708-1.283,1.5-3,1.5-1.571,0-2.765-.679-2.969-1.309a1,1,0,1,0-1.9.617C4.644,13.894,6.646,15,9,15c2.8,0,5-1.538,5-3.5a3.2,3.2,0,0,0-.5-1.843Z">
+                                                    </path>
+                                                </svg></button></span><span class="ql-formats"><button type="button"
+                                                class="ql-link" aria-pressed="false" aria-label="link"><svg
+                                                    viewBox="0 0 18 18">
+                                                    <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line>
+                                                    <path class="ql-even ql-stroke"
+                                                        d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                                                    </path>
+                                                    <path class="ql-even ql-stroke"
+                                                        d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                                                    </path>
+                                                </svg></button></span><span class="ql-formats"><span
+                                                class="ql-color ql-picker ql-color-picker"><span class="ql-picker-label"
+                                                    tabindex="0" role="button" aria-expanded="false"
+                                                    aria-controls="ql-picker-options-1"><svg viewBox="0 0 18 18">
+                                                        <line class="ql-color-label ql-stroke ql-transparent" x1="3"
+                                                            x2="15" y1="15" y2="15"></line>
+                                                        <polyline class="ql-stroke" points="5.5 11 9 3 12.5 11">
+                                                        </polyline>
+                                                        <line class="ql-stroke" x1="11.63" x2="6.38" y1="9" y2="9">
+                                                        </line>
+                                                    </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                                    tabindex="-1" id="ql-picker-options-1"><span tabindex="0"
+                                                        role="button" class="ql-picker-item ql-primary"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#e60000"
+                                                        style="background-color: rgb(230, 0, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#ff9900"
+                                                        style="background-color: rgb(255, 153, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#ffff00"
+                                                        style="background-color: rgb(255, 255, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#008a00"
+                                                        style="background-color: rgb(0, 138, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#0066cc"
+                                                        style="background-color: rgb(0, 102, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#9933ff"
+                                                        style="background-color: rgb(153, 51, 255);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffffff"
+                                                        style="background-color: rgb(255, 255, 255);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#facccc"
+                                                        style="background-color: rgb(250, 204, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffebcc"
+                                                        style="background-color: rgb(255, 235, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffffcc"
+                                                        style="background-color: rgb(255, 255, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#cce8cc"
+                                                        style="background-color: rgb(204, 232, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#cce0f5"
+                                                        style="background-color: rgb(204, 224, 245);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ebd6ff"
+                                                        style="background-color: rgb(235, 214, 255);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#bbbbbb"
+                                                        style="background-color: rgb(187, 187, 187);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#f06666"
+                                                        style="background-color: rgb(240, 102, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffc266"
+                                                        style="background-color: rgb(255, 194, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffff66"
+                                                        style="background-color: rgb(255, 255, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#66b966"
+                                                        style="background-color: rgb(102, 185, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#66a3e0"
+                                                        style="background-color: rgb(102, 163, 224);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#c285ff"
+                                                        style="background-color: rgb(194, 133, 255);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#888888"
+                                                        style="background-color: rgb(136, 136, 136);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#a10000"
+                                                        style="background-color: rgb(161, 0, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#b26b00"
+                                                        style="background-color: rgb(178, 107, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#b2b200"
+                                                        style="background-color: rgb(178, 178, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#006100"
+                                                        style="background-color: rgb(0, 97, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#0047b2"
+                                                        style="background-color: rgb(0, 71, 178);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#6b24b2"
+                                                        style="background-color: rgb(107, 36, 178);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#444444"
+                                                        style="background-color: rgb(68, 68, 68);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#5c0000"
+                                                        style="background-color: rgb(92, 0, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#663d00"
+                                                        style="background-color: rgb(102, 61, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#666600"
+                                                        style="background-color: rgb(102, 102, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#003700"
+                                                        style="background-color: rgb(0, 55, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#002966"
+                                                        style="background-color: rgb(0, 41, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#3d1466"
+                                                        style="background-color: rgb(61, 20, 102);"></span></span></span><select
+                                                class="ql-color" style="display: none;">
+                                                <option selected="selected"></option>
+                                                <option value="#e60000"></option>
+                                                <option value="#ff9900"></option>
+                                                <option value="#ffff00"></option>
+                                                <option value="#008a00"></option>
+                                                <option value="#0066cc"></option>
+                                                <option value="#9933ff"></option>
+                                                <option value="#ffffff"></option>
+                                                <option value="#facccc"></option>
+                                                <option value="#ffebcc"></option>
+                                                <option value="#ffffcc"></option>
+                                                <option value="#cce8cc"></option>
+                                                <option value="#cce0f5"></option>
+                                                <option value="#ebd6ff"></option>
+                                                <option value="#bbbbbb"></option>
+                                                <option value="#f06666"></option>
+                                                <option value="#ffc266"></option>
+                                                <option value="#ffff66"></option>
+                                                <option value="#66b966"></option>
+                                                <option value="#66a3e0"></option>
+                                                <option value="#c285ff"></option>
+                                                <option value="#888888"></option>
+                                                <option value="#a10000"></option>
+                                                <option value="#b26b00"></option>
+                                                <option value="#b2b200"></option>
+                                                <option value="#006100"></option>
+                                                <option value="#0047b2"></option>
+                                                <option value="#6b24b2"></option>
+                                                <option value="#444444"></option>
+                                                <option value="#5c0000"></option>
+                                                <option value="#663d00"></option>
+                                                <option value="#666600"></option>
+                                                <option value="#003700"></option>
+                                                <option value="#002966"></option>
+                                                <option value="#3d1466"></option>
+                                            </select><span class="ql-background ql-picker ql-color-picker"><span
+                                                    class="ql-picker-label" tabindex="0" role="button"
+                                                    aria-expanded="false" aria-controls="ql-picker-options-2"><svg
+                                                        viewBox="0 0 18 18">
+                                                        <g class="ql-fill ql-color-label">
+                                                            <polygon points="6 6.868 6 6 5 6 5 7 5.942 7 6 6.868">
+                                                            </polygon>
+                                                            <rect height="1" width="1" x="4" y="4"></rect>
+                                                            <polygon points="6.817 5 6 5 6 6 6.38 6 6.817 5"></polygon>
+                                                            <rect height="1" width="1" x="2" y="6"></rect>
+                                                            <rect height="1" width="1" x="3" y="5"></rect>
+                                                            <rect height="1" width="1" x="4" y="7"></rect>
+                                                            <polygon points="4 11.439 4 11 3 11 3 12 3.755 12 4 11.439">
+                                                            </polygon>
+                                                            <rect height="1" width="1" x="2" y="12"></rect>
+                                                            <rect height="1" width="1" x="2" y="9"></rect>
+                                                            <rect height="1" width="1" x="2" y="15"></rect>
+                                                            <polygon points="4.63 10 4 10 4 11 4.192 11 4.63 10">
+                                                            </polygon>
+                                                            <rect height="1" width="1" x="3" y="8"></rect>
+                                                            <path
+                                                                d="M10.832,4.2L11,4.582V4H10.708A1.948,1.948,0,0,1,10.832,4.2Z">
+                                                            </path>
+                                                            <path
+                                                                d="M7,4.582L7.168,4.2A1.929,1.929,0,0,1,7.292,4H7V4.582Z">
+                                                            </path>
+                                                            <path
+                                                                d="M8,13H7.683l-0.351.8a1.933,1.933,0,0,1-.124.2H8V13Z">
+                                                            </path>
+                                                            <rect height="1" width="1" x="12" y="2"></rect>
+                                                            <rect height="1" width="1" x="11" y="3"></rect>
+                                                            <path d="M9,3H8V3.282A1.985,1.985,0,0,1,9,3Z"></path>
+                                                            <rect height="1" width="1" x="2" y="3"></rect>
+                                                            <rect height="1" width="1" x="6" y="2"></rect>
+                                                            <rect height="1" width="1" x="3" y="2"></rect>
+                                                            <rect height="1" width="1" x="5" y="3"></rect>
+                                                            <rect height="1" width="1" x="9" y="2"></rect>
+                                                            <rect height="1" width="1" x="15" y="14"></rect>
+                                                            <polygon
+                                                                points="13.447 10.174 13.469 10.225 13.472 10.232 13.808 11 14 11 14 10 13.37 10 13.447 10.174">
+                                                            </polygon>
+                                                            <rect height="1" width="1" x="13" y="7"></rect>
+                                                            <rect height="1" width="1" x="15" y="5"></rect>
+                                                            <rect height="1" width="1" x="14" y="6"></rect>
+                                                            <rect height="1" width="1" x="15" y="8"></rect>
+                                                            <rect height="1" width="1" x="14" y="9"></rect>
+                                                            <path d="M3.775,14H3v1H4V14.314A1.97,1.97,0,0,1,3.775,14Z">
+                                                            </path>
+                                                            <rect height="1" width="1" x="14" y="3"></rect>
+                                                            <polygon points="12 6.868 12 6 11.62 6 12 6.868"></polygon>
+                                                            <rect height="1" width="1" x="15" y="2"></rect>
+                                                            <rect height="1" width="1" x="12" y="5"></rect>
+                                                            <rect height="1" width="1" x="13" y="4"></rect>
+                                                            <polygon points="12.933 9 13 9 13 8 12.495 8 12.933 9">
+                                                            </polygon>
+                                                            <rect height="1" width="1" x="9" y="14"></rect>
+                                                            <rect height="1" width="1" x="8" y="15"></rect>
+                                                            <path d="M6,14.926V15H7V14.316A1.993,1.993,0,0,1,6,14.926Z">
+                                                            </path>
+                                                            <rect height="1" width="1" x="5" y="15"></rect>
+                                                            <path
+                                                                d="M10.668,13.8L10.317,13H10v1h0.792A1.947,1.947,0,0,1,10.668,13.8Z">
+                                                            </path>
+                                                            <rect height="1" width="1" x="11" y="15"></rect>
+                                                            <path d="M14.332,12.2a1.99,1.99,0,0,1,.166.8H15V12H14.245Z">
+                                                            </path>
+                                                            <rect height="1" width="1" x="14" y="15"></rect>
+                                                            <rect height="1" width="1" x="15" y="11"></rect>
+                                                        </g>
+                                                        <polyline class="ql-stroke" points="5.5 13 9 5 12.5 13">
+                                                        </polyline>
+                                                        <line class="ql-stroke" x1="11.63" x2="6.38" y1="11" y2="11">
+                                                        </line>
+                                                    </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                                    tabindex="-1" id="ql-picker-options-2"><span tabindex="0"
+                                                        role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#000000"
+                                                        style="background-color: rgb(0, 0, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#e60000"
+                                                        style="background-color: rgb(230, 0, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#ff9900"
+                                                        style="background-color: rgb(255, 153, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#ffff00"
+                                                        style="background-color: rgb(255, 255, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#008a00"
+                                                        style="background-color: rgb(0, 138, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#0066cc"
+                                                        style="background-color: rgb(0, 102, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item ql-primary"
+                                                        data-value="#9933ff"
+                                                        style="background-color: rgb(153, 51, 255);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#facccc"
+                                                        style="background-color: rgb(250, 204, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffebcc"
+                                                        style="background-color: rgb(255, 235, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffffcc"
+                                                        style="background-color: rgb(255, 255, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#cce8cc"
+                                                        style="background-color: rgb(204, 232, 204);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#cce0f5"
+                                                        style="background-color: rgb(204, 224, 245);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ebd6ff"
+                                                        style="background-color: rgb(235, 214, 255);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#bbbbbb"
+                                                        style="background-color: rgb(187, 187, 187);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#f06666"
+                                                        style="background-color: rgb(240, 102, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffc266"
+                                                        style="background-color: rgb(255, 194, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#ffff66"
+                                                        style="background-color: rgb(255, 255, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#66b966"
+                                                        style="background-color: rgb(102, 185, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#66a3e0"
+                                                        style="background-color: rgb(102, 163, 224);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#c285ff"
+                                                        style="background-color: rgb(194, 133, 255);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#888888"
+                                                        style="background-color: rgb(136, 136, 136);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#a10000"
+                                                        style="background-color: rgb(161, 0, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#b26b00"
+                                                        style="background-color: rgb(178, 107, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#b2b200"
+                                                        style="background-color: rgb(178, 178, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#006100"
+                                                        style="background-color: rgb(0, 97, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#0047b2"
+                                                        style="background-color: rgb(0, 71, 178);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#6b24b2"
+                                                        style="background-color: rgb(107, 36, 178);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#444444"
+                                                        style="background-color: rgb(68, 68, 68);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#5c0000"
+                                                        style="background-color: rgb(92, 0, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#663d00"
+                                                        style="background-color: rgb(102, 61, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#666600"
+                                                        style="background-color: rgb(102, 102, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#003700"
+                                                        style="background-color: rgb(0, 55, 0);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#002966"
+                                                        style="background-color: rgb(0, 41, 102);"></span><span
+                                                        tabindex="0" role="button" class="ql-picker-item"
+                                                        data-value="#3d1466"
+                                                        style="background-color: rgb(61, 20, 102);"></span></span></span><select
+                                                class="ql-background" style="display: none;">
+                                                <option value="#000000"></option>
+                                                <option value="#e60000"></option>
+                                                <option value="#ff9900"></option>
+                                                <option value="#ffff00"></option>
+                                                <option value="#008a00"></option>
+                                                <option value="#0066cc"></option>
+                                                <option value="#9933ff"></option>
+                                                <option selected="selected"></option>
+                                                <option value="#facccc"></option>
+                                                <option value="#ffebcc"></option>
+                                                <option value="#ffffcc"></option>
+                                                <option value="#cce8cc"></option>
+                                                <option value="#cce0f5"></option>
+                                                <option value="#ebd6ff"></option>
+                                                <option value="#bbbbbb"></option>
+                                                <option value="#f06666"></option>
+                                                <option value="#ffc266"></option>
+                                                <option value="#ffff66"></option>
+                                                <option value="#66b966"></option>
+                                                <option value="#66a3e0"></option>
+                                                <option value="#c285ff"></option>
+                                                <option value="#888888"></option>
+                                                <option value="#a10000"></option>
+                                                <option value="#b26b00"></option>
+                                                <option value="#b2b200"></option>
+                                                <option value="#006100"></option>
+                                                <option value="#0047b2"></option>
+                                                <option value="#6b24b2"></option>
+                                                <option value="#444444"></option>
+                                                <option value="#5c0000"></option>
+                                                <option value="#663d00"></option>
+                                                <option value="#666600"></option>
+                                                <option value="#003700"></option>
+                                                <option value="#002966"></option>
+                                                <option value="#3d1466"></option>
+                                            </select></span><span class="ql-formats"><button type="button"
+                                                class="ql-clean" aria-pressed="false" aria-label="clean"><svg class=""
+                                                    viewBox="0 0 18 18">
+                                                    <line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line>
+                                                    <line class="ql-stroke" x1="6" x2="9.35" y1="12" y2="3"></line>
+                                                    <line class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line>
+                                                    <line class="ql-stroke" x1="15" x2="11" y1="11" y2="15"></line>
+                                                    <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2"
+                                                        y="14"></rect>
+                                                </svg></button></span></div>
+                                </div>
+                            </div>
+                            <!-- End Quill Editor Bubble -->
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Quill Editor Full</h5>
+
+                            <!-- Quill Editor Full -->
+                            <p>Quill editor with full toolset</p>
+                            <div role="toolbar" class="ql-toolbar ql-snow"><span class="ql-formats"><span
+                                        class="ql-font ql-picker"><span class="ql-picker-label" tabindex="0"
+                                            role="button" aria-expanded="false" aria-controls="ql-picker-options-3"><svg
+                                                viewBox="0 0 18 18">
+                                                <polygon class="ql-stroke" points="7 11 9 13 11 11 7 11"></polygon>
+                                                <polygon class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon>
+                                            </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                            tabindex="-1" id="ql-picker-options-3"><span tabindex="0" role="button"
+                                                class="ql-picker-item"></span><span tabindex="0" role="button"
+                                                class="ql-picker-item" data-value="serif"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item"
+                                                data-value="monospace"></span></span></span><select class="ql-font"
+                                        style="display: none;">
+                                        <option selected="selected"></option>
+                                        <option value="serif"></option>
+                                        <option value="monospace"></option>
+                                    </select><span class="ql-size ql-picker"><span class="ql-picker-label" tabindex="0"
+                                            role="button" aria-expanded="false" aria-controls="ql-picker-options-4"><svg
+                                                viewBox="0 0 18 18">
+                                                <polygon class="ql-stroke" points="7 11 9 13 11 11 7 11"></polygon>
+                                                <polygon class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon>
+                                            </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                            tabindex="-1" id="ql-picker-options-4"><span tabindex="0" role="button"
+                                                class="ql-picker-item" data-value="small"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="large"></span><span
+                                                tabindex="0" role="button" class="ql-picker-item"
+                                                data-value="huge"></span></span></span><select class="ql-size"
+                                        style="display: none;">
+                                        <option value="small"></option>
+                                        <option selected="selected"></option>
+                                        <option value="large"></option>
+                                        <option value="huge"></option>
+                                    </select></span><span class="ql-formats"><button type="button" class="ql-bold"
+                                        aria-pressed="false" aria-label="bold"><svg viewBox="0 0 18 18">
+                                            <path class="ql-stroke"
+                                                d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                                            </path>
+                                            <path class="ql-stroke"
+                                                d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                                            </path>
+                                        </svg></button><button type="button" class="ql-italic" aria-pressed="false"
+                                        aria-label="italic"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line>
+                                            <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line>
+                                        </svg></button><button type="button" class="ql-underline" aria-pressed="false"
+                                        aria-label="underline"><svg viewBox="0 0 18 18">
+                                            <path class="ql-stroke"
+                                                d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path>
+                                            <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15">
+                                            </rect>
+                                        </svg></button><button type="button" class="ql-strike" aria-pressed="false"
+                                        aria-label="strike"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke ql-thin" x1="15.5" x2="2.5" y1="8.5" y2="9.5"></line>
+                                            <path class="ql-fill"
+                                                d="M9.007,8C6.542,7.791,6,7.519,6,6.5,6,5.792,7.283,5,9,5c1.571,0,2.765.679,2.969,1.309a1,1,0,0,0,1.9-.617C13.356,4.106,11.354,3,9,3,6.2,3,4,4.538,4,6.5a3.2,3.2,0,0,0,.5,1.843Z">
+                                            </path>
+                                            <path class="ql-fill"
+                                                d="M8.984,10C11.457,10.208,12,10.479,12,11.5c0,0.708-1.283,1.5-3,1.5-1.571,0-2.765-.679-2.969-1.309a1,1,0,1,0-1.9.617C4.644,13.894,6.646,15,9,15c2.8,0,5-1.538,5-3.5a3.2,3.2,0,0,0-.5-1.843Z">
+                                            </path>
+                                        </svg></button></span><span class="ql-formats"><span
+                                        class="ql-color ql-picker ql-color-picker"><span class="ql-picker-label"
+                                            tabindex="0" role="button" aria-expanded="false"
+                                            aria-controls="ql-picker-options-5"><svg viewBox="0 0 18 18">
+                                                <line class="ql-color-label ql-stroke ql-transparent" x1="3" x2="15"
+                                                    y1="15" y2="15"></line>
+                                                <polyline class="ql-stroke" points="5.5 11 9 3 12.5 11"></polyline>
+                                                <line class="ql-stroke" x1="11.63" x2="6.38" y1="9" y2="9"></line>
+                                            </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                            tabindex="-1" id="ql-picker-options-5"><span tabindex="0" role="button"
+                                                class="ql-picker-item ql-primary"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#e60000"
+                                                style="background-color: rgb(230, 0, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#ff9900"
+                                                style="background-color: rgb(255, 153, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#ffff00"
+                                                style="background-color: rgb(255, 255, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#008a00"
+                                                style="background-color: rgb(0, 138, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#0066cc"
+                                                style="background-color: rgb(0, 102, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#9933ff"
+                                                style="background-color: rgb(153, 51, 255);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffffff"
+                                                style="background-color: rgb(255, 255, 255);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#facccc"
+                                                style="background-color: rgb(250, 204, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffebcc"
+                                                style="background-color: rgb(255, 235, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffffcc"
+                                                style="background-color: rgb(255, 255, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#cce8cc"
+                                                style="background-color: rgb(204, 232, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#cce0f5"
+                                                style="background-color: rgb(204, 224, 245);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ebd6ff"
+                                                style="background-color: rgb(235, 214, 255);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#bbbbbb"
+                                                style="background-color: rgb(187, 187, 187);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#f06666"
+                                                style="background-color: rgb(240, 102, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffc266"
+                                                style="background-color: rgb(255, 194, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffff66"
+                                                style="background-color: rgb(255, 255, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#66b966"
+                                                style="background-color: rgb(102, 185, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#66a3e0"
+                                                style="background-color: rgb(102, 163, 224);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#c285ff"
+                                                style="background-color: rgb(194, 133, 255);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#888888"
+                                                style="background-color: rgb(136, 136, 136);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#a10000"
+                                                style="background-color: rgb(161, 0, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#b26b00"
+                                                style="background-color: rgb(178, 107, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#b2b200"
+                                                style="background-color: rgb(178, 178, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#006100"
+                                                style="background-color: rgb(0, 97, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#0047b2"
+                                                style="background-color: rgb(0, 71, 178);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#6b24b2"
+                                                style="background-color: rgb(107, 36, 178);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#444444"
+                                                style="background-color: rgb(68, 68, 68);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#5c0000"
+                                                style="background-color: rgb(92, 0, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#663d00"
+                                                style="background-color: rgb(102, 61, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#666600"
+                                                style="background-color: rgb(102, 102, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#003700"
+                                                style="background-color: rgb(0, 55, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#002966"
+                                                style="background-color: rgb(0, 41, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#3d1466"
+                                                style="background-color: rgb(61, 20, 102);"></span></span></span><select
+                                        class="ql-color" style="display: none;">
+                                        <option selected="selected"></option>
+                                        <option value="#e60000"></option>
+                                        <option value="#ff9900"></option>
+                                        <option value="#ffff00"></option>
+                                        <option value="#008a00"></option>
+                                        <option value="#0066cc"></option>
+                                        <option value="#9933ff"></option>
+                                        <option value="#ffffff"></option>
+                                        <option value="#facccc"></option>
+                                        <option value="#ffebcc"></option>
+                                        <option value="#ffffcc"></option>
+                                        <option value="#cce8cc"></option>
+                                        <option value="#cce0f5"></option>
+                                        <option value="#ebd6ff"></option>
+                                        <option value="#bbbbbb"></option>
+                                        <option value="#f06666"></option>
+                                        <option value="#ffc266"></option>
+                                        <option value="#ffff66"></option>
+                                        <option value="#66b966"></option>
+                                        <option value="#66a3e0"></option>
+                                        <option value="#c285ff"></option>
+                                        <option value="#888888"></option>
+                                        <option value="#a10000"></option>
+                                        <option value="#b26b00"></option>
+                                        <option value="#b2b200"></option>
+                                        <option value="#006100"></option>
+                                        <option value="#0047b2"></option>
+                                        <option value="#6b24b2"></option>
+                                        <option value="#444444"></option>
+                                        <option value="#5c0000"></option>
+                                        <option value="#663d00"></option>
+                                        <option value="#666600"></option>
+                                        <option value="#003700"></option>
+                                        <option value="#002966"></option>
+                                        <option value="#3d1466"></option>
+                                    </select><span class="ql-background ql-picker ql-color-picker"><span
+                                            class="ql-picker-label" tabindex="0" role="button" aria-expanded="false"
+                                            aria-controls="ql-picker-options-6"><svg viewBox="0 0 18 18">
+                                                <g class="ql-fill ql-color-label">
+                                                    <polygon points="6 6.868 6 6 5 6 5 7 5.942 7 6 6.868"></polygon>
+                                                    <rect height="1" width="1" x="4" y="4"></rect>
+                                                    <polygon points="6.817 5 6 5 6 6 6.38 6 6.817 5"></polygon>
+                                                    <rect height="1" width="1" x="2" y="6"></rect>
+                                                    <rect height="1" width="1" x="3" y="5"></rect>
+                                                    <rect height="1" width="1" x="4" y="7"></rect>
+                                                    <polygon points="4 11.439 4 11 3 11 3 12 3.755 12 4 11.439">
+                                                    </polygon>
+                                                    <rect height="1" width="1" x="2" y="12"></rect>
+                                                    <rect height="1" width="1" x="2" y="9"></rect>
+                                                    <rect height="1" width="1" x="2" y="15"></rect>
+                                                    <polygon points="4.63 10 4 10 4 11 4.192 11 4.63 10"></polygon>
+                                                    <rect height="1" width="1" x="3" y="8"></rect>
+                                                    <path
+                                                        d="M10.832,4.2L11,4.582V4H10.708A1.948,1.948,0,0,1,10.832,4.2Z">
+                                                    </path>
+                                                    <path d="M7,4.582L7.168,4.2A1.929,1.929,0,0,1,7.292,4H7V4.582Z">
+                                                    </path>
+                                                    <path d="M8,13H7.683l-0.351.8a1.933,1.933,0,0,1-.124.2H8V13Z">
+                                                    </path>
+                                                    <rect height="1" width="1" x="12" y="2"></rect>
+                                                    <rect height="1" width="1" x="11" y="3"></rect>
+                                                    <path d="M9,3H8V3.282A1.985,1.985,0,0,1,9,3Z"></path>
+                                                    <rect height="1" width="1" x="2" y="3"></rect>
+                                                    <rect height="1" width="1" x="6" y="2"></rect>
+                                                    <rect height="1" width="1" x="3" y="2"></rect>
+                                                    <rect height="1" width="1" x="5" y="3"></rect>
+                                                    <rect height="1" width="1" x="9" y="2"></rect>
+                                                    <rect height="1" width="1" x="15" y="14"></rect>
+                                                    <polygon
+                                                        points="13.447 10.174 13.469 10.225 13.472 10.232 13.808 11 14 11 14 10 13.37 10 13.447 10.174">
+                                                    </polygon>
+                                                    <rect height="1" width="1" x="13" y="7"></rect>
+                                                    <rect height="1" width="1" x="15" y="5"></rect>
+                                                    <rect height="1" width="1" x="14" y="6"></rect>
+                                                    <rect height="1" width="1" x="15" y="8"></rect>
+                                                    <rect height="1" width="1" x="14" y="9"></rect>
+                                                    <path d="M3.775,14H3v1H4V14.314A1.97,1.97,0,0,1,3.775,14Z"></path>
+                                                    <rect height="1" width="1" x="14" y="3"></rect>
+                                                    <polygon points="12 6.868 12 6 11.62 6 12 6.868"></polygon>
+                                                    <rect height="1" width="1" x="15" y="2"></rect>
+                                                    <rect height="1" width="1" x="12" y="5"></rect>
+                                                    <rect height="1" width="1" x="13" y="4"></rect>
+                                                    <polygon points="12.933 9 13 9 13 8 12.495 8 12.933 9"></polygon>
+                                                    <rect height="1" width="1" x="9" y="14"></rect>
+                                                    <rect height="1" width="1" x="8" y="15"></rect>
+                                                    <path d="M6,14.926V15H7V14.316A1.993,1.993,0,0,1,6,14.926Z"></path>
+                                                    <rect height="1" width="1" x="5" y="15"></rect>
+                                                    <path
+                                                        d="M10.668,13.8L10.317,13H10v1h0.792A1.947,1.947,0,0,1,10.668,13.8Z">
+                                                    </path>
+                                                    <rect height="1" width="1" x="11" y="15"></rect>
+                                                    <path d="M14.332,12.2a1.99,1.99,0,0,1,.166.8H15V12H14.245Z"></path>
+                                                    <rect height="1" width="1" x="14" y="15"></rect>
+                                                    <rect height="1" width="1" x="15" y="11"></rect>
+                                                </g>
+                                                <polyline class="ql-stroke" points="5.5 13 9 5 12.5 13"></polyline>
+                                                <line class="ql-stroke" x1="11.63" x2="6.38" y1="11" y2="11"></line>
+                                            </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                            tabindex="-1" id="ql-picker-options-6"><span tabindex="0" role="button"
+                                                class="ql-picker-item ql-primary" data-value="#000000"
+                                                style="background-color: rgb(0, 0, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#e60000"
+                                                style="background-color: rgb(230, 0, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#ff9900"
+                                                style="background-color: rgb(255, 153, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#ffff00"
+                                                style="background-color: rgb(255, 255, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#008a00"
+                                                style="background-color: rgb(0, 138, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#0066cc"
+                                                style="background-color: rgb(0, 102, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item ql-primary" data-value="#9933ff"
+                                                style="background-color: rgb(153, 51, 255);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#facccc"
+                                                style="background-color: rgb(250, 204, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffebcc"
+                                                style="background-color: rgb(255, 235, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffffcc"
+                                                style="background-color: rgb(255, 255, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#cce8cc"
+                                                style="background-color: rgb(204, 232, 204);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#cce0f5"
+                                                style="background-color: rgb(204, 224, 245);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ebd6ff"
+                                                style="background-color: rgb(235, 214, 255);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#bbbbbb"
+                                                style="background-color: rgb(187, 187, 187);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#f06666"
+                                                style="background-color: rgb(240, 102, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffc266"
+                                                style="background-color: rgb(255, 194, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#ffff66"
+                                                style="background-color: rgb(255, 255, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#66b966"
+                                                style="background-color: rgb(102, 185, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#66a3e0"
+                                                style="background-color: rgb(102, 163, 224);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#c285ff"
+                                                style="background-color: rgb(194, 133, 255);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#888888"
+                                                style="background-color: rgb(136, 136, 136);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#a10000"
+                                                style="background-color: rgb(161, 0, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#b26b00"
+                                                style="background-color: rgb(178, 107, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#b2b200"
+                                                style="background-color: rgb(178, 178, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#006100"
+                                                style="background-color: rgb(0, 97, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#0047b2"
+                                                style="background-color: rgb(0, 71, 178);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#6b24b2"
+                                                style="background-color: rgb(107, 36, 178);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#444444"
+                                                style="background-color: rgb(68, 68, 68);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#5c0000"
+                                                style="background-color: rgb(92, 0, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#663d00"
+                                                style="background-color: rgb(102, 61, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#666600"
+                                                style="background-color: rgb(102, 102, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#003700"
+                                                style="background-color: rgb(0, 55, 0);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#002966"
+                                                style="background-color: rgb(0, 41, 102);"></span><span tabindex="0"
+                                                role="button" class="ql-picker-item" data-value="#3d1466"
+                                                style="background-color: rgb(61, 20, 102);"></span></span></span><select
+                                        class="ql-background" style="display: none;">
+                                        <option value="#000000"></option>
+                                        <option value="#e60000"></option>
+                                        <option value="#ff9900"></option>
+                                        <option value="#ffff00"></option>
+                                        <option value="#008a00"></option>
+                                        <option value="#0066cc"></option>
+                                        <option value="#9933ff"></option>
+                                        <option selected="selected"></option>
+                                        <option value="#facccc"></option>
+                                        <option value="#ffebcc"></option>
+                                        <option value="#ffffcc"></option>
+                                        <option value="#cce8cc"></option>
+                                        <option value="#cce0f5"></option>
+                                        <option value="#ebd6ff"></option>
+                                        <option value="#bbbbbb"></option>
+                                        <option value="#f06666"></option>
+                                        <option value="#ffc266"></option>
+                                        <option value="#ffff66"></option>
+                                        <option value="#66b966"></option>
+                                        <option value="#66a3e0"></option>
+                                        <option value="#c285ff"></option>
+                                        <option value="#888888"></option>
+                                        <option value="#a10000"></option>
+                                        <option value="#b26b00"></option>
+                                        <option value="#b2b200"></option>
+                                        <option value="#006100"></option>
+                                        <option value="#0047b2"></option>
+                                        <option value="#6b24b2"></option>
+                                        <option value="#444444"></option>
+                                        <option value="#5c0000"></option>
+                                        <option value="#663d00"></option>
+                                        <option value="#666600"></option>
+                                        <option value="#003700"></option>
+                                        <option value="#002966"></option>
+                                        <option value="#3d1466"></option>
+                                    </select></span><span class="ql-formats"><button type="button" class="ql-script"
+                                        aria-pressed="false" value="super" aria-label="script: super"><svg
+                                            viewBox="0 0 18 18">
+                                            <path class="ql-fill"
+                                                d="M15.5,7H13.861a4.015,4.015,0,0,0,1.914-2.975,1.8,1.8,0,0,0-1.6-1.751A1.922,1.922,0,0,0,12.021,3.7a0.5,0.5,0,1,0,.957.291,0.917,0.917,0,0,1,1.053-.725,0.81,0.81,0,0,1,.744.762c0,1.077-1.164,1.925-1.934,2.486A1.423,1.423,0,0,0,12,7.5a0.5,0.5,0,0,0,.5.5h3A0.5,0.5,0,0,0,15.5,7Z">
+                                            </path>
+                                            <path class="ql-fill"
+                                                d="M9.651,5.241a1,1,0,0,0-1.41.108L6,7.964,3.759,5.349a1,1,0,1,0-1.519,1.3L4.683,9.5,2.241,12.35a1,1,0,1,0,1.519,1.3L6,11.036,8.241,13.65a1,1,0,0,0,1.519-1.3L7.317,9.5,9.759,6.651A1,1,0,0,0,9.651,5.241Z">
+                                            </path>
+                                        </svg></button><button type="button" class="ql-script" aria-pressed="false"
+                                        value="sub" aria-label="script: sub"><svg viewBox="0 0 18 18">
+                                            <path class="ql-fill"
+                                                d="M15.5,15H13.861a3.858,3.858,0,0,0,1.914-2.975,1.8,1.8,0,0,0-1.6-1.751A1.921,1.921,0,0,0,12.021,11.7a0.50013,0.50013,0,1,0,.957.291h0a0.914,0.914,0,0,1,1.053-.725,0.81,0.81,0,0,1,.744.762c0,1.076-1.16971,1.86982-1.93971,2.43082A1.45639,1.45639,0,0,0,12,15.5a0.5,0.5,0,0,0,.5.5h3A0.5,0.5,0,0,0,15.5,15Z">
+                                            </path>
+                                            <path class="ql-fill"
+                                                d="M9.65,5.241a1,1,0,0,0-1.409.108L6,7.964,3.759,5.349A1,1,0,0,0,2.192,6.59178Q2.21541,6.6213,2.241,6.649L4.684,9.5,2.241,12.35A1,1,0,0,0,3.71,13.70722q0.02557-.02768.049-0.05722L6,11.036,8.241,13.65a1,1,0,1,0,1.567-1.24277Q9.78459,12.3777,9.759,12.35L7.316,9.5,9.759,6.651A1,1,0,0,0,9.65,5.241Z">
+                                            </path>
+                                        </svg></button></span><span class="ql-formats"><button type="button"
+                                        class="ql-list" aria-pressed="false" value="ordered"
+                                        aria-label="list: ordered"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line>
+                                            <line class="ql-stroke" x1="7" x2="15" y1="14" y2="14"></line>
+                                            <line class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5"></line>
+                                            <path class="ql-fill"
+                                                d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z">
+                                            </path>
+                                            <path class="ql-stroke ql-thin"
+                                                d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156">
+                                            </path>
+                                            <path class="ql-stroke ql-thin"
+                                                d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109">
+                                            </path>
+                                        </svg></button><button type="button" class="ql-list" aria-pressed="false"
+                                        value="bullet" aria-label="list: bullet"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line>
+                                            <line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line>
+                                            <line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line>
+                                            <line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line>
+                                        </svg></button><button type="button" class="ql-indent" aria-pressed="false"
+                                        value="-1" aria-label="indent: -1"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="3" x2="15" y1="14" y2="14"></line>
+                                            <line class="ql-stroke" x1="3" x2="15" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="9" x2="15" y1="9" y2="9"></line>
+                                            <polyline class="ql-stroke" points="5 7 5 11 3 9 5 7"></polyline>
+                                        </svg></button><button type="button" class="ql-indent" aria-pressed="false"
+                                        value="+1" aria-label="indent: +1"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="3" x2="15" y1="14" y2="14"></line>
+                                            <line class="ql-stroke" x1="3" x2="15" y1="4" y2="4"></line>
+                                            <line class="ql-stroke" x1="9" x2="15" y1="9" y2="9"></line>
+                                            <polyline class="ql-fill ql-stroke" points="3 7 3 11 5 9 3 7"></polyline>
+                                        </svg></button></span><span class="ql-formats"><button type="button"
+                                        class="ql-direction" aria-pressed="false" aria-label="direction"><svg
+                                            viewBox="0 0 18 18">
+                                            <polygon class="ql-stroke ql-fill" points="3 11 5 9 3 7 3 11"></polygon>
+                                            <line class="ql-stroke ql-fill" x1="15" x2="11" y1="4" y2="4"></line>
+                                            <path class="ql-fill" d="M11,3a3,3,0,0,0,0,6h1V3H11Z"></path>
+                                            <rect class="ql-fill" height="11" width="1" x="11" y="4"></rect>
+                                            <rect class="ql-fill" height="11" width="1" x="13" y="4"></rect>
+                                        </svg><svg viewBox="0 0 18 18">
+                                            <polygon class="ql-stroke ql-fill" points="15 12 13 10 15 8 15 12">
+                                            </polygon>
+                                            <line class="ql-stroke ql-fill" x1="9" x2="5" y1="4" y2="4"></line>
+                                            <path class="ql-fill" d="M5,3A3,3,0,0,0,5,9H6V3H5Z"></path>
+                                            <rect class="ql-fill" height="11" width="1" x="5" y="4"></rect>
+                                            <rect class="ql-fill" height="11" width="1" x="7" y="4"></rect>
+                                        </svg></button><span class="ql-align ql-picker ql-icon-picker"><span
+                                            class="ql-picker-label" tabindex="0" role="button" aria-expanded="false"
+                                            aria-controls="ql-picker-options-7"><svg viewBox="0 0 18 18">
+                                                <line class="ql-stroke" x1="3" x2="15" y1="9" y2="9"></line>
+                                                <line class="ql-stroke" x1="3" x2="13" y1="14" y2="14"></line>
+                                                <line class="ql-stroke" x1="3" x2="9" y1="4" y2="4"></line>
+                                            </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                            tabindex="-1" id="ql-picker-options-7"><span tabindex="0" role="button"
+                                                class="ql-picker-item"><svg viewBox="0 0 18 18">
+                                                    <line class="ql-stroke" x1="3" x2="15" y1="9" y2="9"></line>
+                                                    <line class="ql-stroke" x1="3" x2="13" y1="14" y2="14"></line>
+                                                    <line class="ql-stroke" x1="3" x2="9" y1="4" y2="4"></line>
+                                                </svg></span><span tabindex="0" role="button" class="ql-picker-item"
+                                                data-value="center"><svg viewBox="0 0 18 18">
+                                                    <line class="ql-stroke" x1="15" x2="3" y1="9" y2="9"></line>
+                                                    <line class="ql-stroke" x1="14" x2="4" y1="14" y2="14"></line>
+                                                    <line class="ql-stroke" x1="12" x2="6" y1="4" y2="4"></line>
+                                                </svg></span><span tabindex="0" role="button" class="ql-picker-item"
+                                                data-value="right"><svg viewBox="0 0 18 18">
+                                                    <line class="ql-stroke" x1="15" x2="3" y1="9" y2="9"></line>
+                                                    <line class="ql-stroke" x1="15" x2="5" y1="14" y2="14"></line>
+                                                    <line class="ql-stroke" x1="15" x2="9" y1="4" y2="4"></line>
+                                                </svg></span><span tabindex="0" role="button" class="ql-picker-item"
+                                                data-value="justify"><svg viewBox="0 0 18 18">
+                                                    <line class="ql-stroke" x1="15" x2="3" y1="9" y2="9"></line>
+                                                    <line class="ql-stroke" x1="15" x2="3" y1="14" y2="14"></line>
+                                                    <line class="ql-stroke" x1="15" x2="3" y1="4" y2="4"></line>
+                                                </svg></span></span></span><select class="ql-align"
+                                        style="display: none;">
+                                        <option selected="selected"></option>
+                                        <option value="center"></option>
+                                        <option value="right"></option>
+                                        <option value="justify"></option>
+                                    </select></span><span class="ql-formats"><button type="button" class="ql-link"
+                                        aria-pressed="false" aria-label="link"><svg viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line>
+                                            <path class="ql-even ql-stroke"
+                                                d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                                            </path>
+                                            <path class="ql-even ql-stroke"
+                                                d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                                            </path>
+                                        </svg></button><button type="button" class="ql-image" aria-pressed="false"
+                                        aria-label="image"><svg viewBox="0 0 18 18">
+                                            <rect class="ql-stroke" height="10" width="12" x="3" y="4"></rect>
+                                            <circle class="ql-fill" cx="6" cy="7" r="1"></circle>
+                                            <polyline class="ql-even ql-fill"
+                                                points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12"></polyline>
+                                        </svg></button><button type="button" class="ql-video" aria-pressed="false"
+                                        aria-label="video"><svg viewBox="0 0 18 18">
+                                            <rect class="ql-stroke" height="12" width="12" x="3" y="3"></rect>
+                                            <rect class="ql-fill" height="12" width="1" x="5" y="3"></rect>
+                                            <rect class="ql-fill" height="12" width="1" x="12" y="3"></rect>
+                                            <rect class="ql-fill" height="2" width="8" x="5" y="8"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="3" y="5"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="3" y="7"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="3" y="10"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="3" y="12"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="12" y="5"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="12" y="7"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="12" y="10"></rect>
+                                            <rect class="ql-fill" height="1" width="3" x="12" y="12"></rect>
+                                        </svg></button></span><span class="ql-formats"><button type="button"
+                                        class="ql-clean" aria-pressed="false" aria-label="clean"><svg class=""
+                                            viewBox="0 0 18 18">
+                                            <line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line>
+                                            <line class="ql-stroke" x1="6" x2="9.35" y1="12" y2="3"></line>
+                                            <line class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line>
+                                            <line class="ql-stroke" x1="15" x2="11" y1="11" y2="15"></line>
+                                            <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2" y="14">
+                                            </rect>
+                                        </svg></button></span></div>
+                            <div class="quill-editor-full ql-container ql-snow">
+                                <div class="ql-editor" contenteditable="true">
+                                    <p>Hello World!</p>
+                                    <p>This is Quill <strong>full</strong> editor</p>
+                                </div>
+                                <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer"
+                                        target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2"
+                                        data-link="https://quilljs.com" data-video="Embed URL"><a
+                                        class="ql-action"></a><a class="ql-remove"></a></div>
+                            </div>
+                            <!-- End Quill Editor Full -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">TinyMCE Editor</h5>
+
+                            <!-- TinyMCE Editor -->
+                            <textarea class="tinymce-editor" id="mce_0" aria-hidden="true" style="display: none;">                &lt;p&gt;Hello World!&lt;/p&gt;
+                  &lt;p&gt;This is TinyMCE &lt;strong&gt;full&lt;/strong&gt; editor&lt;/p&gt;
+                </textarea>
+                            <div role="application" class="tox tox-tinymce" aria-disabled="false"
+                                style="visibility: hidden; height: 600px;">
+                                <div class="tox-editor-container">
+                                    <div data-alloy-vertical-dir="toptobottom" class="tox-editor-header">
+                                        <div class="tox-promotion"><a
+                                                href="https://www.tiny.cloud/tinymce-self-hosted-premium-features/?utm_campaign=self_hosted_upgrade_promo&amp;utm_source=tiny&amp;utm_medium=referral"
+                                                rel="noopener" target="_blank" aria-hidden="true"
+                                                class="tox-promotion-link">⚡️Upgrade</a></div>
+                                        <div role="menubar" data-alloy-tabstop="true" class="tox-menubar"><button
+                                                aria-haspopup="true" role="menuitem" type="button" tabindex="-1"
+                                                data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 36.95px;"><span
+                                                    class="tox-mbtn__select-label">File</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button><button aria-haspopup="true" role="menuitem" type="button"
+                                                tabindex="-1" data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 39.4625px;"><span
+                                                    class="tox-mbtn__select-label">Edit</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button><button aria-haspopup="true" role="menuitem" type="button"
+                                                tabindex="-1" data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 45.525px;"><span
+                                                    class="tox-mbtn__select-label">View</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button><button aria-haspopup="true" role="menuitem" type="button"
+                                                tabindex="-1" data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 50.525px;"><span
+                                                    class="tox-mbtn__select-label">Insert</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button><button aria-haspopup="true" role="menuitem" type="button"
+                                                tabindex="-1" data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 59.8375px;"><span
+                                                    class="tox-mbtn__select-label">Format</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button><button aria-haspopup="true" role="menuitem" type="button"
+                                                tabindex="-1" data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 47.7125px;"><span
+                                                    class="tox-mbtn__select-label">Tools</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button><button aria-haspopup="true" role="menuitem" type="button"
+                                                tabindex="-1" data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 47.8375px;"><span
+                                                    class="tox-mbtn__select-label">Table</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button><button aria-haspopup="true" role="menuitem" type="button"
+                                                tabindex="-1" data-alloy-tabstop="true" unselectable="on"
+                                                class="tox-mbtn tox-mbtn--select" aria-expanded="false"
+                                                style="user-select: none; width: 44.8875px;"><span
+                                                    class="tox-mbtn__select-label">Help</span>
+                                                <div class="tox-mbtn__select-chevron"><svg width="10" height="10"
+                                                        focusable="false">
+                                                        <path
+                                                            d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                            fill-rule="nonzero"></path>
+                                                    </svg></div>
+                                            </button></div>
+                                        <div role="group" class="tox-toolbar-overlord" aria-disabled="false">
+                                            <div role="group" class="tox-toolbar__primary">
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Undo"
+                                                        data-mce-name="undo" type="button" tabindex="-1"
+                                                        class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M6.4 8H12c3.7 0 6.2 2 6.8 5.1.6 2.7-.4 5.6-2.3 6.8a1 1 0 0 1-1-1.8c1.1-.6 1.8-2.7 1.4-4.6-.5-2.1-2.1-3.5-4.9-3.5H6.4l3.3 3.3a1 1 0 1 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.4 1.4L6.4 8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button><button aria-label="Redo"
+                                                        data-mce-name="redo" type="button" tabindex="-1"
+                                                        class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M17.6 10H12c-2.8 0-4.4 1.4-4.9 3.5-.4 2 .3 4 1.4 4.6a1 1 0 1 1-1 1.8c-2-1.2-2.9-4.1-2.3-6.8.6-3 3-5.1 6.8-5.1h5.6l-3.3-3.3a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Insert accordion"
+                                                        data-mce-name="accordion" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <rect x="12" y="7" width="10" height="2" rx="1"></rect>
+                                                                <rect x="12" y="11" width="10" height="2" rx="1"></rect>
+                                                                <rect x="12" y="15" width="6" height="2" rx="1"></rect>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M2.3 7.3a1 1 0 0 1 1.4 0L6 9.6l2.3-2.3a1 1 0 0 1 1.4 1.4L6 12.4 2.3 8.7a1 1 0 0 1 0-1.4Z">
+                                                                </path>
+                                                            </svg></span></button><button aria-label="Delete accordion"
+                                                        data-mce-name="accordionremove" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M16 7h3a1 1 0 0 1 0 2h-1v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V9H5a1 1 0 1 1 0-2h3V6a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v1Zm-2 0V6c0-.6-.4-1-1-1h-2a1 1 0 0 0-1 1v1h4Zm2 2H8v9c0 .6.4 1 1 1h6c.6 0 1-.4 1-1V9Zm-7 3a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Zm4 0a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0v-4Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                                <div role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button
+                                                        aria-label="Reveal or hide additional toolbar items"
+                                                        data-mce-name="overflow-button" type="button" tabindex="-1"
+                                                        data-alloy-tabstop="true" class="tox-tbtn"
+                                                        aria-expanded="false"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M6 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2Zm12 0a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2Zm-6 0a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                            </div>
+                                            <div role="group"
+                                                class="tox-toolbar__overflow tox-toolbar__overflow--closed"
+                                                style="height: 0px;">
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Block Paragraph"
+                                                        data-mce-name="blocks" aria-haspopup="true" type="button"
+                                                        tabindex="-1" unselectable="on"
+                                                        class="tox-tbtn tox-tbtn--select tox-tbtn--bespoke"
+                                                        aria-expanded="false"
+                                                        style="user-select: none; width: 130px;"><span
+                                                            class="tox-tbtn__select-label">Paragraph</span>
+                                                        <div class="tox-tbtn__select-chevron"><svg width="10"
+                                                                height="10" focusable="false">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></div>
+                                                    </button><button aria-label="Font Helvetica"
+                                                        data-mce-name="fontfamily" aria-haspopup="true" type="button"
+                                                        tabindex="-1" unselectable="on"
+                                                        class="tox-tbtn tox-tbtn--select tox-tbtn--bespoke"
+                                                        aria-expanded="false"
+                                                        style="user-select: none; width: 130px;"><span
+                                                            class="tox-tbtn__select-label">Helvetica</span>
+                                                        <div class="tox-tbtn__select-chevron"><svg width="10"
+                                                                height="10" focusable="false">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></div>
+                                                    </button><button aria-label="Font size 12pt"
+                                                        data-mce-name="fontsize" aria-haspopup="true" type="button"
+                                                        tabindex="-1" unselectable="on"
+                                                        class="tox-tbtn tox-tbtn--select tox-tbtn--bespoke"
+                                                        aria-expanded="false"
+                                                        style="user-select: none; width: 130px;"><span
+                                                            class="tox-tbtn__select-label">12pt</span>
+                                                        <div class="tox-tbtn__select-chevron"><svg width="10"
+                                                                height="10" focusable="false">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></div>
+                                                    </button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Bold"
+                                                        data-mce-name="bold" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M7.8 19c-.3 0-.5 0-.6-.2l-.2-.5V5.7c0-.2 0-.4.2-.5l.6-.2h5c1.5 0 2.7.3 3.5 1 .7.6 1.1 1.4 1.1 2.5a3 3 0 0 1-.6 1.9c-.4.6-1 1-1.6 1.2.4.1.9.3 1.3.6s.8.7 1 1.2c.4.4.5 1 .5 1.6 0 1.3-.4 2.3-1.3 3-.8.7-2.1 1-3.8 1H7.8Zm5-8.3c.6 0 1.2-.1 1.6-.5.4-.3.6-.7.6-1.3 0-1.1-.8-1.7-2.3-1.7H9.3v3.5h3.4Zm.5 6c.7 0 1.3-.1 1.7-.4.4-.4.6-.9.6-1.5s-.2-1-.7-1.4c-.4-.3-1-.4-2-.4H9.4v3.8h4Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button><button aria-label="Italic"
+                                                        data-mce-name="italic" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="m16.7 4.7-.1.9h-.3c-.6 0-1 0-1.4.3-.3.3-.4.6-.5 1.1l-2.1 9.8v.6c0 .5.4.8 1.4.8h.2l-.2.8H8l.2-.8h.2c1.1 0 1.8-.5 2-1.5l2-9.8.1-.5c0-.6-.4-.8-1.4-.8h-.3l.2-.9h5.8Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button><button aria-label="Underline"
+                                                        data-mce-name="underline" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M16 5c.6 0 1 .4 1 1v5.5a4 4 0 0 1-.4 1.8l-1 1.4a5.3 5.3 0 0 1-5.5 1 5 5 0 0 1-1.6-1c-.5-.4-.8-.9-1.1-1.4a4 4 0 0 1-.4-1.8V6c0-.6.4-1 1-1s1 .4 1 1v5.5c0 .3 0 .6.2 1l.6.7a3.3 3.3 0 0 0 2.2.8 3.4 3.4 0 0 0 2.2-.8c.3-.2.4-.5.6-.8l.2-.9V6c0-.6.4-1 1-1ZM8 17h8c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 0 1 0-2Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button><button aria-label="Strikethrough"
+                                                        data-mce-name="strikethrough" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <g fill-rule="evenodd">
+                                                                    <path
+                                                                        d="M15.6 8.5c-.5-.7-1-1.1-1.3-1.3-.6-.4-1.3-.6-2-.6-2.7 0-2.8 1.7-2.8 2.1 0 1.6 1.8 2 3.2 2.3 4.4.9 4.6 2.8 4.6 3.9 0 1.4-.7 4.1-5 4.1A6.2 6.2 0 0 1 7 16.4l1.5-1.1c.4.6 1.6 2 3.7 2 1.6 0 2.5-.4 3-1.2.4-.8.3-2-.8-2.6-.7-.4-1.6-.7-2.9-1-1-.2-3.9-.8-3.9-3.6C7.6 6 10.3 5 12.4 5c2.9 0 4.2 1.6 4.7 2.4l-1.5 1.1Z">
+                                                                    </path>
+                                                                    <path d="M5 11h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                                                                        fill-rule="nonzero"></path>
+                                                                </g>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Alignment left"
+                                                        data-mce-name="align" aria-haspopup="true" type="button"
+                                                        tabindex="-1" unselectable="on"
+                                                        class="tox-tbtn tox-tbtn--select" aria-expanded="false"
+                                                        style="user-select: none; width: 48px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><span
+                                                                class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                    height="24" focusable="false">
+                                                                    <path
+                                                                        d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm0 4h8c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2Zm0 8h8c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Zm0-4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2Z"
+                                                                        fill-rule="evenodd"></path>
+                                                                </svg></span></span>
+                                                        <div class="tox-tbtn__select-chevron"><svg width="10"
+                                                                height="10" focusable="false">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></div>
+                                                    </button>
+                                                    <div aria-pressed="false" aria-label="Numbered list"
+                                                        data-mce-name="numlist" role="button" aria-haspopup="true"
+                                                        tabindex="-1" unselectable="on" class="tox-split-button"
+                                                        aria-disabled="false" aria-expanded="false"
+                                                        aria-describedby="aria_551763382841742651369695"
+                                                        style="user-select: none;"><span role="presentation"
+                                                            class="tox-tbtn" aria-disabled="false"
+                                                            style="width: 34px;"><span
+                                                                class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                    height="24" focusable="false">
+                                                                    <path
+                                                                        d="M10 17h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2Zm0-6h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2Zm0-6h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 1 1 0-2ZM6 4v3.5c0 .3-.2.5-.5.5a.5.5 0 0 1-.5-.5V5h-.5a.5.5 0 0 1 0-1H6Zm-1 8.8.2.2h1.3c.3 0 .5.2.5.5s-.2.5-.5.5H4.9a1 1 0 0 1-.9-1V13c0-.4.3-.8.6-1l1.2-.4.2-.3a.2.2 0 0 0-.2-.2H4.5a.5.5 0 0 1-.5-.5c0-.3.2-.5.5-.5h1.6c.5 0 .9.4.9 1v.1c0 .4-.3.8-.6 1l-1.2.4-.2.3ZM7 17v2c0 .6-.4 1-1 1H4.5a.5.5 0 0 1 0-1h1.2c.2 0 .3-.1.3-.3 0-.2-.1-.3-.3-.3H4.4a.4.4 0 1 1 0-.8h1.3c.2 0 .3-.1.3-.3 0-.2-.1-.3-.3-.3H4.5a.5.5 0 1 1 0-1H6c.6 0 1 .4 1 1Z"
+                                                                        fill-rule="evenodd"></path>
+                                                                </svg></span></span><span role="presentation"
+                                                            class="tox-tbtn tox-split-button__chevron"
+                                                            aria-disabled="false"><svg width="10" height="10">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span><span aria-hidden="true" style="display: none;"
+                                                            id="aria_551763382841742651369695">To open the popup, press
+                                                            Shift+Enter</span></div>
+                                                    <div aria-pressed="false" aria-label="Bullet list"
+                                                        data-mce-name="bullist" role="button" aria-haspopup="true"
+                                                        tabindex="-1" unselectable="on" class="tox-split-button"
+                                                        aria-disabled="false" aria-expanded="false"
+                                                        aria-describedby="aria_6571622882851742651369696"
+                                                        style="user-select: none;"><span role="presentation"
+                                                            class="tox-tbtn" aria-disabled="false"
+                                                            style="width: 34px;"><span
+                                                                class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                    height="24" focusable="false">
+                                                                    <path
+                                                                        d="M11 5h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2Zm0 6h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2Zm0 6h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2ZM4.5 6c0-.4.1-.8.4-1 .3-.4.7-.5 1.1-.5.4 0 .8.1 1 .4.4.3.5.7.5 1.1 0 .4-.1.8-.4 1-.3.4-.7.5-1.1.5-.4 0-.8-.1-1-.4-.4-.3-.5-.7-.5-1.1Zm0 6c0-.4.1-.8.4-1 .3-.4.7-.5 1.1-.5.4 0 .8.1 1 .4.4.3.5.7.5 1.1 0 .4-.1.8-.4 1-.3.4-.7.5-1.1.5-.4 0-.8-.1-1-.4-.4-.3-.5-.7-.5-1.1Zm0 6c0-.4.1-.8.4-1 .3-.4.7-.5 1.1-.5.4 0 .8.1 1 .4.4.3.5.7.5 1.1 0 .4-.1.8-.4 1-.3.4-.7.5-1.1.5-.4 0-.8-.1-1-.4-.4-.3-.5-.7-.5-1.1Z"
+                                                                        fill-rule="evenodd"></path>
+                                                                </svg></span></span><span role="presentation"
+                                                            class="tox-tbtn tox-split-button__chevron"
+                                                            aria-disabled="false"><svg width="10" height="10">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span><span aria-hidden="true" style="display: none;"
+                                                            id="aria_6571622882851742651369696">To open the popup, press
+                                                            Shift+Enter</span></div>
+                                                </div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Insert/edit link"
+                                                        data-mce-name="link" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M6.2 12.3a1 1 0 0 1 1.4 1.4l-2 2a2 2 0 1 0 2.6 2.8l4.8-4.8a1 1 0 0 0 0-1.4 1 1 0 1 1 1.4-1.3 2.9 2.9 0 0 1 0 4L9.6 20a3.9 3.9 0 0 1-5.5-5.5l2-2Zm11.6-.6a1 1 0 0 1-1.4-1.4l2-2a2 2 0 1 0-2.6-2.8L11 10.3a1 1 0 0 0 0 1.4A1 1 0 1 1 9.6 13a2.9 2.9 0 0 1 0-4L14.4 4a3.9 3.9 0 0 1 5.5 5.5l-2 2Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button><button aria-label="Insert/edit image"
+                                                        data-mce-name="image" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="m5 15.7 3.3-3.2c.3-.3.7-.3 1 0L12 15l4.1-4c.3-.4.8-.4 1 0l2 1.9V5H5v10.7ZM5 18V19h3l2.8-2.9-2-2L5 17.9Zm14-3-2.5-2.4-6.4 6.5H19v-4ZM4 3h16c.6 0 1 .4 1 1v16c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V4c0-.6.4-1 1-1Zm6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Table"
+                                                        data-mce-name="table" aria-haspopup="true" type="button"
+                                                        tabindex="-1" unselectable="on"
+                                                        class="tox-tbtn tox-tbtn--select" aria-expanded="false"
+                                                        style="user-select: none; width: 48px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path fill-rule="nonzero"
+                                                                    d="M19 4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h14ZM5 14v4h6v-4H5Zm14 0h-6v4h6v-4Zm0-6h-6v4h6V8ZM5 12h6V8H5v4Z">
+                                                                </path>
+                                                            </svg></span>
+                                                        <div class="tox-tbtn__select-chevron"><svg width="10"
+                                                                height="10" focusable="false">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></div>
+                                                    </button><button aria-label="Insert/edit media"
+                                                        data-mce-name="media" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M4 3h16c.6 0 1 .4 1 1v16c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V4c0-.6.4-1 1-1Zm1 2v14h14V5H5Zm4.8 2.6 5.6 4a.5.5 0 0 1 0 .8l-5.6 4A.5.5 0 0 1 9 16V8a.5.5 0 0 1 .8-.4Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Line height"
+                                                        data-mce-name="lineheight" aria-haspopup="true" type="button"
+                                                        tabindex="-1" unselectable="on"
+                                                        class="tox-tbtn tox-tbtn--select" aria-expanded="false"
+                                                        style="user-select: none; width: 48px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M21 5a1 1 0 0 1 .1 2H13a1 1 0 0 1-.1-2H21zm0 4a1 1 0 0 1 .1 2H13a1 1 0 0 1-.1-2H21zm0 4a1 1 0 0 1 .1 2H13a1 1 0 0 1-.1-2H21zm0 4a1 1 0 0 1 .1 2H13a1 1 0 0 1-.1-2H21zM7 3.6l3.7 3.7a1 1 0 0 1-1.3 1.5h-.1L8 7.3v9.2l1.3-1.3a1 1 0 0 1 1.3 0h.1c.4.4.4 1 0 1.3v.1L7 20.4l-3.7-3.7a1 1 0 0 1 1.3-1.5h.1L6 16.7V7.4L4.7 8.7a1 1 0 0 1-1.3 0h-.1a1 1 0 0 1 0-1.3v-.1L7 3.6z">
+                                                                </path>
+                                                            </svg></span>
+                                                        <div class="tox-tbtn__select-chevron"><svg width="10"
+                                                                height="10" focusable="false">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></div>
+                                                    </button><button aria-label="Decrease indent"
+                                                        data-mce-name="outdent" type="button" tabindex="-1"
+                                                        class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M7 5h12c.6 0 1 .4 1 1s-.4 1-1 1H7a1 1 0 1 1 0-2Zm5 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm0 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm-5 4h12a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2Zm1.6-3.8a1 1 0 0 1-1.2 1.6l-3-2a1 1 0 0 1 0-1.6l3-2a1 1 0 0 1 1.2 1.6L6.8 12l1.8 1.2Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button><button aria-label="Increase indent"
+                                                        data-mce-name="indent" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M7 5h12c.6 0 1 .4 1 1s-.4 1-1 1H7a1 1 0 1 1 0-2Zm5 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm0 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2Zm-5 4h12a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2Zm-2.6-3.8L6.2 12l-1.8-1.2a1 1 0 0 1 1.2-1.6l3 2a1 1 0 0 1 0 1.6l-3 2a1 1 0 1 1-1.2-1.6Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group">
+                                                    <div aria-pressed="false" aria-label="Text color Black"
+                                                        data-mce-name="forecolor" role="button" aria-haspopup="true"
+                                                        tabindex="-1" unselectable="on" class="tox-split-button"
+                                                        aria-disabled="false" aria-expanded="false"
+                                                        aria-describedby="aria_7017085162861742651369697"
+                                                        style="user-select: none;"><span role="presentation"
+                                                            class="tox-tbtn" aria-disabled="false"
+                                                            style="width: 34px;"><span
+                                                                class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                    height="24" focusable="false">
+                                                                    <g fill-rule="evenodd">
+                                                                        <path class="tox-icon-text-color__color"
+                                                                            d="M3 18h18v3H3z" fill="#000000"></path>
+                                                                        <path
+                                                                            d="M8.7 16h-.8a.5.5 0 0 1-.5-.6l2.7-9c.1-.3.3-.4.5-.4h2.8c.2 0 .4.1.5.4l2.7 9a.5.5 0 0 1-.5.6h-.8a.5.5 0 0 1-.4-.4l-.7-2.2c0-.3-.3-.4-.5-.4h-3.4c-.2 0-.4.1-.5.4l-.7 2.2c0 .3-.2.4-.4.4Zm2.6-7.6-.6 2a.5.5 0 0 0 .5.6h1.6a.5.5 0 0 0 .5-.6l-.6-2c0-.3-.3-.4-.5-.4h-.4c-.2 0-.4.1-.5.4Z">
+                                                                        </path>
+                                                                    </g>
+                                                                </svg></span></span><span role="presentation"
+                                                            class="tox-tbtn tox-split-button__chevron"
+                                                            aria-disabled="false"><svg width="10" height="10">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span><span aria-hidden="true" style="display: none;"
+                                                            id="aria_7017085162861742651369697">To open the popup, press
+                                                            Shift+Enter</span></div>
+                                                    <div aria-pressed="false" aria-label="Background color Black"
+                                                        data-mce-name="backcolor" role="button" aria-haspopup="true"
+                                                        tabindex="-1" unselectable="on" class="tox-split-button"
+                                                        aria-disabled="false" aria-expanded="false"
+                                                        aria-describedby="aria_7284470142871742651369697"
+                                                        style="user-select: none;"><span role="presentation"
+                                                            class="tox-tbtn" aria-disabled="false"
+                                                            style="width: 34px;"><span
+                                                                class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                    height="24" focusable="false">
+                                                                    <g fill-rule="evenodd">
+                                                                        <path class="tox-icon-highlight-bg-color__color"
+                                                                            d="M3 18h18v3H3z" fill="#000000"></path>
+                                                                        <path fill-rule="nonzero"
+                                                                            d="M7.7 16.7H3l3.3-3.3-.7-.8L10.2 8l4 4.1-4 4.2c-.2.2-.6.2-.8 0l-.6-.7-1.1 1.1zm5-7.5L11 7.4l3-2.9a2 2 0 0 1 2.6 0L18 6c.7.7.7 2 0 2.7l-2.9 2.9-1.8-1.8-.5-.6">
+                                                                        </path>
+                                                                    </g>
+                                                                </svg></span></span><span role="presentation"
+                                                            class="tox-tbtn tox-split-button__chevron"
+                                                            aria-disabled="false"><svg width="10" height="10">
+                                                                <path
+                                                                    d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span><span aria-hidden="true" style="display: none;"
+                                                            id="aria_7284470142871742651369697">To open the popup, press
+                                                            Shift+Enter</span></div><button
+                                                        aria-label="Clear formatting" data-mce-name="removeformat"
+                                                        type="button" tabindex="-1" class="tox-tbtn"
+                                                        aria-disabled="false" style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M13.2 6a1 1 0 0 1 0 .2l-2.6 10a1 1 0 0 1-1 .8h-.2a.8.8 0 0 1-.8-1l2.6-10H8a1 1 0 1 1 0-2h9a1 1 0 0 1 0 2h-3.8ZM5 18h7a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Zm13 1.5L16.5 18 15 19.5a.7.7 0 0 1-1-1l1.5-1.5-1.5-1.5a.7.7 0 0 1 1-1l1.5 1.5 1.5-1.5a.7.7 0 0 1 1 1L17.5 17l1.5 1.5a.7.7 0 0 1-1 1Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button>
+                                                </div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Special character"
+                                                        data-mce-name="charmap" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M15 18h4l1-2v4h-6v-3.3l1.4-1a6 6 0 0 0 1.8-2.9 6.3 6.3 0 0 0-.1-4.1 5.8 5.8 0 0 0-3-3.2c-.6-.3-1.3-.5-2.1-.5a5.1 5.1 0 0 0-3.9 1.8 6.3 6.3 0 0 0-1.3 6 6.2 6.2 0 0 0 1.8 3l1.4.9V20H4v-4l1 2h4v-.5l-2-1L5.4 15A6.5 6.5 0 0 1 4 11c0-1 .2-1.9.6-2.7A7 7 0 0 1 6.3 6C7.1 5.4 8 5 9 4.5c1-.3 2-.5 3.1-.5a8.8 8.8 0 0 1 5.7 2 7 7 0 0 1 1.7 2.3 6 6 0 0 1 .2 4.8c-.2.7-.6 1.3-1 1.9a7.6 7.6 0 0 1-3.6 2.5v.5Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button><button aria-label="Emojis"
+                                                        data-mce-name="emoticons" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M9 11c.6 0 1-.4 1-1s-.4-1-1-1a1 1 0 0 0-1 1c0 .6.4 1 1 1Zm6 0c.6 0 1-.4 1-1s-.4-1-1-1a1 1 0 0 0-1 1c0 .6.4 1 1 1Zm-3 5.5c2.1 0 4-1.5 4.4-3.5H7.6c.5 2 2.3 3.5 4.4 3.5ZM12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 14.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Source code"
+                                                        data-mce-name="code" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <g fill-rule="nonzero">
+                                                                    <path
+                                                                        d="M9.8 15.7c.3.3.3.8 0 1-.3.4-.9.4-1.2 0l-4.4-4.1a.8.8 0 0 1 0-1.2l4.4-4.2c.3-.3.9-.3 1.2 0 .3.3.3.8 0 1.1L6 12l3.8 3.7ZM14.2 15.7c-.3.3-.3.8 0 1 .4.4.9.4 1.2 0l4.4-4.1c.3-.3.3-.9 0-1.2l-4.4-4.2a.8.8 0 0 0-1.2 0c-.3.3-.3.8 0 1.1L18 12l-3.8 3.7Z">
+                                                                    </path>
+                                                                </g>
+                                                            </svg></span></button><button aria-label="Fullscreen"
+                                                        data-mce-name="fullscreen" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="m15.3 10-1.2-1.3 2.9-3h-2.3a.9.9 0 1 1 0-1.7H19c.5 0 .9.4.9.9v4.4a.9.9 0 1 1-1.8 0V7l-2.9 3Zm0 4 3 3v-2.3a.9.9 0 1 1 1.7 0V19c0 .5-.4.9-.9.9h-4.4a.9.9 0 1 1 0-1.8H17l-3-2.9 1.3-1.2ZM10 15.4l-2.9 3h2.3a.9.9 0 1 1 0 1.7H5a.9.9 0 0 1-.9-.9v-4.4a.9.9 0 1 1 1.8 0V17l2.9-3 1.2 1.3ZM8.7 10 5.7 7v2.3a.9.9 0 0 1-1.7 0V5c0-.5.4-.9.9-.9h4.4a.9.9 0 0 1 0 1.8H7l3 2.9-1.3 1.2Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button><button aria-label="Preview"
+                                                        data-mce-name="preview" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M3.5 12.5c.5.8 1.1 1.6 1.8 2.3 2 2 4.2 3.2 6.7 3.2s4.7-1.2 6.7-3.2a16.2 16.2 0 0 0 2.1-2.8 15.7 15.7 0 0 0-2.1-2.8c-2-2-4.2-3.2-6.7-3.2a9.3 9.3 0 0 0-6.7 3.2A16.2 16.2 0 0 0 3.2 12c0 .2.2.3.3.5Zm-2.4-1 .7-1.2L4 7.8C6.2 5.4 8.9 4 12 4c3 0 5.8 1.4 8.1 3.8a18.2 18.2 0 0 1 2.8 3.7v1l-.7 1.2-2.1 2.5c-2.3 2.4-5 3.8-8.1 3.8-3 0-5.8-1.4-8.1-3.8a18.2 18.2 0 0 1-2.8-3.7 1 1 0 0 1 0-1Zm12-3.3a2 2 0 1 0 2.7 2.6 4 4 0 1 1-2.6-2.6Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Save"
+                                                        data-mce-name="save" type="button" tabindex="-1"
+                                                        class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M5 16h14a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2c0-1.1.9-2 2-2Zm0 2v2h14v-2H5Zm10 0h2v2h-2v-2Zm-4-6.4L8.7 9.3a1 1 0 1 0-1.4 1.4l4 4c.4.4 1 .4 1.4 0l4-4a1 1 0 1 0-1.4-1.4L13 11.6V4a1 1 0 0 0-2 0v7.6Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button><button aria-label="Print"
+                                                        data-mce-name="print" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M18 8H6a3 3 0 0 0-3 3v6h2v3h14v-3h2v-6a3 3 0 0 0-3-3Zm-1 10H7v-4h10v4Zm.5-5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5Zm.5-8H6v2h12V5Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Page break"
+                                                        data-mce-name="pagebreak" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <g fill-rule="evenodd">
+                                                                    <path
+                                                                        d="M5 11c.6 0 1 .4 1 1s-.4 1-1 1a1 1 0 0 1 0-2Zm3 0h1c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 0 1 0-2Zm4 0c.6 0 1 .4 1 1s-.4 1-1 1a1 1 0 0 1 0-2Zm3 0h1c.6 0 1 .4 1 1s-.4 1-1 1h-1a1 1 0 0 1 0-2Zm4 0c.6 0 1 .4 1 1s-.4 1-1 1a1 1 0 0 1 0-2ZM7 3v5h10V3c0-.6.4-1 1-1s1 .4 1 1v7H5V3c0-.6.4-1 1-1s1 .4 1 1ZM6 22a1 1 0 0 1-1-1v-7h14v7c0 .6-.4 1-1 1a1 1 0 0 1-1-1v-5H7v5c0 .6-.4 1-1 1Z">
+                                                                    </path>
+                                                                </g>
+                                                            </svg></span></button><button aria-label="Anchor"
+                                                        data-mce-name="anchor" type="button" tabindex="-1"
+                                                        class="tox-tbtn" aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M6 4v17l6-4 6 4V4c0-.6-.4-1-1-1H7a1 1 0 0 0-1 1Z"
+                                                                    fill-rule="nonzero"></path>
+                                                            </svg></span></button><button
+                                                        aria-label="Insert/edit code sample" data-mce-name="codesample"
+                                                        type="button" tabindex="-1" class="tox-tbtn"
+                                                        aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="26" focusable="false">
+                                                                <path
+                                                                    d="M7.1 11a2.8 2.8 0 0 1-.8 2 2.8 2.8 0 0 1 .8 2v1.7c0 .3.1.6.4.8.2.3.5.4.8.4.3 0 .4.2.4.4v.8c0 .2-.1.4-.4.4-.7 0-1.4-.3-2-.8-.5-.6-.8-1.3-.8-2V15c0-.3-.1-.6-.4-.8-.2-.3-.5-.4-.8-.4a.4.4 0 0 1-.4-.4v-.8c0-.2.2-.4.4-.4.3 0 .6-.1.8-.4.3-.2.4-.5.4-.8V9.3c0-.7.3-1.4.8-2 .6-.5 1.3-.8 2-.8.3 0 .4.2.4.4v.8c0 .2-.1.4-.4.4-.3 0-.6.1-.8.4-.3.2-.4.5-.4.8V11Zm9.8 0V9.3c0-.3-.1-.6-.4-.8-.2-.3-.5-.4-.8-.4a.4.4 0 0 1-.4-.4V7c0-.2.1-.4.4-.4.7 0 1.4.3 2 .8.5.6.8 1.3.8 2V11c0 .3.1.6.4.8.2.3.5.4.8.4.2 0 .4.2.4.4v.8c0 .2-.2.4-.4.4-.3 0-.6.1-.8.4-.3.2-.4.5-.4.8v1.7c0 .7-.3 1.4-.8 2-.6.5-1.3.8-2 .8a.4.4 0 0 1-.4-.4v-.8c0-.2.1-.4.4-.4.3 0 .6-.1.8-.4.3-.2.4-.5.4-.8V15a2.8 2.8 0 0 1 .8-2 2.8 2.8 0 0 1-.8-2Zm-3.3-.4c0 .4-.1.8-.5 1.1-.3.3-.7.5-1.1.5-.4 0-.8-.2-1.1-.5-.4-.3-.5-.7-.5-1.1 0-.5.1-.9.5-1.2.3-.3.7-.4 1.1-.4.4 0 .8.1 1.1.4.4.3.5.7.5 1.2ZM12 13c.4 0 .8.1 1.1.5.4.3.5.7.5 1.1 0 1-.1 1.6-.5 2a3 3 0 0 1-1.1 1c-.4.3-.8.4-1.1.4a.5.5 0 0 1-.5-.5V17a3 3 0 0 0 1-.2l.6-.6c-.6 0-1-.2-1.3-.5-.2-.3-.3-.7-.3-1 0-.5.1-1 .5-1.2.3-.4.7-.5 1.1-.5Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button></div>
+                                                <div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1"
+                                                    class="tox-toolbar__group"><button aria-label="Left to right"
+                                                        data-mce-name="ltr" type="button" tabindex="-1"
+                                                        class="tox-tbtn tox-tbtn--enabled" aria-disabled="false"
+                                                        aria-pressed="true" style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M11 5h7a1 1 0 0 1 0 2h-1v11a1 1 0 0 1-2 0V7h-2v11a1 1 0 0 1-2 0v-6c-.5 0-1 0-1.4-.3A3.4 3.4 0 0 1 7.8 10a3.3 3.3 0 0 1 0-2.8 3.4 3.4 0 0 1 1.8-1.8L11 5ZM4.4 16.2 6.2 15l-1.8-1.2a1 1 0 0 1 1.2-1.6l3 2a1 1 0 0 1 0 1.6l-3 2a1 1 0 1 1-1.2-1.6Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button><button aria-label="Right to left"
+                                                        data-mce-name="rtl" type="button" tabindex="-1" class="tox-tbtn"
+                                                        aria-disabled="false" aria-pressed="false"
+                                                        style="width: 34px;"><span
+                                                            class="tox-icon tox-tbtn__icon-wrap"><svg width="24"
+                                                                height="24" focusable="false">
+                                                                <path
+                                                                    d="M8 5h8v2h-2v12h-2V7h-2v12H8v-7c-.5 0-1 0-1.4-.3A3.4 3.4 0 0 1 4.8 10a3.3 3.3 0 0 1 0-2.8 3.4 3.4 0 0 1 1.8-1.8L8 5Zm12 11.2a1 1 0 1 1-1 1.6l-3-2a1 1 0 0 1 0-1.6l3-2a1 1 0 1 1 1 1.6L18.4 15l1.8 1.2Z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </svg></span></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="tox-anchorbar"></div>
+                                    </div>
+                                    <div class="tox-sidebar-wrap">
+                                        <div class="tox-edit-area"><iframe id="mce_0_ifr" frameborder="0"
+                                                allowtransparency="true" title="Rich Text Area"
+                                                class="tox-edit-area__iframe"
+                                                srcdoc="<!DOCTYPE html><html><head><meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /></head><body id=&quot;tinymce&quot; class=&quot;mce-content-body &quot; data-id=&quot;mce_0&quot; aria-label=&quot;Rich Text Area. Press ALT-0 for help.&quot;><br></body></html>"></iframe>
+                                        </div>
+                                        <div role="presentation" class="tox-sidebar">
+                                            <div data-alloy-tabstop="true" tabindex="-1"
+                                                class="tox-sidebar__slider tox-sidebar--sliding-closed"
+                                                style="width: 0px;">
+                                                <div class="tox-sidebar__pane-container"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tox-bottom-anchorbar"></div>
+                                </div>
+                                <div aria-hidden="true" class="tox-view-wrap" style="display: none;">
+                                    <div class="tox-view-wrap__slot-container"></div>
+                                </div>
+                                <div class="tox-statusbar">
+                                    <div
+                                        class="tox-statusbar__text-container tox-statusbar__text-container-3-cols tox-statusbar__text-container--flex-start">
+                                        <div role="navigation" data-alloy-tabstop="true" class="tox-statusbar__path"
+                                            aria-disabled="false">
+                                            <div data-index="0" role="button" tabindex="-1"
+                                                class="tox-statusbar__path-item" aria-disabled="false">p</div>
+                                        </div>
+                                        <div class="tox-statusbar__help-text">Press Alt+0 for help</div>
+                                        <div class="tox-statusbar__right-container"><button type="button" tabindex="-1"
+                                                data-alloy-tabstop="true" class="tox-statusbar__wordcount">7
+                                                words</button><span class="tox-statusbar__branding"><a
+                                                    href="https://www.tiny.cloud/powered-by-tiny?utm_campaign=poweredby&amp;utm_source=tiny&amp;utm_medium=referral&amp;utm_content=v7"
+                                                    rel="noopener" target="_blank" aria-label="Build with TinyMCE"
+                                                    tabindex="-1">Build with <svg height="16" viewBox="0 0 80 16"
+                                                        width="80" xmlns="http://www.w3.org/2000/svg">
+                                                        <g opacity=".8">
+                                                            <path
+                                                                d="m80 3.537v-2.202h-7.976v11.585h7.976v-2.25h-5.474v-2.621h4.812v-2.069h-4.812v-2.443zm-10.647 6.929c-.493.217-1.13.337-1.864.337s-1.276-.156-1.805-.47a3.732 3.732 0 0 1 -1.3-1.298c-.324-.554-.48-1.191-.48-1.877s.156-1.335.48-1.877a3.635 3.635 0 0 1 1.3-1.299 3.466 3.466 0 0 1 1.805-.481c.65 0 .914.06 1.263.18.36.12.698.277.986.47.289.192.578.384.842.6l.12.085v-2.586l-.023-.024c-.385-.35-.855-.614-1.384-.818-.53-.205-1.155-.313-1.877-.313-.721 0-1.6.144-2.333.445a5.773 5.773 0 0 0 -1.937 1.251 5.929 5.929 0 0 0 -1.324 1.9c-.324.735-.48 1.565-.48 2.455s.156 1.72.48 2.454c.325.734.758 1.383 1.324 1.913.553.53 1.215.938 1.937 1.25a6.286 6.286 0 0 0 2.333.434c.819 0 1.384-.108 1.961-.313.59-.216 1.083-.505 1.468-.866l.024-.024v-2.49l-.12.096c-.41.337-.878.626-1.396.866zm-14.869-4.15-4.8-5.04-.024-.025h-.902v11.67h2.502v-6.847l2.827 3.08.385.409.397-.41 2.791-3.067v6.845h2.502v-11.679h-.902l-4.788 5.052z">
+                                                            </path>
+                                                            <path clip-rule="evenodd"
+                                                                d="m15.543 5.137c0-3.032-2.466-5.113-4.957-5.137-.36 0-.745.024-1.094.096-.157.024-3.85.758-3.85.758-3.032.602-4.62 2.466-4.704 4.788-.024.89-.024 4.27-.024 4.27.036 3.165 2.406 5.138 5.017 5.126.337 0 1.119-.109 1.287-.145.144-.024.385-.084.746-.144.661-.12 1.684-.325 3.067-.602 2.37-.409 4.103-2.009 4.44-4.33.156-1.023.084-4.692.084-4.692zm-3.213 3.308-2.346.457v2.31l-5.859 1.143v-5.75l2.346-.458v3.441l3.513-.686v-3.44l-3.513.685v-2.297l5.859-1.143v5.75zm20.09-3.296-.083-1.023h-2.13v8.794h2.346v-4.884c0-1.107.95-1.985 2.057-1.997 1.095 0 1.901.89 1.901 1.997v4.884h2.346v-5.245c-.012-2.105-1.588-3.777-3.67-3.765a3.764 3.764 0 0 0 -2.778 1.25l.012-.011zm-6.014-4.102 2.346-.458v2.298l-2.346.457z"
+                                                                fill-rule="evenodd"></path>
+                                                            <path d="m28.752 4.126h-2.346v8.794h2.346z"></path>
+                                                            <path clip-rule="evenodd"
+                                                                d="m43.777 15.483 4.043-11.357h-2.418l-1.54 4.355-.445 1.324-.36-1.324-1.54-4.355h-2.418l3.151 8.794-1.083 3.08zm-21.028-5.51c0 .722.541 1.034.878 1.034s.638-.048.95-.144l.518 1.708c-.217.145-.879.518-2.13.518a2.565 2.565 0 0 1 -2.562-2.587c-.024-1.082-.024-2.49 0-4.21h-1.54v-2.142h1.54v-1.912l2.346-.458v2.37h2.201v2.142h-2.2v3.693-.012z"
+                                                                fill-rule="evenodd"></path>
+                                                        </g>
+                                                    </svg></a></span></div>
+                                    </div>
+                                    <div aria-label="Press the Up and Down arrow keys to resize the editor."
+                                        data-mce-name="resize-handle" data-alloy-tabstop="true" tabindex="-1"
+                                        class="tox-statusbar__resize-handle"><svg width="10" height="10"
+                                            focusable="false">
+                                            <g fill-rule="nonzero">
+                                                <path
+                                                    d="M8.1 1.1A.5.5 0 1 1 9 2l-7 7A.5.5 0 1 1 1 8l7-7ZM8.1 5.1A.5.5 0 1 1 9 6l-3 3A.5.5 0 1 1 5 8l3-3Z">
+                                                </path>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                                <div aria-hidden="true" class="tox-throbber" style="display: none;"></div>
+                            </div><!-- End TinyMCE Editor -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+</body>
+
+</html>
+{% endblock %}

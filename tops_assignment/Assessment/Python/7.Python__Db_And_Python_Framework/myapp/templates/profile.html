@@ -1,0 +1,97 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+
+<head>
+    <title>Users / Profile - NiceAdmin Bootstrap Template</title>
+</head>
+
+<body>
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Profile</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    <li class="breadcrumb-item active">Profile</li>
+                </ol>
+            </nav>
+        </div>
+        <!-- End Page Title -->
+
+        <section class="section profile">
+            <div class="row">
+                <div class="col-xl-6" style="margin: 1px auto;">
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+
+                            <img src="{% static 'assets/img/profile-img.jpeg' %}" alt="Profile" class="rounded-circle">
+                            <h2>Pranav Kareliya</h2>
+
+                        </div>
+                        <div class="mb-3">
+                            <div class="card-body">
+                                <form class="row g-3 needs-validation col-12" style="margin: 1px auto;">
+                                    <div class="col-12">
+                                        <label for="fname" class="form-label"><b>Your First Name</b></label>
+                                        <input type="text" name="fname" class="form-control" id="fname"
+                                            placeholder="Pranav" required="">
+                                        <div class="invalid-feedback">Enter Your First Name..!!</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="lname" class="form-label"><b>Your Last Name</b></label>
+                                        <input type="text" name="lname" class="form-control" id="lname"
+                                            placeholder="Kareliya" required="">
+                                        <div class="invalid-feedback">Enter Your Last Name..!!</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="yourEmail" class="form-label"><b>Your Email</b></label>
+                                        <input type="email" name="email" class="form-control" id="yourEmail"
+                                            placeholder="pranavkareliya123@gmail.com" required="" readonly disabled>
+                                        <div class="invalid-feedback">Please Enter Valid Email..!!</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="yourUsername" class="form-label"><b>Username</b></label>
+                                        <div class="input-group has-validation">
+                                            <input type="text" name="username" class="form-control" id="yourUsername"
+                                                placeholder="pranavkareliya456" required="">
+                                            <div class="invalid-feedback">Please Enter Username.!!</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="yourPassword" class="form-label"><b>Password</b></label>
+                                        <input type="password" name="password" class="form-control" id="yourPassword"
+                                            placeholder="••••••••••" required="">
+                                        <div class="invalid-feedback">Please Enter password.!!</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="profile_picture" class="form-label"><b>Profile Picture</b></label>
+                                        <input type="file" name="profile_picture" class="form-control"
+                                            id="profile_picture" required="">
+                                        <div class="invalid-feedback">Please Add Your Profile Picture.!!</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Update Profile</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+</body>
+
+</html>
+{% endblock %}

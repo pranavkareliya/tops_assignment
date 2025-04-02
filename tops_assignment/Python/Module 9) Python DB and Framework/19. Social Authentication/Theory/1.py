@@ -1,1 +1,3 @@
 # Setting up social login options (Google, Facebook, GitHub) in Django using OAuth2.
+
+print("Using a social auth has its advantages. You won't need to set up auth for your web application, since it's handled by the third-party, OAuth provider. Also, since providers like Google, Facebook, and GitHub perform extensive checks to prevent unauthorized access to their services, leveraging social auth instead of rolling your own auth mechanism can boost your application's security.")

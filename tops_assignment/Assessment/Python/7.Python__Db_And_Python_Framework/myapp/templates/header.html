@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title></title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'vendors/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet"> -->
+    <link href="{% static 'vendors/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/quill/quill.snow.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/quill/quill.bubble.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/remixicon/remixicon.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+                <span class="d-none d-lg-block">Digital Society</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+        <!-- End Logo -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li>
+                <!-- End Search Icon-->
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="{% static 'assets/img/profile-img.jpeg' %}" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Pranav Kareliya</span>
+                    </a>
+                    <!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>Pranav Kareliya</h6>
+                            <span>Software Developer</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="{% url 'profile' %}">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="{% url 'profile' %}">
+                                <i class="bi bi-lock"></i>
+                                <span>Change Password</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav>
+        <!-- End Icons Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="{% url 'index' %}">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{% url 'forms_elements' %}">
+                            <i class="bi bi-circle"></i><span>Form Elements</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'forms_layouts' %}">
+                            <i class="bi bi-circle"></i><span>Form Layouts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'forms_editors' %}">
+                            <i class="bi bi-circle"></i><span>Form Editors</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'forms_validation' %}">
+                            <i class="bi bi-circle"></i><span>Form Validation</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Forms Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{% url 'tables_general' %}">
+                            <i class="bi bi-circle"></i><span>General Tables</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'tables_data' %}">
+                            <i class="bi bi-circle"></i><span>Data Tables</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Tables Nav -->
+
+            <li class="nav-heading">Pages</li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'profile' %}">
+                    <i class="bi bi-person"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <!-- End Profile Page Nav -->
+
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'contact' %}">
+                    <i class="bi bi-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li> -->
+            <!-- End Contact Page Nav -->
+
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'register' %}">
+                    <i class="bi bi-card-list"></i>
+                    <span>Register</span>
+                </a>
+            </li> -->
+            <!-- End Register Page Nav -->
+
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'login' %}">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    <span>Login</span>
+                </a>
+            </li> -->
+            <!-- End Login Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'society_members' %}">
+                    <i class="bi bi-person-add"></i>
+                    <span>Society Members</span>
+                </a>
+            </li>
+            <!-- End Society Members Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'society_watchmens' %}">
+                    <i class="bi bi-person-add"></i>
+                    <span>Society Watchmens</span>
+                </a>
+            </li>
+            <!-- End Society Watchmens Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'login' %}">
+                    <i class="bi bi-app-indicator"></i>
+                    <span>Notice</span>
+                </a>
+            </li>
+            <!-- End Society Watchmens Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'login' %}">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <!-- End Society Watchmens Page Nav -->
+
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'pages_error_404' %}">
+                    <i class="bi bi-dash-circle"></i>
+                    <span>Error 404</span>
+                </a>
+            </li> -->
+            <!-- End Error 404 Page Nav -->
+
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'pages_blank' %}">
+                    <i class="bi bi-file-earmark"></i>
+                    <span>Blank</span>
+                </a>
+            </li> -->
+            <!-- End Blank Page Nav -->
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>Digital Society (2025)</span></strong>. All Rights Reserved
+        </div>
+    </footer>/
+    <!-- End Footer -->
+
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a> -->
+
+    <button class="back-to-top d-flex align-items-center justify-content-center" onclick="scrollToTop()" style="position: fixed;bottom: 20px;right: 20px;width: 40px;height: 40px;border: none;background-color: #007bff;color: white;cursor: pointer;border-radius: 50%;z-index: 1000;">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendors/quill/quill.js' %}"></script>
+    <script src="{% static 'vendors/tinymce/tinymce.min.js' %}"></script>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-sidebar-btn');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function (e) {
+                document.body.classList.toggle('toggle-sidebar');
+            });
+        }
+
+        let backtotop = document.querySelector('.back-to-top');
+        if (backtotop) {
+            const toggleBacktotop = () => {
+                if (window.scrollY > 100) {
+                    backtotop.classList.add('active');
+                } else {
+                    backtotop.classList.remove('active');
+                }
+            };
+            window.addEventListener('load', toggleBacktotop);
+            document.addEventListener('scroll', toggleBacktotop);
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <!-- Template Main JS File -->
+    <!-- <script src="{% static 'main.js' %}"></script> -->
+
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"></script>
+</body>
+
+</html>

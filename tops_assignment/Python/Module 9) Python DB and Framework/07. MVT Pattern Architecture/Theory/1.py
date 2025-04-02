@@ -1,1 +1,3 @@
 # Django’s MVT (Model-View-Template) architecture and how it handles request-response cycles.
+
+print("Most of the web frameworks implement the MVC (Model-View-Controller) architecture. Django uses a variation of MVC and calls it the MVT (stands for Model-View-Template) architecture. Model is the data layer of the application. The View is in fact the layer that undertakes the processing logic. The Template is the presentation layer.")

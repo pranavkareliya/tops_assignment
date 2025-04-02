@@ -1,1 +1,3 @@
 # Implementing Django’s authentication system (sign up, login, logout, password management).
+
+print("configuration has evolved to serve the most common project needs, handling a reasonably wide range of tasks, and has a careful implementation of passwords and permissions. For projects where authentication needs differ from the default, Django supports extensive extension and customization of authentication. Django authentication provides both authentication and authorization together and is generally referred to as the authentication system, as these features are somewhat coupled.")

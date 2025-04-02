@@ -1,1 +1,3 @@
 # Using AJAX for making asynchronous requests to the server without reloading the page
+
+print("reating AJAX-Based POST Requests in Django Without Page Refresh. Making a POST request in Django without refreshing the page is a common requirement in modern web applications. It allows the user to submit data to the server and receive a response without interrupting their workflow or causing the page to reload.")
