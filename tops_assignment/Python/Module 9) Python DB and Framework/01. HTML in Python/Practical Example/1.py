@@ -1,1 +1,2 @@
 # Write a Django project that renders an HTML file displaying “Welcome to Doctor Finder” on the home page.
+print("To render an HTML file in Django, the render() function from django.shortcuts is used. This function combines a given template with a context dictionary and returns an HttpResponse object with the rendered text. ")

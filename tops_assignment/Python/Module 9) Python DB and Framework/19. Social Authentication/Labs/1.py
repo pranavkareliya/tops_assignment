@@ -1,1 +1,3 @@
 # Implement Google and Facebook login for the Django project.
+
+print("OAuth2 is an authorization framework that allows third-partyapplications to obtain limited access to user accounts on an HTTPservice, such as Google, Facebook, or GitHub. It works by delegating user authentication to the service that hosts the user account. Social login allows users to authenticate using their existingcredentials from services like Google, Facebook, or GitHub, avoiding the need to create new usernames and passwords.")

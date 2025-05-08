@@ -1,1 +1,2 @@
 # Build a simple Django app showcasing how the MVT architecture works.
+print("Django apps use the Model-View-Template (MVT) architecture to structure web applications. This architecture separates the application logic (Model), the presentation (Template), and the data handling (View). MVT helps developers organize code, making it easier to manage and maintain complex web applications. ")

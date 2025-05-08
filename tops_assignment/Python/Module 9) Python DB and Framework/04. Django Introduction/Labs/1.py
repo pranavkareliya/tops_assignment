@@ -1,1 +1,2 @@
 # Write a short project using Django’s built-in tools to render a simple webpage.
+print("Django provides several built-in tools to render a simple webpage, primarily utilizing the Model-View-Template (MVT) architecture. This involves defining models for data, views for handling logic and rendering, and templates for the HTML structure. ")

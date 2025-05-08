@@ -1,1 +1,2 @@
 # Write a Django project with models, views, and templates to display doctor information.
+print("A Django project to display doctor information would involve creating a model for Doctor, views to fetch and display doctor data, and templates to render the data in a user-friendly format. The Doctor model would store relevant attributes like name, specialty, and contact information. The views would interact with the model to retrieve doctor data, and the templates would display this data in an HTML format.")

@@ -1,1 +1,2 @@
 # Write a Django project to display a webpage with custom CSS styling for a doctor profile page.
+print("The first step in connecting CSS files with HTML in Django is to create a static folder. This folder will store all your CSS and other static files, such as images and JavaScript files. You can create the static folder in the root of your Django project, or in a subfolder if you prefer.")
