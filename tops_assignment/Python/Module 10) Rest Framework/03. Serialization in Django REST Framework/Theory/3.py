@@ -1,1 +1,3 @@
 #  Using serializers in Django REST Framework (DRF).
+
+print("A serializer in Django REST Framework (DRF) is a component that translates complex data types (like Django models or QuerySets) into native Python datatypes that can then be easily rendered into JSON, XML, or other content types. It also supports deserialization, i.e.,converting parsed data back into complex types and validating theinput.")

@@ -1,1 +1,3 @@
 # Using Google Maps API to display maps and calculate distances between locations.
+
+print("The Google Maps API is a collection of web services provided by Google that allows developers to embed maps and integrate geolocation functionalities into websites and applications. Two primary components used for visual mapping and distance calculation are the Maps JavaScript API and the Distance Matrix API.")

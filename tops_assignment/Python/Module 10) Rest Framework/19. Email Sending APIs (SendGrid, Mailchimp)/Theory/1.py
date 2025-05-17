@@ -1,1 +1,3 @@
 # Using email sending APIs like SendGrid and Mailchimp to send transactional emails.
+
+print("Transactional emails are automated, real-time messages sent to individuals based on specific actions or events — for example password resets, order confirmations, or OTPs. Tools like SendGrid and Mailchimp Transactional (formerly Mandrill) provide robust APIs  for sending these emails reliably and at scale.")

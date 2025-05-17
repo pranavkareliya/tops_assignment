@@ -1,1 +1,3 @@
 # Configuring Django settings for database, static files, and API keys.
+
+print("Configuring Django Settings for Database, Static Files, and API Keys In Django, settings.py is the configuration file where various application parameters are defined, including settings for the database, static files, and API keys. Properly configuring these settings ensures that your application runs smoothly and securely. Here's an overview of how to configure these aspects in a Django project.")

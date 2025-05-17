@@ -1,1 +1,3 @@
 # Introduction to GitHub API and how to interact with repositories, pull requests, and issues.
+
+print("The GitHub API is a web-based interface that allows developers to interact with GitHub's features programmatically. It provides access to various GitHub services, including managing repositories, issues, pull requests, and user information. GitHub offers two primary types of APIs : 1. REST API : 2. GraphQL API")

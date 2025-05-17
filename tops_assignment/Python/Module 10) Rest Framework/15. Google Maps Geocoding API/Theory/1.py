@@ -1,1 +1,3 @@
 # Using Google Maps Geocoding API to convert addresses into coordinates.
+
+print("Using Google Maps Geocoding API to Convert Addresses into Coordinates The Google Maps Geocoding API allows you to convert addresses into geographical coordinates (latitude and longitude), making it an essential tool for location-based services in applications. This API helps in handling addresses and mapping them to geographic locations, enabling features like mapping, distance calculations, and spatial analysis.")

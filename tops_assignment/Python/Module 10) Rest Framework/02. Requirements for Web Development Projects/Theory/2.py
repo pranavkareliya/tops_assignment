@@ -1,1 +1,2 @@
 # Setting up the environment and installing necessary packages.
+print("Setting up the environment means preparing your system with the tools and configurations needed to develop and run your application smoothly.")
